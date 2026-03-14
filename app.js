@@ -83,6 +83,7 @@ function MapView({scored, selId, onSel, flood, w}){
   const mapRef = useRef(null);
   const leafRef = useRef(null);
   const markersRef = useRef([]);
+  const floodRef = useRef([]);
 
   useEffect(()=>{
     if(leafRef.current) return;
@@ -112,13 +113,28 @@ function MapView({scored, selId, onSel, flood, w}){
       });
       const marker=L.marker([d.la,d.ln],{icon}).addTo(leafRef.current);
       marker.on('click',()=>onSel(d.id===selId?null:d.id));
-      if(flood && d.fl){
-        const fc=FC[d.fl];
-        L.circle([d.la,d.ln],{radius:400,color:'transparent',fillColor:fc,fillOpacity:0.7}).addTo(leafRef.current);
-      }
       markersRef.current.push(marker);
     });
-  },[scored,selId,flood]);
+  },[scored,selId]);
+
+  useEffect(()=>{
+    if(!leafRef.current) return;
+    floodRef.current.forEach(l=>l.remove());
+    floodRef.current=[];
+    if(flood){
+      scored.forEach(d=>{
+        if(!d.fl) return;
+        const fc=FC[d.fl];
+        const circle=L.circle([d.la,d.ln],{
+          radius:350,
+          color:'transparent',
+          fillColor:fc,
+          fillOpacity:0.65
+        }).addTo(leafRef.current);
+        floodRef.current.push(circle);
+      });
+    }
+  },[flood,scored]);
 
   return React.createElement('div',{ref:mapRef,style:{width:'100%',height:'100%'}});
 }
