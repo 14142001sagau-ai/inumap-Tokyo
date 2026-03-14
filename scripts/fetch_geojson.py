@@ -9,6 +9,47 @@ relation["admin_level"="9"](area.ward);
 out geom;
 """
 
+def build_polygon(members):
+    # wayのgeometryを順番に繋いでリングを作る
+    ways = []
+    for member in members:
+        if member.get("role") == "outer" and "geometry" in member:
+            ways.append([[p["lon"], p["lat"]] for p in member["geometry"]])
+    
+    if not ways:
+        return None
+    
+    # 1つのwayだけの場合
+    if len(ways) == 1:
+        ring = ways[0]
+        if ring[0] != ring[-1]:
+            ring.append(ring[0])
+        return [ring]
+    
+    # 複数wayを繋ぎ合わせる
+    result = list(ways[0])
+    used = [False] * len(ways)
+    used[0] = True
+    
+    for _ in range(len(ways) - 1):
+        last = result[-1]
+        for i, way in enumerate(ways):
+            if used[i]:
+                continue
+            if way[0] == last or (abs(way[0][0]-last[0])<0.0001 and abs(way[0][1]-last[1])<0.0001):
+                result.extend(way[1:])
+                used[i] = True
+                break
+            elif way[-1] == last or (abs(way[-1][0]-last[0])<0.0001 and abs(way[-1][1]-last[1])<0.0001):
+                result.extend(list(reversed(way))[1:])
+                used[i] = True
+                break
+    
+    if result[0] != result[-1]:
+        result.append(result[0])
+    
+    return [result]
+
 def fetch():
     try:
         r = requests.post(OVERPASS, data={"data": query}, timeout=90)
@@ -23,14 +64,8 @@ def fetch():
             name = el.get("tags", {}).get("name", "")
             if not name:
                 continue
-            coords = []
-            for member in el.get("members", []):
-                if member.get("role") == "outer" and "geometry" in member:
-                    ring = [[p["lon"], p["lat"]] for p in member["geometry"]]
-                    if len(ring) > 2:
-                        if ring[0] != ring[-1]:
-                            ring.append(ring[0])
-                        coords.append(ring)
+            
+            coords = build_polygon(el.get("members", []))
             if coords:
                 features.append({
                     "type": "Feature",
@@ -49,6 +84,8 @@ def fetch():
 
     except Exception as e:
         print(f"❌ エラー: {e}")
+        import traceback
+        traceback.print_exc()
         os.makedirs("data", exist_ok=True)
         with open("data/edogawa.geojson", "w") as f:
             json.dump({"type": "FeatureCollection", "features": []}, f)
