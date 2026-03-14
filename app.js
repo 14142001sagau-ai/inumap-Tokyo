@@ -79,11 +79,13 @@ const FL={1:"低 0-0.5m",2:"中 0.5-3m",3:"高 3-5m",4:"危 5m+",5:"最危 10m+"
 function calc(areas,w){const tot=Object.values(w).reduce((a,b)=>a+b,0);const rs=areas.map(d=>AXES.reduce((s,a)=>s+(d[a.k]||0)*w[a.k],0)/tot);const avg=rs.reduce((a,b)=>a+b,0)/rs.length;const sd=Math.sqrt(rs.reduce((a,b)=>a+(b-avg)**2,0)/rs.length)||1;return areas.map((d,i)=>({...d,dev:Math.round((rs[i]-avg)/sd*10+50)}));}
 function gs(v){if(v>=65)return{c:"#1b5e20",b:"S"};if(v>=58)return{c:"#2e7d32",b:"A"};if(v>=50)return{c:"#e65100",b:"B"};if(v>=42)return{c:"#bf360c",b:"C"};return{c:"#b71c1c",b:"D"};}
 function note(id,key){const dog=key[1];const a=AREAS.find(x=>x.id===id);if(!a)return["詳細はPhase2で追加予定"];const nm={walk:"散歩・公園",housing:"住環境・家賃",medical:"医療・サポート",mobility:"移動",community:"地域"};const top=Object.entries({walk:a.walk,housing:a.housing,medical:a.medical,mobility:a.mobility,community:a.community}).sort((x,y)=>y[1]-x[1]);return[`${nm[top[0][0]]}が区内上位（${top[0][1]}点）`,`${nm[top[1][0]]}も強み（${top[1][1]}点）`,`${nm[top[top.length-1][0]]}はやや低め（${top[top.length-1][1]}点）`,dog==="X"?"小型犬OKの物件・カフェを探せるエリア":dog==="Y"?"大型犬の散歩コースへのアクセスを確認して":"シニア犬のかかりつけ医は早めに確保を"];}
+
 function MapView({scored, selId, onSel, flood, w}){
   const mapRef = useRef(null);
   const leafRef = useRef(null);
   const markersRef = useRef([]);
   const floodRef = useRef([]);
+  const polyRef = useRef([]);
 
   useEffect(()=>{
     if(leafRef.current) return;
@@ -98,16 +100,44 @@ function MapView({scored, selId, onSel, flood, w}){
   },[]);
 
   useEffect(()=>{
+    if(!leafRef.current||!scored.length) return;
+    polyRef.current.forEach(l=>l.remove());
+    polyRef.current=[];
+    const GEOJSON_URL="https://raw.githubusercontent.com/14142001sagau-ai/inumap-Tokyo/main/data/edogawa.geojson";
+    fetch(GEOJSON_URL)
+      .then(r=>r.json())
+      .then(gj=>{
+        gj.features.forEach(f=>{
+          const name=f.properties.name||"";
+          const match=scored.find(d=>name.includes(d.n)||d.n.includes(name));
+          if(!match) return;
+          const s=gs(match.dev);
+          const layer=L.geoJSON(f,{
+            style:{
+              fillColor:s.c,
+              fillOpacity:0.55,
+              color:"#fff",
+              weight:1.5
+            }
+          }).addTo(leafRef.current);
+          layer.on('click',()=>onSel(match.id===selId?null:match.id));
+          polyRef.current.push(layer);
+        });
+      })
+      .catch(e=>console.error(e));
+  },[scored,selId]);
+
+  useEffect(()=>{
     if(!leafRef.current) return;
     markersRef.current.forEach(m=>m.remove());
     markersRef.current=[];
     scored.forEach(d=>{
       const s=gs(d.dev);
       const iS=d.id===selId;
-      const size=iS?44:34;
+      const size=iS?40:28;
       const icon=L.divIcon({
         className:'',
-        html:`<div style="width:${size}px;height:${size}px;border-radius:50%;background:${s.c};border:${iS?'3px solid #fff':'2px solid rgba(255,255,255,0.7)'};display:flex;align-items:center;justify-content:center;font-size:${iS?13:11}px;font-weight:900;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.3);cursor:pointer">${s.b}</div>`,
+        html:`<div style="width:${size}px;height:${size}px;border-radius:50%;background:${s.c};border:${iS?'3px solid #fff':'2px solid rgba(255,255,255,0.8)'};display:flex;align-items:center;justify-content:center;font-size:${iS?12:10}px;font-weight:900;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.3);cursor:pointer">${s.b}</div>`,
         iconSize:[size,size],
         iconAnchor:[size/2,size/2]
       });
@@ -124,11 +154,10 @@ function MapView({scored, selId, onSel, flood, w}){
     if(flood){
       scored.forEach(d=>{
         if(!d.fl) return;
-        const fc=FC[d.fl];
         const circle=L.circle([d.la,d.ln],{
           radius:350,
           color:'transparent',
-          fillColor:fc,
+          fillColor:FC[d.fl],
           fillOpacity:0.65
         }).addTo(leafRef.current);
         floodRef.current.push(circle);
