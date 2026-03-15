@@ -1,0 +1,14 @@
+[
+  {"id":"nishikasai","name":"西葛西","line":"東京メトロ東西線","lat":35.6577,"lng":139.8695,"walk":63,"housing":62,"medical":82,"mobility":79,"community":67,"fl":4},
+  {"id":"kasai","name":"葛西","line":"東京メトロ東西線","lat":35.6558,"lng":139.8832,"walk":65,"housing":63,"medical":78,"mobility":76,"community":67,"fl":3},
+  {"id":"kasairinkai","name":"葛西臨海公園","line":"JR京葉線","lat":35.6338,"lng":139.8598,"walk":90,"housing":50,"medical":38,"mobility":62,"community":65,"fl":5},
+  {"id":"funabori","name":"船堀","line":"都営新宿線","lat":35.6888,"lng":139.8712,"walk":62,"housing":66,"medical":68,"mobility":72,"community":67,"fl":3},
+  {"id":"ichinoe","name":"一之江","line":"都営新宿線","lat":35.6975,"lng":139.8788,"walk":63,"housing":68,"medical":65,"mobility":63,"community":69,"fl":3},
+  {"id":"shinozaki","name":"篠崎","line":"都営新宿線","lat":35.7148,"lng":139.8712,"walk":80,"housing":75,"medical":62,"mobility":58,"community":77,"fl":2},
+  {"id":"koiwa","name":"小岩","line":"JR総武線","lat":35.7378,"lng":139.8858,"walk":68,"housing":73,"medical":70,"mobility":63,"community":75,"fl":2},
+  {"id":"shinkoiwa","name":"新小岩","line":"JR総武線","lat":35.7128,"lng":139.8588,"walk":66,"housing":70,"medical":72,"mobility":68,"community":73,"fl":2},
+  {"id":"hirai","name":"平井","line":"JR総武線","lat":35.7058,"lng":139.8448,"walk":68,"housing":70,"medical":60,"mobility":62,"community":71,"fl":1},
+  {"id":"ojima","name":"大島","line":"都営新宿線","lat":35.6928,"lng":139.8388,"walk":64,"housing":68,"medical":66,"mobility":65,"community":68,"fl":2},
+  {"id":"nishiojima","name":"西大島","line":"都営新宿線","lat":35.6888,"lng":139.8318,"walk":63,"housing":67,"medical":65,"mobility":64,"community":67,"fl":2},
+  {"id":"higashiojima","name":"東大島","line":"都営新宿線","lat":35.6838,"lng":139.8458,"walk":65,"housing":66,"medical":64,"mobility":65,"community":67,"fl":2}
+]
