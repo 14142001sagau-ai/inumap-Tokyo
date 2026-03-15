@@ -19,7 +19,7 @@ RADIUS = 1000
 BBOX = '35.63,139.82,35.75,139.95'
 
 def get_station_coord(name):
-    q = '[out:json][timeout:30];node[railway=station][name=' + name + '](' + BBOX + ');out 1;'
+        q = '[out:json][timeout:30];node[railway=station][name=' + chr(34) + name + chr(34) + '](' + BBOX + ');out 1;'
     try:
         r = requests.post(OVERPASS, data={'data': q}, timeout=30)
         els = r.json().get('elements', [])
