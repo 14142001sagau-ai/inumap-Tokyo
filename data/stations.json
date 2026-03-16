@@ -108,14 +108,20 @@
     "line": "都営新宿線",
     "lat": 35.6962,
     "lng": 139.8877,
-    "walk": 40,
+    "walk": 80,
     "housing": 68,
     "medical": 30,
     "mobility": 50,
     "community": 69,
     "safety": 74,
     "fl": 3,
-    "parks": [],
+    "parks": [
+      "東部フレンド公園",
+      "みずえ中央公園",
+      "一之江分教場の杜",
+      "一之江一丁目児童遊園",
+      "一之江さくら公園"
+    ],
     "vets": [],
     "dogruns": [],
     "carshares": []
@@ -126,14 +132,20 @@
     "line": "都営新宿線",
     "lat": 35.7012,
     "lng": 139.8974,
-    "walk": 40,
+    "walk": 80,
     "housing": 72,
     "medical": 30,
     "mobility": 50,
     "community": 70,
     "safety": 76,
     "fl": 2,
-    "parks": [],
+    "parks": [
+      "篠崎六丁目公園",
+      "南篠崎つつじ公園",
+      "都立篠崎公園B地区",
+      "高田公園",
+      "東部フレンド公園"
+    ],
     "vets": [],
     "dogruns": [],
     "carshares": []
@@ -210,20 +222,14 @@
     "line": "JR総武線",
     "lat": 35.7022,
     "lng": 139.8472,
-    "walk": 80,
+    "walk": 40,
     "housing": 70,
     "medical": 30,
     "mobility": 50,
     "community": 72,
     "safety": 70,
     "fl": 1,
-    "parks": [
-      "大島小松川公園",
-      "大島小松川公園 スポーツ広場",
-      "大島小松川公園 自由の広場",
-      "亀戸浅間公園",
-      "小松川たんぽぽ公園"
-    ],
+    "parks": [],
     "vets": [],
     "dogruns": [],
     "carshares": []
@@ -261,24 +267,15 @@
     "line": "京成本線",
     "lat": 35.742,
     "lng": 139.8839,
-    "walk": 80,
+    "walk": 40,
     "housing": 67,
-    "medical": 54,
+    "medical": 30,
     "mobility": 50,
     "community": 67,
     "safety": 68,
     "fl": 2,
-    "parks": [
-      "小岩公園",
-      "柴又公園",
-      "北小岩コスモス児童遊園",
-      "北小岩二丁目第三児童遊園",
-      "西小岩公園"
-    ],
-    "vets": [
-      "モネ動物病院",
-      "葛飾アニマルホスピタル"
-    ],
+    "parks": [],
+    "vets": [],
     "dogruns": [],
     "carshares": []
   }
