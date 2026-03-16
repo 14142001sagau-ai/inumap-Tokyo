@@ -1,7 +1,7 @@
 import requests, json, os, time, openpyxl
 OVERPASS = 'https://overpass-api.de/api/interpreter'
 EXCEL = 'data/master.xlsx'
-RADIUS = 2500
+RADIUS = 2000
 HOUSING   = {'nishikasai':62,'kasai':63,'kasairinkai':50,'funabori':66,'ichinoe':68,'mizue':72,'shinozaki':76,'koiwa':70,'shinkoiwa':68,'hirai':70,'edogawa':68,'keiseikoiwa':67}
 SAFETY    = {'nishikasai':78,'kasai':74,'kasairinkai':82,'funabori':72,'ichinoe':74,'mizue':76,'shinozaki':82,'koiwa':55,'shinkoiwa':54,'hirai':70,'edogawa':70,'keiseikoiwa':68}
 COMMUNITY = {'nishikasai':71,'kasai':69,'kasairinkai':65,'funabori':67,'ichinoe':69,'mizue':70,'shinozaki':79,'koiwa':70,'shinkoiwa':68,'hirai':72,'edogawa':68,'keiseikoiwa':67}
