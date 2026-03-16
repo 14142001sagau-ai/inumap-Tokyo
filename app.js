@@ -51,23 +51,68 @@ function gs(v){
   return{c:"#b71c1c",b:"D"};
 }
 function getNote(station, key){
-  // stations.jsonにnotesフィールドがあればそれを使用
   if(station.notes && station.notes[key]) return station.notes[key];
-  // なければ自動生成
-  const dog=key[1];
-  const nm={walk:"散歩・公園",housing:"住環境・家賃",medical:"医療・サポート",mobility:"移動",community:"地域"};
-  const top=Object.entries({
-    walk:station.walk,housing:station.housing,
-    medical:station.medical,mobility:station.mobility,community:station.community
-  }).sort((x,y)=>y[1]-x[1]);
-  const lines=[
-    `${nm[top[0][0]]}が区内上位（${top[0][1]}点）`,
-    `${nm[top[1][0]]}も強み（${top[1][1]}点）`,
-    `${nm[top[top.length-1][0]]}はやや低め（${top[top.length-1][1]}点）`,
-  ];
-  if(dog==="X") lines.push("小型犬OKの物件・カフェを探せるエリア");
-  else if(dog==="Y") lines.push("大型犬の散歩コースへのアクセスを確認して");
-  else lines.push("シニア犬のかかりつけ医は早めに確保を");
+  const dog = key[1];
+  const lines = [];
+  const parks = station.parks || [];
+  const dogruns = station.dogruns || [];
+  let walkLine = "";
+  if(dogruns.length > 0){
+    walkLine = "🐾 散歩・安全: " + dogruns[0] + "のドッグランあり。";
+    if(parks.length > 0) walkLine += parks[0] + "など" + parks.length + "つの公園が徒歩圏内。";
+  } else if(parks.length >= 3){
+    walkLine = "🐾 散歩・安全: " + parks[0] + "など" + parks.length + "つの公園が徒歩圏内。";
+    walkLine += station.walk >= 70 ? "散歩コースが充実している。" : "日常の散歩には十分な環境。";
+  } else if(parks.length > 0){
+    walkLine = "🐾 散歩・安全: " + parks[0] + "が最寄り公園。";
+    walkLine += station.walk < 55 ? "大型公園へは移動が必要。" : "散歩環境は標準的。";
+  } else {
+    walkLine = "🐾 散歩・安全: 徒歩圏内の公園は少なめ。近隣エリアへの移動を推奨。";
+  }
+  if(dog === "Y") walkLine += station.walk >= 65 ? "大型犬の散歩スペースも確保しやすい。" : "大型犬は広い公園への遠出を検討して。";
+  lines.push(walkLine);
+  const housing = station.housing || 65;
+  const safety = station.safety || 70;
+  let houseLine = "🏠 住環境: ";
+  if(safety >= 78) houseLine += "治安は区内でも良好な部類。";
+  else if(safety >= 68) houseLine += "治安は平均的で落ち着いたエリア。";
+  else houseLine += "治安はやや注意が必要なエリア。";
+  if(housing >= 72) houseLine += "ペット可物件の選択肢が多く、大型犬OKも見つけやすい。";
+  else if(housing >= 65) houseLine += "ペット可物件は標準的な密度。";
+  else houseLine += "ペット可・大型犬OKの物件は少なめ、早めの情報収集を。";
+  lines.push(houseLine);
+  const vets = station.vets || [];
+  const medical = station.medical || 50;
+  let medLine = "🏥 医療・サポート: ";
+  if(vets.length >= 3){
+    medLine += vets.slice(0,2).join("、") + "など" + vets.length + "院が徒歩圏内。";
+    medLine += medical >= 65 ? "医療環境は充実。" : "動物病院の選択肢が多い。";
+  } else if(vets.length > 0){
+    medLine += vets[0] + "が最寄り動物病院。";
+    medLine += dog === "Z" ? "シニア犬のかかりつけは早めに確保を。" : "夜間救急は近隣エリアで要確認。";
+  } else {
+    medLine += "徒歩圏内の動物病院は少なめ。";
+    medLine += dog === "Z" ? "シニア犬には医療アクセスが重要、要確認。" : "近隣駅エリアで探すことを推奨。";
+  }
+  lines.push(medLine);
+  const carshares = station.carshares || [];
+  const mobility = station.mobility || 50;
+  let mobLine = "🚗 移動: ";
+  if(carshares.length > 0){
+    mobLine += carshares[0] + "などカーシェア" + carshares.length + "拠点あり。";
+    mobLine += dog === "Y" ? "大型犬の遠出に活用できる。" : "週末のお出かけに便利。";
+  } else if(mobility >= 60){
+    mobLine += "駅周辺のモビリティ環境は良好。レンタカーも利用しやすい。";
+  } else {
+    mobLine += "カーシェア拠点は少なめ。愛犬との遠出はレンタカーの事前予約を推奨。";
+  }
+  lines.push(mobLine);
+  const community = station.community || 68;
+  let comLine = "👥 地域: ";
+  if(community >= 75) comLine += "犬の飼育率が高く、愛犬家コミュニティが充実。同行避難所の整備も進んでいる。";
+  else if(community >= 68) comLine += "犬連れ住民も多く、地域のつながりが感じられるエリア。";
+  else comLine += "犬の飼育率は平均的。地域の犬友達コミュニティは自分から開拓を。";
+  lines.push(comLine);
   return lines;
 }
 
