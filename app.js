@@ -43,7 +43,7 @@ const tot=Object.values(w).reduce((a,b)=>a+b,0);
 const rs=areas.map(d=>AXES.reduce((s,a)=>s+(d[a.k]||0)*w[a.k],0)/tot);
 const avg=rs.reduce((a,b)=>a+b,0)/rs.length;
 const sd=Math.sqrt(rs.reduce((a,b)=>a+(b-avg)**2,0)/rs.length)||1;
-return areas.map((d,i)=>({...d,dev:Math.round((rs[i]-avg)/sd*10+50)}));
+return areas.map((d,i)=>({…d,dev:Math.round((rs[i]-avg)/sd*10+50)}));
 }
 function gs(v){
 if(v>=65)return{c:”#1b5e20”,b:“S”};
@@ -200,7 +200,7 @@ const w=key?WW[key]:null;
 const lc=life?LS[life].co:”#2e7d32”;
 const dc=dog?DG[dog].co:”#2e7d32”;
 const scored=useMemo(()=>w&&stations.length?calc(stations,w):[],[key,stations]);
-const sorted=useMemo(()=>[...scored].sort((a,b)=>b.dev-a.dev),[scored]);
+const sorted=useMemo(()=>[…scored].sort((a,b)=>b.dev-a.dev),[scored]);
 const selA=sel?scored.find(d=>d.id===sel):null;
 const selR=selA?sorted.findIndex(d=>d.id===sel)+1:null;
 
