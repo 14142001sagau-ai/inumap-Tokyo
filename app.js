@@ -1,4 +1,5 @@
 const {useState, useMemo, useEffect, useRef} = React;
+
 const WW={
 AX:{walk:12,housing:14,medical:42,mobility:10,community:12},
 AY:{walk:38,housing:22,medical:10,mobility:20,community:10},
@@ -35,12 +36,14 @@ const FC={1:“rgba(255,255,100,0.35)”,2:“rgba(255,180,50,0.4)”,3:“rgba(
 const FL={1:“低 0-0.5m”,2:“中 0.5-3m”,3:“高 3-5m”,4:“危 5m+”,5:“最危 10m+”};
 const DATA_URL=“https://raw.githubusercontent.com/14142001sagau-ai/inumap-Tokyo/main/data/stations.json”;
 const COMMENTS_URL=“https://raw.githubusercontent.com/14142001sagau-ai/inumap-Tokyo/main/data/comments.json”;
+const COMMENT_LABELS={walk:“🐾 散歩・安全”,housing:“🏠 住環境”,medical:“🏥 医療・サポート”,mobility:“🚗 移動”,community:“👥 地域”};
+
 function calc(areas,w){
 const tot=Object.values(w).reduce((a,b)=>a+b,0);
-const rs=areas.map(d=>AXES.reduce((s,a)=>s+(d[a.k]||0)w[a.k],0)/tot);
+const rs=areas.map(d=>AXES.reduce((s,a)=>s+(d[a.k]||0)*w[a.k],0)/tot);
 const avg=rs.reduce((a,b)=>a+b,0)/rs.length;
 const sd=Math.sqrt(rs.reduce((a,b)=>a+(b-avg)**2,0)/rs.length)||1;
-return areas.map((d,i)=>({…d,dev:Math.round((rs[i]-avg)/sd10+50)}));
+return areas.map((d,i)=>({…d,dev:Math.round((rs[i]-avg)/sd*10+50)}));
 }
 function gs(v){
 if(v>=65)return{c:”#1b5e20”,b:“S”};
@@ -55,24 +58,24 @@ const dog = key[1];
 const lines = [];
 const parks = station.parks || [];
 const dogruns = station.dogruns || [];
-let walkLine = “”;
+let walkLine = “🐾 散歩・安全： “;
 if(dogruns.length > 0){
-walkLine = “🐾 散歩・安全: “ + dogruns[0] + “のドッグランあり。”;
+walkLine += dogruns[0] + “のドッグランあり。”;
 if(parks.length > 0) walkLine += parks[0] + “など” + parks.length + “つの公園が徒歩圏内。”;
 } else if(parks.length >= 3){
-walkLine = “🐾 散歩・安全: “ + parks[0] + “など” + parks.length + “つの公園が徒歩圏内。”;
+walkLine += parks[0] + “など” + parks.length + “つの公園が徒歩圏内。”;
 walkLine += station.walk >= 70 ? “散歩コースが充実している。” : “日常の散歩には十分な環境。”;
 } else if(parks.length > 0){
-walkLine = “🐾 散歩・安全: “ + parks[0] + “が最寄り公園。”;
+walkLine += parks[0] + “が最寄り公園。”;
 walkLine += station.walk < 55 ? “大型公園へは移動が必要。” : “散歩環境は標準的。”;
 } else {
-walkLine = “🐾 散歩・安全: 徒歩圏内の公園は少なめ。近隣エリアへの移動を推奨。”;
+walkLine += “徒歩圏内の公園は少なめ。近隣エリアへの移動を推奨。”;
 }
 if(dog === “Y”) walkLine += station.walk >= 65 ? “大型犬の散歩スペースも確保しやすい。” : “大型犬は広い公園への遠出を検討して。”;
 lines.push(walkLine);
 const housing = station.housing || 65;
 const safety = station.safety || 70;
-let houseLine = “🏠 住環境: “;
+let houseLine = “🏠 住環境： “;
 if(safety >= 78) houseLine += “治安は区内でも良好な部類。”;
 else if(safety >= 68) houseLine += “治安は平均的で落ち着いたエリア。”;
 else houseLine += “治安はやや注意が必要なエリア。”;
@@ -82,7 +85,7 @@ else houseLine += “ペット可・大型犬OKの物件は少なめ、早めの
 lines.push(houseLine);
 const vets = station.vets || [];
 const medical = station.medical || 50;
-let medLine = “🏥 医療・サポート: “;
+let medLine = “🏥 医療・サポート： “;
 if(vets.length >= 3){
 medLine += vets.slice(0,2).join(”、”) + “など” + vets.length + “院が徒歩圏内。”;
 medLine += medical >= 65 ? “医療環境は充実。” : “動物病院の選択肢が多い。”;
@@ -96,7 +99,7 @@ medLine += dog === “Z” ? “シニア犬には医療アクセスが重要、
 lines.push(medLine);
 const carshares = station.carshares || [];
 const mobility = station.mobility || 50;
-let mobLine = “🚗 移動: “;
+let mobLine = “🚗 移動： “;
 if(carshares.length > 0){
 mobLine += carshares[0] + “などカーシェア” + carshares.length + “拠点あり。”;
 mobLine += dog === “Y” ? “大型犬の遠出に活用できる。” : “週末のお出かけに便利。”;
@@ -107,18 +110,20 @@ mobLine += “カーシェア拠点は少なめ。愛犬との遠出はレンタ
 }
 lines.push(mobLine);
 const community = station.community || 68;
-let comLine = “👥 地域: “;
+let comLine = “👥 地域： “;
 if(community >= 75) comLine += “犬の飼育率が高く、愛犬家コミュニティが充実。同行避難所の整備も進んでいる。”;
 else if(community >= 68) comLine += “犬連れ住民も多く、地域のつながりが感じられるエリア。”;
 else comLine += “犬の飼育率は平均的。地域の犬友達コミュニティは自分から開拓を。”;
 lines.push(comLine);
 return lines;
 }
+
 function MapView({scored, selId, onSel, flood}){
 const mapRef=useRef(null);
 const leafRef=useRef(null);
 const markersRef=useRef([]);
 const floodRef=useRef([]);
+
 useEffect(()=>{
 if(leafRef.current) return;
 leafRef.current=L.map(mapRef.current,{center:[35.685,139.870],zoom:12,zoomControl:true});
@@ -126,6 +131,7 @@ L.tileLayer(‘https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png’,{
 attribution:‘© OpenStreetMap contributors’,maxZoom:19
 }).addTo(leafRef.current);
 },[]);
+
 useEffect(()=>{
 if(!leafRef.current) return;
 markersRef.current.forEach(m=>m.remove());
@@ -136,7 +142,7 @@ const iS=d.id===selId;
 const size=iS?44:32;
 const icon=L.divIcon({
 className:’’,
-html:<div style="width:${size}px;height:${size}px;border-radius:50%;background:${s.c};border:${iS?'3px solid #fff':'2px solid rgba(255,255,255,0.8)'};display:flex;align-items:center;justify-content:center;font-size:${iS?13:10}px;font-weight:900;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.35);cursor:pointer">${s.b}</div>,
+html:`<div style="width:${size}px;height:${size}px;border-radius:50%;background:${s.c};border:${iS?'3px solid #fff':'2px solid rgba(255,255,255,0.8)'};display:flex;align-items:center;justify-content:center;font-size:${iS?13:10}px;font-weight:900;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.35);cursor:pointer">${s.b}</div>`,
 iconSize:[size,size],iconAnchor:[size/2,size/2]
 });
 const marker=L.marker([d.lat,d.lng],{icon}).addTo(leafRef.current);
@@ -144,6 +150,7 @@ marker.on(‘click’,()=>onSel(d.id===selId?null:d.id));
 markersRef.current.push(marker);
 });
 },[scored,selId]);
+
 useEffect(()=>{
 if(!leafRef.current) return;
 floodRef.current.forEach(l=>l.remove());
@@ -159,8 +166,10 @@ floodRef.current.push(circle);
 });
 }
 },[flood,scored]);
+
 return React.createElement(‘div’,{ref:mapRef,style:{width:‘100%’,height:‘100%’}});
 }
+
 function App(){
 const[life,setLife]=useState(null);
 const[dog,setDog]=useState(null);
@@ -171,18 +180,21 @@ const[stations,setStations]=useState([]);
 const[comments,setComments]=useState({});
 const[loading,setLoading]=useState(true);
 const[error,setError]=useState(null);
+
 useEffect(()=>{
 fetch(DATA_URL)
 .then(r=>r.json())
 .then(data=>{setStations(data);setLoading(false);})
 .catch(e=>{setError(“データ取得エラー”);setLoading(false);});
 },[]);
+
 useEffect(()=>{
 fetch(COMMENTS_URL)
 .then(r=>r.json())
 .then(data=>setComments(data))
 .catch(()=>{});
 },[]);
+
 const key=life&&dog?life+dog:null;
 const w=key?WW[key]:null;
 const lc=life?LS[life].co:”#2e7d32”;
@@ -191,14 +203,17 @@ const scored=useMemo(()=>w&&stations.length?calc(stations,w):[],[key,stations]);
 const sorted=useMemo(()=>[…scored].sort((a,b)=>b.dev-a.dev),[scored]);
 const selA=sel?scored.find(d=>d.id===sel):null;
 const selR=selA?sorted.findIndex(d=>d.id===sel)+1:null;
+
 if(loading) return React.createElement(“div”,{style:{height:“100dvh”,display:“flex”,alignItems:“center”,justifyContent:“center”,background:”#f0f7f0”,flexDirection:“column”,gap:16}},
 React.createElement(“div”,{style:{fontSize:32}},“🐕”),
 React.createElement(“div”,{style:{fontSize:14,color:”#2e7d32”,fontWeight:700}},“データを読み込み中…”)
 );
+
 if(error) return React.createElement(“div”,{style:{height:“100dvh”,display:“flex”,alignItems:“center”,justifyContent:“center”,background:”#f0f7f0”,flexDirection:“column”,gap:16}},
 React.createElement(“div”,{style:{fontSize:32}},“⚠️”),
 React.createElement(“div”,{style:{fontSize:14,color:”#c62828”}},“データの読み込みに失敗しました”)
 );
+
 if(phase===“select”) return React.createElement(“div”,{style:{height:“100dvh”,background:“linear-gradient(160deg,#f0f7f0,#e8f0e8)”,display:“flex”,flexDirection:“column”,overflow:“hidden”}},
 React.createElement(“div”,{style:{padding:“16px 20px 8px”,textAlign:“center”,flexShrink:0}},
 React.createElement(“div”,{style:{fontSize:28}},“🐕”),
@@ -241,6 +256,7 @@ key?“🗺️ マップを見る →”:“①と②を選んでください”
 ),
 React.createElement(“div”,{style:{padding:“6px”,fontSize:7.5,color:”#aabcaa”,textAlign:“center”}},“📊 OSM/国土数値情報/e-Stat推定値 ⚠️ データは月次自動更新”)
 );
+
 return React.createElement(“div”,{style:{display:“flex”,flexDirection:“column”,height:“100dvh”,overflow:“hidden”}},
 React.createElement(“div”,{style:{background:”#fff”,borderBottom:“1px solid #dde4dd”,padding:“5px 10px”,flexShrink:0}},
 React.createElement(“div”,{style:{display:“flex”,alignItems:“center”,gap:5,marginBottom:4}},
@@ -300,14 +316,20 @@ selA.facilities.shops&&React.createElement(“div”,null,“🛒 “+selA.facil
 selA.facilities.vets&&React.createElement(“div”,null,“🏥 “+selA.facilities.vets.join(”・”)),
 selA.facilities.cafes&&React.createElement(“div”,null,“☕ “+selA.facilities.cafes.join(”・”))
 ),
-React.createElement(“div”,{style:{marginTop:8,padding:“8px 10px”,background:dog===“X”?”#fce4ec”:dog===“Y”?”#e8f5e9”:”#fff3e0”,borderLeft:“3px solid “+(dog===“X”?”#c2185b”:dog===“Y”?”#2e7d32”:”#e65100”),borderRadius:“0 6px 6px 0”,fontSize:8.5,lineHeight:1.8}},
+React.createElement(“div”,{style:{marginTop:8,padding:“10px 12px”,background:dog===“X”?”#fce4ec”:dog===“Y”?”#e8f5e9”:”#fff3e0”,borderLeft:“3px solid “+(dog===“X”?”#c2185b”:dog===“Y”?”#2e7d32”:”#e65100”),borderRadius:“0 8px 8px 0”}},
 (comments[selA.id]&&comments[selA.id][dog]
-?[“walk”,“housing”,“medical”,“mobility”,“community”].map((k,i)=>React.createElement(“div”,{key:i,style:{marginBottom:6}},comments[selA.id][dog][k]))
-:getNote(selA,key).map((l,i)=>React.createElement(“div”,{key:i},”・”+l)))
+?[“walk”,“housing”,“medical”,“mobility”,“community”].map((k,i)=>React.createElement(“div”,{key:i,style:{marginBottom:12}},
+React.createElement(“div”,{style:{fontSize:10,fontWeight:700,color:dog===“X”?”#c2185b”:dog===“Y”?”#2e7d32”:”#e65100”,marginBottom:3}},COMMENT_LABELS[k]),
+React.createElement(“div”,{style:{fontSize:11,lineHeight:1.8,color:”#2a3a2a”}},comments[selA.id][dog][k])
+))
+:getNote(selA,key).map((l,i)=>React.createElement(“div”,{key:i,style:{marginBottom:12}},
+React.createElement(“div”,{style:{fontSize:11,lineHeight:1.8,color:”#2a3a2a”}},l)
+)))
 )
 )
 )
 )
 );
 }
+
 ReactDOM.createRoot(document.getElementById(“root”)).render(React.createElement(App));
