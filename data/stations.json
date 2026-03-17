@@ -5,26 +5,15 @@
     "line": "東京メトロ東西線",
     "lat": 35.6646,
     "lng": 139.8592,
-    "walk": 80,
+    "walk": 40,
     "housing": 62,
-    "medical": 78,
+    "medical": 30,
     "mobility": 50,
     "community": 71,
     "safety": 78,
     "fl": 4,
-    "parks": [
-      "playpark",
-      "ふれあいの森宇喜田公園",
-      "都立宇喜田公園",
-      "やまびこ公園",
-      "さざなみ公園"
-    ],
-    "vets": [
-      "ACプラザ苅谷動物病院",
-      "西葛西ペットクリニック",
-      "キャミャックひがし東京",
-      "フルール動物病院"
-    ],
+    "parks": [],
+    "vets": [],
     "dogruns": [],
     "carshares": []
   },
@@ -34,30 +23,17 @@
     "line": "東京メトロ東西線",
     "lat": 35.6635,
     "lng": 139.8727,
-    "walk": 80,
+    "walk": 40,
     "housing": 63,
-    "medical": 78,
-    "mobility": 60,
+    "medical": 30,
+    "mobility": 50,
     "community": 69,
     "safety": 74,
     "fl": 3,
-    "parks": [
-      "playpark",
-      "ふれあいの森宇喜田公園",
-      "都立宇喜田公園",
-      "やまびこ公園",
-      "さざなみ公園"
-    ],
-    "vets": [
-      "ACプラザ苅谷動物病院",
-      "西葛西ペットクリニック",
-      "キャミャックひがし東京",
-      "フルール動物病院"
-    ],
+    "parks": [],
+    "vets": [],
     "dogruns": [],
-    "carshares": [
-      "Trendy24"
-    ]
+    "carshares": []
   },
   {
     "id": "kasairinkai",
@@ -107,14 +83,20 @@
     "line": "都営新宿線",
     "lat": 35.6859,
     "lng": 139.883,
-    "walk": 40,
+    "walk": 80,
     "housing": 68,
     "medical": 30,
     "mobility": 50,
     "community": 69,
     "safety": 74,
     "fl": 3,
-    "parks": [],
+    "parks": [
+      "南篠崎つつじ公園",
+      "春江五丁目公園",
+      "東小松川スポーツ公園",
+      "南行徳公園",
+      "一之江フレンド公園"
+    ],
     "vets": [],
     "dogruns": [],
     "carshares": []
