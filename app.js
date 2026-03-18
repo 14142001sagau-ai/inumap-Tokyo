@@ -9,28 +9,28 @@ BY:{walk:30,housing:24,medical:12,mobility:18,community:16},
 BZ:{walk:22,housing:22,medical:36,mobility:6,community:14}
 };
 const AXES=[
-{k:“walk”,lb:”\u{1F43E} \u6563\u6B69\u30FB\u5B89\u5168”,co:”#2e7d32”},
-{k:“housing”,lb:”\u{1F3E0} \u4F4F\u74B0\u5883”,co:”#1565c0”},
-{k:“medical”,lb:”\u{1F3AA}\u{1F3E5} \u30B5\u30DD\u30FC\u30C8\u30FB\u533B\u7642”,co:”#c2185b”},
-{k:“mobility”,lb:”\u{1F697} \u79FB\u52D5”,co:”#e65100”},
-{k:“community”,lb:”\u{1F465} \u5730\u57DF”,co:”#6a1a9a”}
+{k:“walk”,lb:”\uD83D\uDC3E \u6563\u6B69\u30FB\u5B89\u5168”,co:”#2e7d32”},
+{k:“housing”,lb:”\uD83C\uDFE0 \u4F4F\u74B0\u5883”,co:”#1565c0”},
+{k:“medical”,lb:”\uD83C\uDFAA\uD83C\uDFE5 \u30B5\u30DD\u30FC\u30C8\u30FB\u533B\u7642”,co:”#c2185b”},
+{k:“mobility”,lb:”\uD83D\uDE97 \u79FB\u52D5”,co:”#e65100”},
+{k:“community”,lb:”\uD83D\uDC65 \u5730\u57DF”,co:”#6a1a9a”}
 ];
 const LS={
-A:{lb:”\u5358\u8EAB\u30FB\u5171\u5171\u304D”,em:”\u{1F3D9}”,co:”#1565c0”,de:”\u4ED5\u4E8B\u5E30\u308A\u306E\u5229\u4FBF\u30FB\u533B\u7642\u30A2\u30AF\u30BB\u30B9\u3092\u91CD\u8996”},
-B:{lb:”\u5B50\u80B2\u3066\u30D5\u30A1\u30DF\u30EA\u30FC”,em:”\u{1F46A}”,co:”#6a1a9a”,de:”\u5B50\u80B2\u3066\u74B0\u5883\u30FB\u516C\u5712\u30FB\u30B3\u30DF\u30E5\u30CB\u30C6\u30A3\u3092\u91CD\u8996”}
+A:{lb:”\u5358\u8EAB\u30FB\u5171\u5171\u304D”,em:”\uD83C\uDFD9”,co:”#1565c0”,de:”\u4ED5\u4E8B\u5E30\u308A\u306E\u5229\u4FBF\u30FB\u533B\u7642\u30A2\u30AF\u30BB\u30B9\u3092\u91CD\u8996”},
+B:{lb:”\u5B50\u80B2\u3066\u30D5\u30A1\u30DF\u30EA\u30FC”,em:”\uD83D\uDC6A”,co:”#6a1a9a”,de:”\u5B50\u80B2\u3066\u74B0\u5883\u30FB\u516C\u5712\u30FB\u30B3\u30DF\u30E5\u30CB\u30C6\u30A3\u3092\u91CD\u8996”}
 };
 const DG={
-X:{lb:”\u5C0F\u578B\u72AC”,em:”\u{1F429}”,co:”#c2185b”,de:”\u5BA4\u5185\u6D3E\u30FB\u30AB\u30D5\u30A7/\u30C9\u30C3\u30B0\u30E9\u30F3/\u30DA\u30C3\u30C8\u30DB\u30C6\u30EB\u304C\u9375”},
-Y:{lb:”\u4E2D\u30FB\u5927\u578B\u72AC”,em:”\u{1F415}”,co:”#2e7d32”,de:”\u5E83\u3044\u6563\u6B69\u30B9\u30DA\u30FC\u30B9\u30FB\u30E2\u30D3\u30EA\u30C6\u30A3\u304C\u91CD\u8981”},
-Z:{lb:”\u30B7\u30CB\u30A2\u30FB\u6301\u75C5”,em:”\u{1F3E5}”,co:”#e65100”,de:”\u52D5\u7269\u75C5\u9662\u30FB\u591C\u9593\u6551\u6025\u3078\u306E\u30A2\u30AF\u30BB\u30B9\u304C\u6700\u91CD\u8981”}
+X:{lb:”\u5C0F\u578B\u72AC”,em:”\uD83D\uDC29”,co:”#c2185b”,de:”\u5BA4\u5185\u6D3E\u30FB\u30AB\u30D5\u30A7/\u30C9\u30C3\u30B0\u30E9\u30F3/\u30DA\u30C3\u30C8\u30DB\u30C6\u30EB\u304C\u9375”},
+Y:{lb:”\u4E2D\u30FB\u5927\u578B\u72AC”,em:”\uD83D\uDC15”,co:”#2e7d32”,de:”\u5E83\u3044\u6563\u6B69\u30B9\u30DA\u30FC\u30B9\u30FB\u30E2\u30D3\u30EA\u30C6\u30A3\u304C\u91CD\u8981”},
+Z:{lb:”\u30B7\u30CB\u30A2\u30FB\u6301\u75C5”,em:”\uD83C\uDFE5”,co:”#e65100”,de:”\u52D5\u7269\u75C5\u9662\u30FB\u591C\u9593\u6551\u6025\u3078\u306E\u30A2\u30AF\u30BB\u30B9\u304C\u6700\u91CD\u8981”}
 };
 const ML={
-AX:”\u2615\u{1F3E8}\u{1F43E} \u30AB\u30D5\u30A7\u30FB\u30DA\u30C3\u30C8\u30DB\u30C6\u30EB\u30FB\u5BA4\u5185\u30C9\u30C3\u30B0\u30E9\u30F3\u30FB\u52D5\u7269\u75C5\u9662”,
-AY:”\u{1F3E5} \u52D5\u7269\u75C5\u9662\u30FB\u591C\u9593\u6551\u6025”,
-AZ:”\u{1F3E5} \u52D5\u7269\u75C5\u9662\u30FB\u591C\u9593\u6551\u6025\uFF08\u6700\u91CD\u8981\uFF09”,
-BX:”\u2615\u{1F3E5} \u30AB\u30D5\u30A7\u30FB\u30B5\u30DD\u30FC\u30C8\u30FB\u52D5\u7269\u75C5\u9662”,
-BY:”\u{1F3E5} \u52D5\u7269\u75C5\u9662\u30FBSC\u30FB\u30B9\u30FC\u30D1\u30FC”,
-BZ:”\u{1F3E5} \u52D5\u7269\u75C5\u9662\u30FB\u591C\u9593\u6551\u6025\u30FB\u8CB7\u3044\u7269”
+AX:”\u2615\uD83C\uDFE8\uD83D\uDC3E \u30AB\u30D5\u30A7\u30FB\u30DA\u30C3\u30C8\u30DB\u30C6\u30EB\u30FB\u5BA4\u5185\u30C9\u30C3\u30B0\u30E9\u30F3\u30FB\u52D5\u7269\u75C5\u9662”,
+AY:”\uD83C\uDFE5 \u52D5\u7269\u75C5\u9662\u30FB\u591C\u9593\u6551\u6025”,
+AZ:”\uD83C\uDFE5 \u52D5\u7269\u75C5\u9662\u30FB\u591C\u9593\u6551\u6025\uFF08\u6700\u91CD\u8981\uFF09”,
+BX:”\u2615\uD83C\uDFE5 \u30AB\u30D5\u30A7\u30FB\u30B5\u30DD\u30FC\u30C8\u30FB\u52D5\u7269\u75C5\u9662”,
+BY:”\uD83C\uDFE5 \u52D5\u7269\u75C5\u9662\u30FBSC\u30FB\u30B9\u30FC\u30D1\u30FC”,
+BZ:”\uD83C\uDFE5 \u52D5\u7269\u75C5\u9662\u30FB\u591C\u9593\u6551\u6025\u30FB\u8CB7\u3044\u7269”
 };
 const FC={1:“rgba(255,255,100,0.35)”,2:“rgba(255,180,50,0.4)”,3:“rgba(240,100,20,0.45)”,4:“rgba(200,30,20,0.5)”,5:“rgba(140,0,0,0.55)”};
 const FL={1:”\u4F4E 0-0.5m”,2:”\u4E2D 0.5-3m”,3:”\u9AD8 3-5m”,4:”\u5371 5m+”,5:”\u6700\u5371 10m+”};
@@ -197,7 +197,7 @@ const selA=sel?scored.find(d=>d.id===sel):null;
 const selR=selA?sorted.findIndex(d=>d.id===sel)+1:null;
 
 if(loading)return React.createElement(“div”,{style:{height:“100dvh”,display:“flex”,alignItems:“center”,justifyContent:“center”,background:”#f0f7f0”,flexDirection:“column”,gap:16}},
-React.createElement(“div”,{style:{fontSize:32}},”\u{1F415}”),
+React.createElement(“div”,{style:{fontSize:32}},”\uD83D\uDC15”),
 React.createElement(“div”,{style:{fontSize:14,color:”#2e7d32”,fontWeight:700}},”\u30C7\u30FC\u30BF\u3092\u8AAD\u307F\u8FBC\u307F\u4E2D…”)
 );
 if(error)return React.createElement(“div”,{style:{height:“100dvh”,display:“flex”,alignItems:“center”,justifyContent:“center”,background:”#f0f7f0”,flexDirection:“column”,gap:16}},
@@ -207,7 +207,7 @@ React.createElement(“div”,{style:{fontSize:14,color:”#c62828”}},”\u30C
 
 if(phase===“select”)return React.createElement(“div”,{style:{height:“100dvh”,background:“linear-gradient(160deg,#f0f7f0,#e8f0e8)”,display:“flex”,flexDirection:“column”,overflow:“hidden”}},
 React.createElement(“div”,{style:{padding:“16px 20px 8px”,textAlign:“center”,flexShrink:0}},
-React.createElement(“div”,{style:{fontSize:28}},”\u{1F415}”),
+React.createElement(“div”,{style:{fontSize:28}},”\uD83D\uDC15”),
 React.createElement(“div”,{style:{fontSize:20,fontWeight:900,color:”#1b5e20”}},“INUMAP TOKYO”),
 React.createElement(“div”,{style:{fontSize:10,color:”#7a9a7a”}},”\u6771\u4EAC23\u533A \u99C5\u5468\u8FBA\u30A8\u30EA\u30A2 \u72AC\u9023\u308C\u30B9\u30B3\u30A2 \u2014 Beta”)
 ),
@@ -238,24 +238,24 @@ w[ax.k]>=12&&React.createElement(“span”,{style:{fontSize:7.5,color:”#fff�
 ))
 ),
 React.createElement(“div”,{style:{fontSize:8.5,color:”#7a1a3a”,background:”#fce4ec”,borderRadius:8,padding:“6px 10px”,lineHeight:1.7,border:“1px solid #f8bbd0”}},
-“\u{1F3AA}\u{1F3E5} \u30B5\u30DD\u30FC\u30C8\u30FB\u533B\u7642\u306E\u4E2D\u8EAB: “,React.createElement(“span”,{style:{color:”#c2185b”,fontWeight:700}},ML[key])
+“\uD83C\uDFAA\uD83C\uDFE5 \u30B5\u30DD\u30FC\u30C8\u30FB\u533B\u7642\u306E\u4E2D\u8EAB: “,React.createElement(“span”,{style:{color:”#c2185b”,fontWeight:700}},ML[key])
 )
 ),
 React.createElement(“button”,{onClick:()=>key&&setPhase(“map”),disabled:!key,style:{width:“100%”,padding:“15px”,borderRadius:16,border:“none”,cursor:key?“pointer”:“not-allowed”,background:key?“linear-gradient(135deg,”+lc+”,”+dc+”)”:”#ccc”,color:”#fff”,fontSize:14,fontWeight:900,boxShadow:key?“0 6px 18px rgba(0,0,0,0.18)”:“none”,opacity:key?1:0.5}},
-key?”\u{1F5FA} \u30DE\u30C3\u30D7\u3092\u898B\u308B \u2192”:”\u2460\u3068\u2461\u3092\u9078\u3093\u3067\u304F\u3060\u3055\u3044”
+key?”\uD83D\uDDFA \u30DE\u30C3\u30D7\u3092\u898B\u308B \u2192”:”\u2460\u3068\u2461\u3092\u9078\u3093\u3067\u304F\u3060\u3055\u3044”
 )
 ),
-React.createElement(“div”,{style:{padding:“6px”,fontSize:7.5,color:”#aabcaa”,textAlign:“center”}},”\u{1F4CA} OSM/\u56FD\u571F\u6570\u5024\u60C5\u5831/e-Stat\u63A8\u5B9A\u5024 \u26A0\uFE0F \u30C7\u30FC\u30BF\u306F\u6708\u6B21\u81EA\u52D5\u66F4\u65B0”)
+React.createElement(“div”,{style:{padding:“6px”,fontSize:7.5,color:”#aabcaa”,textAlign:“center”}},”\uD83D\uDCCA OSM/\u56FD\u571F\u6570\u5024\u60C5\u5831/e-Stat\u63A8\u5B9A\u5024 \u26A0\uFE0F \u30C7\u30FC\u30BF\u306F\u6708\u6B21\u81EA\u52D5\u66F4\u65B0”)
 );
 
 return React.createElement(“div”,{style:{display:“flex”,flexDirection:“column”,height:“100dvh”,overflow:“hidden”}},
 React.createElement(“div”,{style:{background:”#fff”,borderBottom:“1px solid #dde4dd”,padding:“5px 10px”,flexShrink:0}},
 React.createElement(“div”,{style:{display:“flex”,alignItems:“center”,gap:5,marginBottom:4}},
 React.createElement(“button”,{onClick:()=>{setPhase(“select”);setSel(null);},style:{background:“none”,border:“1px solid #dde4dd”,borderRadius:8,padding:“2px 7px”,fontSize:8.5,cursor:“pointer”,color:”#5a7a5a”}},”\u2190 \u9078\u3073\u76F4\u3059”),
-React.createElement(“span”,{style:{fontSize:12,fontWeight:900,color:”#1b5e20”}},”\u{1F415} INUMAP”),
+React.createElement(“span”,{style:{fontSize:12,fontWeight:900,color:”#1b5e20”}},”\uD83D\uDC15 INUMAP”),
 React.createElement(“span”,{style:{fontSize:8,color:”#aac0aa”}},“Beta”),
 React.createElement(“span”,{style:{fontSize:8.5,fontWeight:700,padding:“2px 7px”,borderRadius:10,background:lc+“18”,color:lc,border:“1px solid “+lc+“44”}},LS[life].em+life+” x “+DG[dog].em+dog),
-React.createElement(“button”,{onClick:()=>setFlood(f=>!f),style:{marginLeft:“auto”,padding:“3px 9px”,borderRadius:10,border:“1.5px solid “+(flood?”#d32f2f”:”#dde4dd”),background:flood?”#ffebee”:”#f5f5f5”,color:flood?”#d32f2f”:”#888”,fontSize:8.5,fontWeight:700,cursor:“pointer”}},”\u{1F30A}”+(flood?“ON”:”\u6D2A\u6C34”))
+React.createElement(“button”,{onClick:()=>setFlood(f=>!f),style:{marginLeft:“auto”,padding:“3px 9px”,borderRadius:10,border:“1.5px solid “+(flood?”#d32f2f”:”#dde4dd”),background:flood?”#ffebee”:”#f5f5f5”,color:flood?”#d32f2f”:”#888”,fontSize:8.5,fontWeight:700,cursor:“pointer”}},”\uD83C\uDF0A”+(flood?“ON”:”\u6D2A\u6C34”))
 ),
 React.createElement(“div”,{style:{display:“flex”,height:18,borderRadius:6,overflow:“hidden”,marginBottom:4}},
 AXES.map(ax=>React.createElement(“div”,{key:ax.k,style:{flex:w[ax.k],background:ax.co,display:“flex”,alignItems:“center”,justifyContent:“center”,minWidth:0}},
@@ -290,7 +290,7 @@ React.createElement(“div”,{style:{display:“flex”,alignItems:“center”
 React.createElement(“div”,{style:{fontSize:42,fontWeight:900,color:gs(selA.dev).c,lineHeight:1}},selA.dev),
 React.createElement(“span”,{style:{fontSize:10,fontWeight:900,color:”#fff”,background:gs(selA.dev).c,padding:“3px 9px”,borderRadius:6}},gs(selA.dev).b+” \u30E9\u30F3\u30AF”)
 ),
-flood&&selA.fl&&React.createElement(“div”,{style:{marginBottom:10,padding:“5px 8px”,background:”#fff3f3”,borderLeft:“3px solid #d32f2f”,borderRadius:“0 6px 6px 0”,fontSize:8.5,color:”#7a2a2a”}},”\u{1F30A} \u6D2A\u6C34\u30EA\u30B9\u30AF: “+FL[selA.fl]),
+flood&&selA.fl&&React.createElement(“div”,{style:{marginBottom:10,padding:“5px 8px”,background:”#fff3f3”,borderLeft:“3px solid #d32f2f”,borderRadius:“0 6px 6px 0”,fontSize:8.5,color:”#7a2a2a”}},”\uD83C\uDF0A \u6D2A\u6C34\u30EA\u30B9\u30AF: “+FL[selA.fl]),
 AXES.map(ax=>{const v=selA[ax.k]||0;return React.createElement(“div”,{key:ax.k,style:{marginBottom:5}},
 React.createElement(“div”,{style:{display:“flex”,justifyContent:“space-between”,fontSize:8.5,color:”#4a6a4a”,marginBottom:1.5}},
 React.createElement(“span”,null,ax.lb,React.createElement(“span”,{style:{fontSize:6.5,background:ax.co+“18”,color:ax.co,padding:“1px 3px”,borderRadius:6,fontWeight:700,marginLeft:3}},“x”+w[ax.k]+”%”)),
@@ -301,17 +301,17 @@ React.createElement(“div”,{style:{height:“100%”,width:v+”%”,backgrou
 )
 );}),
 selA.facilities&&React.createElement(“div”,{style:{marginTop:8,padding:“8px 10px”,background:”#f8f8f8”,borderRadius:6,fontSize:8.5,color:”#3a3a3a”,lineHeight:1.8}},
-React.createElement(“div”,{style:{fontWeight:700,marginBottom:4,color:”#2e7d32”}},”\u{1F4CD} \u5468\u8FBA\u65BD\u8A2D”),
-selA.facilities.parks&&React.createElement(“div”,null,”\u{1F333} “+selA.facilities.parks.join(”\u30FB”)),
-selA.facilities.shops&&React.createElement(“div”,null,”\u{1F6D2} “+selA.facilities.shops.join(”\u30FB”)),
-selA.facilities.vets&&React.createElement(“div”,null,”\u{1F3E5} “+selA.facilities.vets.join(”\u30FB”)),
+React.createElement(“div”,{style:{fontWeight:700,marginBottom:4,color:”#2e7d32”}},”\uD83D\uDCCD \u5468\u8FBA\u65BD\u8A2D”),
+selA.facilities.parks&&React.createElement(“div”,null,”\uD83C\uDF33 “+selA.facilities.parks.join(”\u30FB”)),
+selA.facilities.shops&&React.createElement(“div”,null,”\uD83D\uDED2 “+selA.facilities.shops.join(”\u30FB”)),
+selA.facilities.vets&&React.createElement(“div”,null,”\uD83C\uDFE5 “+selA.facilities.vets.join(”\u30FB”)),
 selA.facilities.cafes&&React.createElement(“div”,null,”\u2615 “+selA.facilities.cafes.join(”\u30FB”))
 ),
 React.createElement(“div”,{style:{marginTop:8,padding:“8px 10px”,background:dog===“X”?”#fce4ec”:dog===“Y”?”#e8f5e9”:”#fff3e0”,borderLeft:“3px solid “+(dog===“X”?”#c2185b”:dog===“Y”?”#2e7d32”:”#e65100”),borderRadius:“0 6px 6px 0”,fontSize:11,lineHeight:1.9}},
 (comments[selA.id]&&comments[selA.id][dog]
 ?[“walk”,“housing”,“medical”,“mobility”,“community”].map((k,i)=>React.createElement(“div”,{key:i,style:{marginBottom:10}},
 React.createElement(“div”,{style:{fontWeight:700,fontSize:10,color:dog===“X”?”#c2185b”:dog===“Y”?”#2e7d32”:”#e65100”,marginBottom:2}},
-k===“walk”?”\u{1F43E} \u6563\u6B69\u30FB\u5B89\u5168”:k===“housing”?”\u{1F3E0} \u4F4F\u74B0\u5883”:k===“medical”?”\u{1F3E5} \u533B\u7642\u30FB\u30B5\u30DD\u30FC\u30C8”:k===“mobility”?”\u{1F697} \u79FB\u52D5”:”\u{1F465} \u5730\u57DF”
+k===“walk”?”\uD83D\uDC3E \u6563\u6B69\u30FB\u5B89\u5168”:k===“housing”?”\uD83C\uDFE0 \u4F4F\u74B0\u5883”:k===“medical”?”\uD83C\uDFE5 \u533B\u7642\u30FB\u30B5\u30DD\u30FC\u30C8”:k===“mobility”?”\uD83D\uDE97 \u79FB\u52D5”:”\uD83D\uDC65 \u5730\u57DF”
 ),
 React.createElement(“div”,null,comments[selA.id][dog][k])
 ))
