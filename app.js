@@ -32,7 +32,7 @@ const ML={
   BY:'\uD83C\uDFE5 \u52D5\u7269\u75C5\u9662\u30FBSC\u30FB\u30B9\u30FC\u30D1\u30FC',
   BZ:'\uD83C\uDFE5 \u52D5\u7269\u75C5\u9662\u30FB\u591C\u9593\u6551\u6025\u30FB\u8CB7\u3044\u7269'
 };
-const FC={1:'rgba(255,240,80,0.38)',2:'rgba(255,140,10,0.62)',3:'rgba(210,50,0,0.75)',4:'rgba(170,0,0,0.88)',5:'rgba(90,0,0,0.94)'};
+const FC={1:'rgba(255,240,80,0.28)',2:'rgba(255,140,10,0.38)',3:'rgba(210,50,0,0.48)',4:'rgba(170,0,0,0.58)',5:'rgba(120,0,0,0.68)'};
 const FL={1:'\u4F4E 0-0.5m',2:'\u4E2D 0.5-3m',3:'\u9AD8 3-5m',4:'\u5371 5m+',5:'\u6700\u5371 10m+'};
 const DATA_URL='https://raw.githubusercontent.com/14142001sagau-ai/inumap-Tokyo/main/data/stations.json';
 const COMMENTS_URL='https://raw.githubusercontent.com/14142001sagau-ai/inumap-Tokyo/main/data/comments.json';
@@ -265,8 +265,8 @@ function App(){
     React.createElement('div',{style:{flex:1,position:'relative',overflow:'hidden'}},
       React.createElement(MapView,{scored,selId:sel,onSel:setSel,flood}),
       React.createElement('div',{style:{position:'absolute',top:8,left:8,background:'rgba(255,255,255,0.92)',borderRadius:8,padding:'5px 8px',zIndex:1000,boxShadow:'0 2px 8px rgba(0,0,0,0.15)'}},
-        React.createElement('div',{style:{fontSize:6.5,fontWeight:700,color:'#2e7d32',marginBottom:3}},'SCORE'),
-        [{d:66,l:'S 65+'},{d:60,l:'A 58-64'},{d:53,l:'B 50-57'},{d:45,l:'C 42-49'},{d:38,l:'D ~41'}].map(item=>{const s=gs(item.d);return React.createElement('div',{key:item.l,style:{display:'flex',alignItems:'center',gap:4,marginBottom:2}},
+        React.createElement('div',{style:{fontSize:6.5,fontWeight:700,color:'#2e7d32',marginBottom:3,paddingLeft:20}},'SCORE'),
+        [{d:66,l:'S 65+'},{d:60,l:'A 58-64'},{d:53,l:'B 50-57'},{d:45,l:'C 42-49'},{d:38,l:'D ~41'}].map(item=>{const s=gs(item.d);return React.createElement('div',{key:item.l,style:{display:'flex',alignItems:'center',gap:4,marginBottom:2,paddingLeft:20}},
           React.createElement('div',{style:{width:8,height:8,borderRadius:'50%',background:s.c}}),
           React.createElement('span',{style:{fontSize:7.5,color:'#3a5a3a'}},item.l)
         );}),
@@ -281,8 +281,8 @@ function App(){
         React.createElement('div',{style:{borderTop:'1px solid #eee',margin:'4px 0'}}),
         React.createElement('button',{onClick:()=>setFlood(f=>!f),style:{width:'100%',padding:'3px 0',borderRadius:20,border:'1.5px solid '+(flood?'#d32f2f':'#bbb'),background:flood?'rgba(211,47,47,0.12)':'rgba(200,200,200,0.18)',color:flood?'#d32f2f':'#888',fontSize:8,fontWeight:700,cursor:'pointer'}},'\uD83C\uDF0A '+(flood?'\u6D2A\u6C34 ON':'\u6D2A\u6C34')),
         flood&&React.createElement('div',{style:{marginTop:4}},
-          React.createElement('div',{style:{fontSize:6.5,fontWeight:700,color:'#d32f2f',marginBottom:3}},'\u6D2A\u6C34\u6DF1\u3055'),
-          [[FC[1],FL[1]],[FC[2],FL[2]],[FC[3],FL[3]],[FC[4],FL[4]],[FC[5],FL[5]]].map((item,i)=>React.createElement('div',{key:i,style:{display:'flex',alignItems:'center',gap:4,marginBottom:2}},
+          React.createElement('div',{style:{fontSize:6.5,fontWeight:700,color:'#d32f2f',marginBottom:3,paddingLeft:20}},'\u6D2A\u6C34\u6DF1\u3055'),
+          [[FC[1],FL[1]],[FC[2],FL[2]],[FC[3],FL[3]],[FC[4],FL[4]],[FC[5],FL[5]]].map((item,i)=>React.createElement('div',{key:i,style:{display:'flex',alignItems:'center',gap:4,marginBottom:2,paddingLeft:20}},
             React.createElement('div',{style:{width:9,height:9,borderRadius:'50%',background:item[0],border:'1.5px solid rgba(0,0,0,0.25)',flexShrink:0}}),
             React.createElement('span',{style:{fontSize:7,color:'#7a2a2a'}},item[1])
           ))
