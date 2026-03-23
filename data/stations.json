@@ -56,13 +56,7 @@
     "community": 65,
     "safety": 74,
     "fl": 5,
-    "parks": [
-      "playpark",
-      "総合レクリエーション公園（ファミリースポーツ広場）",
-      "総合レクリエーション公園（南葛西少年野球広場）",
-      "総合レクリエーション公園（フラワーガーデン）",
-      "葛西防災公園"
-    ],
+    "parks": [],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -165,21 +159,36 @@
     "line": "JR総武線",
     "lat": 35.7333,
     "lng": 139.882,
-    "walk": 40,
+    "walk": 58,
     "housing": 53,
-    "medical": 30,
-    "mobility": 39,
+    "medical": 45,
+    "mobility": 49,
     "community": 70,
     "safety": 55,
     "fl": 2,
-    "parks": [],
+    "parks": [
+      "柴又公園",
+      "北小岩コスモス児童遊園",
+      "北小岩二丁目第三児童遊園",
+      "西小岩公園",
+      "南小岩三丁目児童遊園(タイヤ公園)"
+    ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "マリーン動物病院",
+      "モネ動物病院",
+      "葛飾アニマルホスピタル"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "フォルトゥナ"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "日産レンタカー"
+    ]
   },
   {
     "id": "shinkoiwa",
@@ -264,18 +273,34 @@
     "lng": 139.8839,
     "walk": 80,
     "housing": 72,
-    "medical": 95,
-    "mobility": 45,
+    "medical": 69,
+    "mobility": 54,
     "community": 67,
     "safety": 73,
     "fl": 2,
-    "parks": [],
+    "parks": [
+      "小岩公園",
+      "柴又公園",
+      "北小岩コスモス児童遊園",
+      "北小岩二丁目第三児童遊園",
+      "西小岩公園"
+    ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "マリーン動物病院",
+      "モネ動物病院",
+      "北小岩動物病院",
+      "葛飾アニマルホスピタル"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "フォルトゥナ"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "日産レンタカー"
+    ]
   }
 ]
