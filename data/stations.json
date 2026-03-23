@@ -7,8 +7,8 @@
     "lng": 139.8592,
     "walk": 80,
     "housing": 68,
-    "medical": 43,
-    "mobility": 45,
+    "medical": 54,
+    "mobility": 52,
     "community": 71,
     "safety": 59,
     "fl": 4,
@@ -40,7 +40,7 @@
     "lng": 139.8727,
     "walk": 80,
     "housing": 65,
-    "medical": 43,
+    "medical": 57,
     "mobility": 45,
     "community": 69,
     "safety": 64,
@@ -73,18 +73,12 @@
     "lng": 139.8616,
     "walk": 80,
     "housing": 46,
-    "medical": 50,
-    "mobility": 50,
+    "medical": 30,
+    "mobility": 42,
     "community": 65,
     "safety": 74,
     "fl": 5,
-    "parks": [
-      "playpark",
-      "総合レクリエーション公園（ファミリースポーツ広場）",
-      "総合レクリエーション公園（南葛西少年野球広場）",
-      "総合レクリエーション公園（フラワーガーデン）",
-      "葛西防災公園"
-    ],
+    "parks": [],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -101,8 +95,8 @@
     "lng": 139.8641,
     "walk": 80,
     "housing": 65,
-    "medical": 50,
-    "mobility": 50,
+    "medical": 78,
+    "mobility": 55,
     "community": 67,
     "safety": 70,
     "fl": 3,
@@ -121,10 +115,10 @@
     "line": "都営新宿線",
     "lat": 35.6859,
     "lng": 139.883,
-    "walk": 40,
+    "walk": 47,
     "housing": 69,
-    "medical": 50,
-    "mobility": 55,
+    "medical": 30,
+    "mobility": 60,
     "community": 69,
     "safety": 80,
     "fl": 3,
@@ -154,21 +148,33 @@
     "line": "都営新宿線",
     "lat": 35.6933,
     "lng": 139.8977,
-    "walk": 80,
+    "walk": 59,
     "housing": 64,
-    "medical": 50,
-    "mobility": 50,
+    "medical": 47,
+    "mobility": 55,
     "community": 70,
     "safety": 70,
     "fl": 2,
-    "parks": [],
+    "parks": [
+      "篠崎六丁目公園",
+      "南篠崎つつじ公園",
+      "都立篠崎公園B地区",
+      "東部フレンド公園",
+      "東部公園"
+    ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ごしま動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Bow Wow Club"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "オリックスレンタカー"
+    ]
   },
   {
     "id": "shinozaki",
@@ -176,18 +182,28 @@
     "line": "都営新宿線",
     "lat": 35.706,
     "lng": 139.9039,
-    "walk": 80,
+    "walk": 59,
     "housing": 67,
-    "medical": 50,
-    "mobility": 50,
+    "medical": 47,
+    "mobility": 51,
     "community": 79,
     "safety": 77,
     "fl": 2,
-    "parks": [],
+    "parks": [
+      "篠崎六丁目公園",
+      "南篠崎つつじ公園",
+      "篠崎公園",
+      "都立篠崎公園B地区",
+      "高田公園"
+    ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "クロス動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "愛犬の美容室"
+    ],
     "dog_cafes": [],
     "carshares": [],
     "car_rentals": []
@@ -198,10 +214,10 @@
     "line": "JR総武線",
     "lat": 35.7333,
     "lng": 139.882,
-    "walk": 40,
+    "walk": 47,
     "housing": 53,
-    "medical": 52,
-    "mobility": 52,
+    "medical": 45,
+    "mobility": 49,
     "community": 70,
     "safety": 55,
     "fl": 2,
@@ -235,21 +251,30 @@
     "line": "JR総武線",
     "lat": 35.7174,
     "lng": 139.8586,
-    "walk": 80,
+    "walk": 59,
     "housing": 56,
-    "medical": 50,
-    "mobility": 50,
+    "medical": 81,
+    "mobility": 55,
     "community": 68,
     "safety": 64,
     "fl": 2,
-    "parks": [],
+    "parks": [
+      "小松川境川親水公園",
+      "新小岩公園",
+      "文化センター公園",
+      "中央森林公園",
+      "間栗公園"
+    ],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "hirai",
@@ -257,14 +282,20 @@
     "line": "JR総武線",
     "lat": 35.7066,
     "lng": 139.8427,
-    "walk": 80,
+    "walk": 59,
     "housing": 58,
-    "medical": 50,
-    "mobility": 50,
+    "medical": 69,
+    "mobility": 39,
     "community": 72,
     "safety": 67,
     "fl": 1,
-    "parks": [],
+    "parks": [
+      "新小岩公園",
+      "区立立花いこい公園",
+      "平井橋第一公園",
+      "中川公園",
+      "平井橋第二公園"
+    ],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -279,21 +310,37 @@
     "line": "京成本線",
     "lat": 35.7378,
     "lng": 139.8959,
-    "walk": 40,
+    "walk": 47,
     "housing": 55,
-    "medical": 50,
-    "mobility": 50,
+    "medical": 47,
+    "mobility": 53,
     "community": 68,
     "safety": 75,
     "fl": 2,
-    "parks": [],
+    "parks": [
+      "縁結び 桂の木",
+      "里美公園",
+      "小岩公園",
+      "国府台公園",
+      "柴又公園"
+    ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "苅谷動物病院",
+      "モネ動物病院",
+      "北小岩動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "フォルトゥナ"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー新千葉",
+      "ニッポンレンタカー",
+      "日産レンタカー"
+    ]
   },
   {
     "id": "keiseikoiwa",
@@ -303,34 +350,18 @@
     "lng": 139.8839,
     "walk": 80,
     "housing": 72,
-    "medical": 58,
-    "mobility": 56,
+    "medical": 95,
+    "mobility": 45,
     "community": 67,
     "safety": 73,
     "fl": 2,
-    "parks": [
-      "小岩公園",
-      "柴又公園",
-      "北小岩コスモス児童遊園",
-      "北小岩二丁目第三児童遊園",
-      "西小岩公園"
-    ],
+    "parks": [],
     "dogruns": [],
-    "vets": [
-      "マリーン動物病院",
-      "モネ動物病院",
-      "北小岩動物病院",
-      "葛飾アニマルホスピタル"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "フォルトゥナ"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "日産レンタカー"
-    ]
+    "car_rentals": []
   }
 ]
