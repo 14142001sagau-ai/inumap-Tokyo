@@ -7,30 +7,19 @@
     "lng": 139.8592,
     "walk": 80,
     "housing": 68,
-    "medical": 54,
-    "mobility": 52,
+    "medical": 78,
+    "mobility": 48,
     "community": 71,
     "safety": 59,
     "fl": 4,
-    "parks": [
-      "playpark",
-      "ふれあいの森宇喜田公園",
-      "都立宇喜田公園",
-      "やまびこ公園",
-      "さざなみ公園"
-    ],
+    "parks": [],
     "dogruns": [],
-    "vets": [
-      "ACプラザ苅谷動物病院",
-      "西葛西ペットクリニック"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "パーキング🅿️"
-    ]
+    "car_rentals": []
   },
   {
     "id": "kasai",
@@ -78,13 +67,7 @@
     "community": 65,
     "safety": 74,
     "fl": 5,
-    "parks": [
-      "playpark",
-      "総合レクリエーション公園（ファミリースポーツ広場）",
-      "総合レクリエーション公園（南葛西少年野球広場）",
-      "総合レクリエーション公園（フラワーガーデン）",
-      "葛西防災公園"
-    ],
+    "parks": [],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -99,20 +82,14 @@
     "line": "都営新宿線",
     "lat": 35.6839,
     "lng": 139.8641,
-    "walk": 70,
+    "walk": 80,
     "housing": 65,
     "medical": 78,
     "mobility": 55,
     "community": 67,
     "safety": 70,
     "fl": 3,
-    "parks": [
-      "春江五丁目公園",
-      "ふれあいの森宇喜田公園",
-      "東小松川スポーツ公園",
-      "一之江ひだまり公園",
-      "西船堀公園"
-    ],
+    "parks": [],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -230,30 +207,21 @@
     "line": "JR総武線",
     "lat": 35.7174,
     "lng": 139.8586,
-    "walk": 59,
+    "walk": 80,
     "housing": 56,
     "medical": 81,
-    "mobility": 55,
+    "mobility": 46,
     "community": 68,
     "safety": 64,
     "fl": 2,
-    "parks": [
-      "小松川境川親水公園",
-      "新小岩公園",
-      "文化センター公園",
-      "中央森林公園",
-      "間栗公園"
-    ],
+    "parks": [],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "トヨタレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "hirai",
@@ -305,36 +273,20 @@
     "line": "京成本線",
     "lat": 35.7421,
     "lng": 139.8839,
-    "walk": 59,
+    "walk": 80,
     "housing": 72,
-    "medical": 69,
-    "mobility": 54,
+    "medical": 95,
+    "mobility": 45,
     "community": 67,
     "safety": 73,
     "fl": 2,
-    "parks": [
-      "小岩公園",
-      "柴又公園",
-      "北小岩コスモス児童遊園",
-      "北小岩二丁目第三児童遊園",
-      "西小岩公園"
-    ],
+    "parks": [],
     "dogruns": [],
-    "vets": [
-      "マリーン動物病院",
-      "モネ動物病院",
-      "北小岩動物病院",
-      "葛飾アニマルホスピタル"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "フォルトゥナ"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "日産レンタカー"
-    ]
+    "car_rentals": []
   }
 ]
