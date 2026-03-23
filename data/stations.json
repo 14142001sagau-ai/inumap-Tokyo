@@ -29,30 +29,19 @@
     "lng": 139.8727,
     "walk": 80,
     "housing": 65,
-    "medical": 57,
-    "mobility": 45,
+    "medical": 90,
+    "mobility": 40,
     "community": 69,
     "safety": 64,
     "fl": 3,
-    "parks": [
-      "二反割公園",
-      "宇喜田中央公園",
-      "葛西防災公園",
-      "子供の広場",
-      "新田公園"
-    ],
+    "parks": [],
     "dogruns": [],
-    "vets": [
-      "キャミャックひがし東京",
-      "フルール動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "パーキング🅿️"
-    ]
+    "car_rentals": []
   },
   {
     "id": "kasairinkai",
@@ -67,7 +56,13 @@
     "community": 65,
     "safety": 74,
     "fl": 5,
-    "parks": [],
+    "parks": [
+      "playpark",
+      "総合レクリエーション公園（ファミリースポーツ広場）",
+      "総合レクリエーション公園（南葛西少年野球広場）",
+      "総合レクリエーション公園（フラワーガーデン）",
+      "葛西防災公園"
+    ],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -170,36 +165,21 @@
     "line": "JR総武線",
     "lat": 35.7333,
     "lng": 139.882,
-    "walk": 47,
+    "walk": 40,
     "housing": 53,
-    "medical": 45,
-    "mobility": 49,
+    "medical": 30,
+    "mobility": 39,
     "community": 70,
     "safety": 55,
     "fl": 2,
-    "parks": [
-      "柴又公園",
-      "北小岩コスモス児童遊園",
-      "北小岩二丁目第三児童遊園",
-      "西小岩公園",
-      "南小岩三丁目児童遊園(タイヤ公園)"
-    ],
+    "parks": [],
     "dogruns": [],
-    "vets": [
-      "マリーン動物病院",
-      "モネ動物病院",
-      "葛飾アニマルホスピタル"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "フォルトゥナ"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "日産レンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "shinkoiwa",
@@ -210,18 +190,27 @@
     "walk": 80,
     "housing": 56,
     "medical": 81,
-    "mobility": 46,
+    "mobility": 55,
     "community": 68,
     "safety": 64,
     "fl": 2,
-    "parks": [],
+    "parks": [
+      "小松川境川親水公園",
+      "新小岩公園",
+      "文化センター公園",
+      "中央森林公園",
+      "間栗公園"
+    ],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "hirai",
