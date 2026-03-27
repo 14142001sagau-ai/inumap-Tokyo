@@ -131,7 +131,7 @@ SAFETY_STATION = {
     '北池袋':62,
     '北綾瀬':81,
     '北赤羽':83,
-    '北青山':78,
+
     '十条':77,
     '千住大橋':74,
     '千川':77,
@@ -422,7 +422,7 @@ SAFETY_STATION = {
     '芦花公園':81,
     '若松河田':64,
     '若林':79,
-    '若洲':85,
+
     '茅場町':72,
     '茗荷谷':80,
     '荏原中延':80,
@@ -532,7 +532,7 @@ SAFETY_STATION = {
 }
 
 HOUSING_STATION = {
-    'お台場海浜公園':72,
+    'お台場海浜公園':47,
     'お花茶屋':75,
     'とうきょうスカイツリー':67,
     'ときわ台':69,
@@ -629,7 +629,7 @@ HOUSING_STATION = {
     '北池袋':39,
     '北綾瀬':75,
     '北赤羽':72,
-    '北青山':42,
+
     '十条':67,
     '千住大橋':65,
     '千川':64,
@@ -920,7 +920,7 @@ HOUSING_STATION = {
     '芦花公園':71,
     '若松河田':34,
     '若林':71,
-    '若洲':30,  # 非居住エリア
+
     '茅場町':30,
     '茗荷谷':67,
     '荏原中延':68,
@@ -1110,6 +1110,43 @@ def load_stations():
             results.append({'id':sid,'name':name,'line':line,
                             'lat':float(lat),'lng':float(lng),'fl':int(fl or 2),'ku':ku})
     return results
+
+
+# ============================================================
+# 洪水リスク自動取得（国土地理院ハザードマップタイル）
+# ============================================================
+def get_flood_level(lat, lng):
+    """
+    国土地理院タイルから浸水深を取得してfl値(1-5)を返す
+    取得失敗時はNoneを返しmaster.xlsxの値を使う
+    """
+    try:
+        from PIL import Image
+        import io
+        ZOOM = 12
+        n = 2 ** ZOOM
+        x_f = (lng + 180) / 360 * n
+        lat_rad = math.radians(lat)
+        y_f = (1 - math.log(math.tan(lat_rad) + 1/math.cos(lat_rad)) / math.pi) / 2 * n
+        tx, ty = int(x_f), int(y_f)
+        px_i = max(0, min(255, int((x_f - tx) * 256)))
+        py_i = max(0, min(255, int((y_f - ty) * 256)))
+        url = f'https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{ZOOM}/{tx}/{ty}.png'
+        r = requests.get(url, timeout=10)
+        if r.status_code != 200:
+            return None
+        img = Image.open(io.BytesIO(r.content)).convert('RGBA')
+        R, G, B, A = img.getpixel((px_i, py_i))
+        if A < 50:   return 1   # 透明=浸水なし
+        if R > 230 and G > 200 and B < 120: return 1  # 薄黄: 0-0.5m
+        if R > 220 and G > 140 and B < 80:  return 2  # 薄橙: 0.5-3m
+        if R > 200 and G > 90  and B < 60:  return 3  # 橙:   3-5m
+        if R > 160 and G < 90  and B < 60:  return 4  # 赤橙: 5-10m
+        if R > 80  and G < 50  and B < 40:  return 5  # 暗赤: 10m+
+        if R > 150: return 2
+        return 1
+    except Exception:
+        return None
 
 # ============================================================
 # OSMクエリ
