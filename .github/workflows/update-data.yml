@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dependencies
-        run: pip install requests openpyxl
+        run: pip install requests openpyxl Pillow
       - name: Fetch Station Data
         run: python scripts/fetch_geojson.py
       - name: Commit and push
