@@ -1265,6 +1265,10 @@ results = []
 for st in stations:
     print(f'📍 {st["ku"]} {st["name"]}')
     fac = get_fac(st['lat'], st['lng'])
+    # 洪水リスク: タイルから取得、失敗時はmaster.xlsxの値を使う
+    fl_val = get_flood_level(st['lat'], st['lng'])
+    if fl_val is None:
+        fl_val = st['fl']  # フォールバック
     time.sleep(1.5)
 
     sid = st['id']
@@ -1283,7 +1287,7 @@ for st in stations:
         'medical':  med,
         'mobility': mob,
         'safety':   SAFETY_STATION.get(st['name'], SAFETY_WARD.get(ku, 70)),
-        'fl':       st['fl'],
+        'fl':       fl_val,
         'parks':    fac['parks'],
         'dogruns':  fac['dogruns'],
         'vets':     fac['vets'],
