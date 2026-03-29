@@ -1035,6 +1035,12 @@ MEDICAL_BASE_DEFAULT = 55
 WALK_BASE_DEFAULT    = 60
 
 STATION_OVERRIDE = {
+    # 代々木エリア（代々木公園78ha+ドッグランあり・OSMエラー対策）
+    '代々木公園_5a2091':  {'walk_base':85, 'medical_base':65},
+    '代々木八幡_80028d': {'walk_base':82, 'medical_base':62},
+    # 下赤塚・地下鉄赤塚（近接駅・OSMエラー対策）
+    '下赤塚_687399':  {'walk_base':62, 'medical_base':55},
+    '地下鉄赤塚_cc2b86': {'walk_base':62, 'medical_base':55},
     # 江戸川区12駅（実測値）
     'nishikasai': {'medical_base':78, 'walk_base':80},
     'kasai':      {'medical_base':90, 'walk_base':80},
