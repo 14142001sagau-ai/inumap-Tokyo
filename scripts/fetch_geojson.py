@@ -477,7 +477,6 @@ SAFETY_STATION = {
     '赤坂':78,
     '赤坂見附':79,
     '赤堤':80,
-    '赤塚':83,
     '赤羽':75,
     '赤羽岩淵':77,
     '赤羽橋':77,
@@ -975,7 +974,6 @@ HOUSING_STATION = {
     '赤坂':35,
     '赤坂見附':45,
     '赤堤':71,
-    '赤塚':74,
     '赤羽':67,
     '赤羽岩淵':67,
     '赤羽橋':37,
@@ -1143,14 +1141,14 @@ def get_flood_level(lat, lng):
             return None
         img = Image.open(io.BytesIO(r.content)).convert('RGBA')
         R, G, B, A = img.getpixel((px_i, py_i))
-        if A < 50:   return 1   # 透明=浸水なし
+        if A < 50:   return None  # 透明=タイルデータなし→master.xlsxにフォールバック
         if R > 230 and G > 200 and B < 120: return 1  # 薄黄: 0-0.5m
         if R > 220 and G > 140 and B < 80:  return 2  # 薄橙: 0.5-3m
         if R > 200 and G > 90  and B < 60:  return 3  # 橙:   3-5m
         if R > 160 and G < 90  and B < 60:  return 4  # 赤橙: 5-10m
         if R > 80  and G < 50  and B < 40:  return 5  # 暗赤: 10m+
         if R > 150: return 2
-        return 1
+        return None  # 判定不能→master.xlsxにフォールバック
     except Exception:
         return None
 
