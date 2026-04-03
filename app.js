@@ -177,8 +177,8 @@ function MapView({scored,selId,onSel,flood}){
     if(!leafRef.current)return;
     markersRef.current.forEach(m=>m.remove());
     markersRef.current=[];
-    scored.filter(d=>d.dev!==null).forEach(d=>{
-      const s=gs(d.dev);
+    scored.forEach(d=>{
+      const s=d.dev===null?{c:'#999999',b:'-'}:gs(d.dev);
       const iS=d.id===selId;
       const size=iS?44:32;
       const icon=L.divIcon({
@@ -382,11 +382,11 @@ function App(){
       selA&&React.createElement('div',{style:{position:'absolute',top:0,right:0,width:'72%',maxWidth:290,height:'100%',background:'rgba(255,255,255,0.97)',borderLeft:'1px solid #dde4dd',boxShadow:'-4px 0 14px rgba(0,0,0,0.1)',display:'flex',flexDirection:'column',overflow:'hidden',zIndex:1000}},
         React.createElement('button',{onClick:()=>setSel(null),style:{position:'absolute',top:8,right:8,width:24,height:24,borderRadius:'50%',border:'none',background:'#eef2ee',color:'#6a8a6a',cursor:'pointer',fontSize:13,fontWeight:700}},'x'),
         React.createElement('div',{style:{flex:1,overflow:'auto',padding:'12px'}},
-          React.createElement('div',{style:{fontSize:8,color:'#8a9a8a',marginBottom:1}},'#'+selR+'\u4F4D\u3000'+selA.line),
+          React.createElement('div',{style:{fontSize:8,color:'#8a9a8a',marginBottom:1}},(selR?'#'+selR+'\u4F4D\u3000':'')+selA.line),
           React.createElement('div',{style:{fontSize:17,fontWeight:900,color:'#1a2a1a',marginBottom:3}},selA.name+'\u99C5'),
           React.createElement('div',{style:{display:'flex',alignItems:'center',gap:8,marginBottom:10}},
             React.createElement('div',{style:{fontSize:42,fontWeight:900,color:selA.dev===null?'#aaa':gs(selA.dev).c,lineHeight:1}},selA.dev===null?'-':selA.dev),
-            React.createElement('span',{style:{fontSize:10,fontWeight:900,color:'#fff',background:selA.dev===null?'#aaa':gs(selA.dev).c,padding:'3px 9px',borderRadius:6}},selA.dev===null?'-':gs(selA.dev).b+' \u30E9\u30F3\u30AF')
+            selA.dev!==null&&React.createElement('span',{style:{fontSize:10,fontWeight:900,color:'#fff',background:gs(selA.dev).c,padding:'3px 9px',borderRadius:6}},gs(selA.dev).b+' \u30E9\u30F3\u30AF')
           ),
           flood&&selA.fl&&React.createElement('div',{style:{marginBottom:10,padding:'5px 8px',background:'#fff3f3',borderLeft:'3px solid #d32f2f',borderRadius:'0 6px 6px 0',fontSize:8.5,color:'#7a2a2a'}},'\uD83C\uDF0A \u6D2A\u6C34\u30EA\u30B9\u30AF: '+FL[selA.fl]),
           AXES.map(ax=>{const v=selA[ax.k];const isNull=v===null;return React.createElement('div',{key:ax.k,style:{marginBottom:5}},
