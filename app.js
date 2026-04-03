@@ -84,11 +84,13 @@ const PENALTY={
 
 function calc(areas,w,personaKey){
   const tot=Object.values(w).reduce((a,b)=>a+b,0);
-  const rs=areas.map(d=>AXES.reduce((s,a)=>s+(d[a.k]||0)*w[a.k],0)/tot);
-  const avg=rs.reduce((a,b)=>a+b,0)/rs.length;
-  const sd=Math.sqrt(rs.reduce((a,b)=>a+(b-avg)**2,0)/rs.length)||1;
+  const hasNull=d=>AXES.some(a=>d[a.k]===null);
+  const rs=areas.map(d=>hasNull(d)?null:AXES.reduce((s,a)=>s+(d[a.k]||0)*w[a.k],0)/tot);
+  const valid=rs.filter(v=>v!==null);
+  const avg=valid.reduce((a,b)=>a+b,0)/valid.length;
+  const sd=Math.sqrt(valid.reduce((a,b)=>a+(b-avg)**2,0)/valid.length)||1;
   const pen=personaKey&&PENALTY[personaKey]?PENALTY[personaKey]:()=>0;
-  return areas.map((d,i)=>({...d,dev:Math.round((rs[i]-avg)/sd*10+50)+pen(d)}));
+  return areas.map((d,i)=>({...d,dev:rs[i]===null?null:Math.round((rs[i]-avg)/sd*10+50)+pen(d)}));
 }
 function gs(v){
   if(v>=75)return{c:'#0d3b1e',b:'SS'};
@@ -175,7 +177,7 @@ function MapView({scored,selId,onSel,flood}){
     if(!leafRef.current)return;
     markersRef.current.forEach(m=>m.remove());
     markersRef.current=[];
-    scored.forEach(d=>{
+    scored.filter(d=>d.dev!==null).forEach(d=>{
       const s=gs(d.dev);
       const iS=d.id===selId;
       const size=iS?44:32;
@@ -235,9 +237,9 @@ function App(){
   const lc=life?LS[life].co:'#2e7d32';
   const dc=dog?DG[dog].co:'#2e7d32';
   const scored=useMemo(()=>w&&stations.length?calc(stations,w,key):[],[key,stations]);
-  const sorted=useMemo(()=>[...scored].sort((a,b)=>b.dev-a.dev),[scored]);
+  const sorted=useMemo(()=>[...scored].filter(d=>d.dev!==null).sort((a,b)=>b.dev-a.dev),[scored]);
   const selA=sel?scored.find(d=>d.id===sel):null;
-  const selR=selA?sorted.findIndex(d=>d.id===sel)+1:null;
+  const selR=selA&&selA.dev!==null?sorted.findIndex(d=>d.id===sel)+1:null;
 
   if(loading)return React.createElement('div',{style:{height:'100dvh',display:'flex',alignItems:'center',justifyContent:'center',background:'#f0f7f0',flexDirection:'column',gap:16}},
     React.createElement('div',{style:{fontSize:32}},'\uD83D\uDC15'),
@@ -383,17 +385,17 @@ function App(){
           React.createElement('div',{style:{fontSize:8,color:'#8a9a8a',marginBottom:1}},'#'+selR+'\u4F4D\u3000'+selA.line),
           React.createElement('div',{style:{fontSize:17,fontWeight:900,color:'#1a2a1a',marginBottom:3}},selA.name+'\u99C5'),
           React.createElement('div',{style:{display:'flex',alignItems:'center',gap:8,marginBottom:10}},
-            React.createElement('div',{style:{fontSize:42,fontWeight:900,color:gs(selA.dev).c,lineHeight:1}},selA.dev),
-            React.createElement('span',{style:{fontSize:10,fontWeight:900,color:'#fff',background:gs(selA.dev).c,padding:'3px 9px',borderRadius:6}},gs(selA.dev).b+' \u30E9\u30F3\u30AF')
+            React.createElement('div',{style:{fontSize:42,fontWeight:900,color:selA.dev===null?'#aaa':gs(selA.dev).c,lineHeight:1}},selA.dev===null?'-':selA.dev),
+            React.createElement('span',{style:{fontSize:10,fontWeight:900,color:'#fff',background:selA.dev===null?'#aaa':gs(selA.dev).c,padding:'3px 9px',borderRadius:6}},selA.dev===null?'-':gs(selA.dev).b+' \u30E9\u30F3\u30AF')
           ),
           flood&&selA.fl&&React.createElement('div',{style:{marginBottom:10,padding:'5px 8px',background:'#fff3f3',borderLeft:'3px solid #d32f2f',borderRadius:'0 6px 6px 0',fontSize:8.5,color:'#7a2a2a'}},'\uD83C\uDF0A \u6D2A\u6C34\u30EA\u30B9\u30AF: '+FL[selA.fl]),
-          AXES.map(ax=>{const v=selA[ax.k]||0;return React.createElement('div',{key:ax.k,style:{marginBottom:5}},
+          AXES.map(ax=>{const v=selA[ax.k];const isNull=v===null;return React.createElement('div',{key:ax.k,style:{marginBottom:5}},
             React.createElement('div',{style:{display:'flex',justifyContent:'space-between',fontSize:8.5,color:'#4a6a4a',marginBottom:1.5}},
               React.createElement('span',null,ax.lb,React.createElement('span',{style:{fontSize:6.5,background:ax.co+'18',color:ax.co,padding:'1px 3px',borderRadius:6,fontWeight:700,marginLeft:3}},'x'+w[ax.k]+'%')),
-              React.createElement('span',{style:{fontWeight:900,color:ax.co,fontSize:10.5}},v)
+              React.createElement('span',{style:{fontWeight:900,color:isNull?'#aaa':ax.co,fontSize:10.5}},isNull?'-':v)
             ),
             React.createElement('div',{style:{height:3.5,background:'#eef2ee',borderRadius:2,overflow:'hidden'}},
-              React.createElement('div',{style:{height:'100%',width:v+'%',background:ax.co,borderRadius:2}})
+              !isNull&&React.createElement('div',{style:{height:'100%',width:v+'%',background:ax.co,borderRadius:2}})
             )
           );}),
           selA.facilities&&React.createElement('div',{style:{marginTop:8,padding:'8px 10px',background:'#f8f8f8',borderRadius:6,fontSize:8.5,color:'#3a3a3a',lineHeight:1.8}},
