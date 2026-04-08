@@ -2272,9 +2272,9 @@ for st in stations:
     med   = calc_medical_score(fac, ov.get('medical_base', MEDICAL_BASE_DEFAULT))
     mob   = calc_mobility_score(fac, sid, st['lat'], st['lng'], ku)
 
-    # 非居住駅はスコアを"-"に上書き
+    # 非居住駅はスコアをNoneに上書き（app.jsがnullを"-"マーカーで表示するため）
     if st['name'] in NON_RESIDENTIAL_STATIONS:
-        walk = med = mob = '-'
+        walk = med = mob = None
 
     results.append({
         'id': sid, 'name': st['name'], 'line': st['line'],
