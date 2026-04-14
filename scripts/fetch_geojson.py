@@ -1082,7 +1082,12 @@ LARGE_PARKS = [
     {'name':'光が丘公園','lat':35.7631,'lng':139.6284,'area':607824},
     {'name':'浮間公園','lat':35.7944,'lng':139.6926,'area':117330},
     {'name':'城北中央公園','lat':35.7568,'lng':139.6728,'area':260338},
-    {'name':'代々木公園','lat':35.6719,'lng':139.6918,'area':540529},
+    {'name':'代々木公園','lat':35.6719,'lng':139.6918,'area':540529,
+     'entrances':[(35.6715,139.6993),(35.6804,139.6970)]},  # 原宿口・代々木口
+    {'name':'明治神宮','lat':35.6763,'lng':139.6993,'area':720000,
+     'entrances':[(35.6763,139.6993),(35.6830,139.6986)]},  # 南参道口・北参道口
+    {'name':'新宿御苑','lat':35.6850,'lng':139.7101,'area':580000,
+     'entrances':[(35.6863,139.7101),(35.6837,139.7156)]},  # 新宿門・千駄ヶ谷門
     {'name':'善福寺公園','lat':35.7149,'lng':139.5905,'area':78622},
     {'name':'善福寺川緑地','lat':35.6951,'lng':139.6327,'area':184083},
     {'name':'和田堀公園','lat':35.6843,'lng':139.6414,'area':227510},
@@ -1858,6 +1863,10 @@ STATION_OVERRIDE = {
     # 下赤塚・地下鉄赤塚（近接駅・OSMエラー対策）
     '下赤塚_687399':  {'walk_base':62, 'medical_base':55},
     '地下鉄赤塚_cc2b86': {'walk_base':62, 'medical_base':55},
+    # 金町・京成金町（75m離れた同一地点駅、OSMデータのばらつきによるスコア差を統一）
+    '金町_f7f426':    {'walk_base':62},  # 京成金町(62)に合わせる
+    # 赤坂見附（OSMクエリで公園0件ヒット→清水谷公園のみLARGE_PARKS判定でblended=24に低下）
+    '赤坂見附_6c6bf2': {'walk_base':75},  # 赤坂(79)と同エリア・下限保証
     # 江戸川区12駅（実測値）
     'nishikasai': {'medical_base':78, 'walk_base':80},
     'kasai':      {'medical_base':90, 'walk_base':80},
@@ -2195,15 +2204,22 @@ BIG_PARK_KEYWORDS = [
     '砧公園','駒沢公園','多摩川','荒川','隅田公園','木場公園',
 ]
 
+def min_park_dist(st_lat, st_lng, p):
+    """公園の最近傍点（入口がある場合は入口群の最短距離、なければ重心）までの距離を返す"""
+    entrances = p.get('entrances', [])
+    if entrances:
+        return min(haversine(st_lat, st_lng, la, lo) for la, lo in entrances)
+    return haversine(st_lat, st_lng, p['lat'], p['lng'])
+
 def calc_walk_score(fac, base, st_lat=None, st_lng=None, base_is_override=False):
     park_score   = min(len(fac['parks']) * 10, 50)
     dogrun_score = 40 if fac['dogruns'] else 0
     big_parks    = [p for p in fac['parks'] if any(k in p for k in BIG_PARK_KEYWORDS)]
     bonus        = min(len(big_parks) * 15, 30)
-    # 国土交通省公園データで大型公園ボーナスを補完
+    # 国土交通省公園データで大型公園ボーナスを補完（入口がある場合は最近傍入口で距離判定）
     if st_lat and st_lng:
         near_large = [p for p in LARGE_PARKS
-                      if haversine(st_lat, st_lng, p['lat'], p['lng']) <= 1600]
+                      if min_park_dist(st_lat, st_lng, p) <= 1600]
         if near_large:
             max_area = max(p['area'] for p in near_large)
             if max_area >= 100000: bonus = max(bonus, 30)   # 10万㎡以上
@@ -2214,7 +2230,7 @@ def calc_walk_score(fac, base, st_lat=None, st_lng=None, base_is_override=False)
                 if dogrun_names: dogrun_score = 40
     osm_score    = min(park_score + dogrun_score + bonus, 90)
     no_osm_data  = not fac['parks'] and not fac['dogruns'] and not (st_lat and any(
-            haversine(st_lat, st_lng, p['lat'], p['lng']) <= 1600 for p in LARGE_PARKS))
+            min_park_dist(st_lat, st_lng, p) <= 1600 for p in LARGE_PARKS))
     if no_osm_data:
         return base
     blended = round(osm_score * 0.7 + base * 0.3)
