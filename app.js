@@ -38,8 +38,8 @@ const ML={
 };
 const FC={1:'rgba(255,240,80,0.28)',2:'rgba(255,140,10,0.38)',3:'rgba(210,50,0,0.48)',4:'rgba(170,0,0,0.58)',5:'rgba(120,0,0,0.68)'};
 const FL={1:'\u4F4E 0-0.5m',2:'\u4E2D 0.5-3m',3:'\u9AD8 3-5m',4:'\u5371 5m+',5:'\u6700\u5371 10m+'};
-const DATA_URL='https://raw.githubusercontent.com/14142001sagau-ai/inumap-Tokyo/main/data/stations.json';
-const COMMENTS_URL='https://raw.githubusercontent.com/14142001sagau-ai/inumap-Tokyo/main/data/comments.json';
+const DATA_URL='./data/stations.json';
+const COMMENTS_URL='./data/comments.json';
 
 // ペルソナ別ペナルティ・ボーナス設定
 // safety: 凶悪・粗暴犯重み付きスコア（35〜85）

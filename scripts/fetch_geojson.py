@@ -2275,12 +2275,15 @@ for st in stations:
     # 非居住駅はスコアをNoneに上書き（app.jsがnullを"-"マーカーで表示するため）
     if st['name'] in NON_RESIDENTIAL_STATIONS:
         walk = med = mob = None
+        housing_val = None
+    else:
+        housing_val = HOUSING_STATION.get(st['name'], HOUSING_WARD.get(ku, 65))
 
     results.append({
         'id': sid, 'name': st['name'], 'line': st['line'],
         'lat': st['lat'], 'lng': st['lng'],
         'walk':     walk,
-        'housing':  HOUSING_STATION.get(st['name'], HOUSING_WARD.get(ku, 65)),
+        'housing':  housing_val,
         'medical':  med,
         'mobility': mob,
         'safety':   SAFETY_STATION.get(st['name'], SAFETY_WARD.get(ku, 70)),
