@@ -1913,6 +1913,13 @@ STATION_OVERRIDE = {
     '東日本橋_c35183':    {'walk_base':63},  # 馬喰横山(walk=68, 220m)と同一エリア
     '荒川二丁目_3f1ecf':  {'walk_base':69},  # 荒川区役所前(walk=74, 383m)と同一エリア
     '新御茶ノ水_a485f1':  {'walk_base':41},  # 小川町(walk=46, 186m)と同一エリア
+    # 【作業】上野エリア（OSMデータ不足でblendedが大幅低下）
+    '京成上野_fabb1f':   {'walk_base':75},  # 上野(81)から300m同一エリア、OSM0件でblended=63
+    '上野広小路_cfe21b': {'walk_base':65},  # 上野公園徒歩圏、OSM0件でblended=44
+    '上野御徒町_4bc376': {'walk_base':65},  # 上野公園徒歩圏、OSM0件でblended=45
+    '御徒町_1d1560':     {'walk_base':65},  # 上野公園徒歩圏、OSM0件でblended=45
+    '新御徒町_92e5e3':   {'walk_base':60},  # アメ横隣接エリア、OSM0件でblended=42
+    '東大前_df831c':     {'walk_base':50},  # 東大キャンパス周辺、OSM0件でblended=38
     # 江戸川区12駅（実測値）
     'nishikasai': {'medical_base':78, 'walk_base':80},
     'kasai':      {'medical_base':90, 'walk_base':80},
