@@ -8013,41 +8013,6 @@
     "car_rentals": []
   },
   {
-    "id": "赤堤_f670a6",
-    "name": "赤堤",
-    "line": "東急世田谷線",
-    "lat": 35.6288,
-    "lng": 139.6406,
-    "walk": 53,
-    "housing": 70,
-    "medical": 57,
-    "mobility": 49,
-    "safety": 80,
-    "child": 56,
-    "fl": 1,
-    "parks": [
-      "桜三丁目公園",
-      "松丘公園",
-      "JRA弦巻公園",
-      "用賀2丁目公園",
-      "新町2-25遊び場"
-    ],
-    "dogruns": [],
-    "vets": [
-      "ヤマ動物医院",
-      "ようが動物病院",
-      "ベルヴェット動物病院",
-      "駒沢どうぶつ病院"
-    ],
-    "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
-  },
-  {
     "id": "駒場東大前_ab4cc5",
     "name": "駒場東大前",
     "line": "井の頭線",
