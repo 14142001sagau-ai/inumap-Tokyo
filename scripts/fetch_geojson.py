@@ -1427,9 +1427,37 @@ def _load_parks_data():
 
 PARKS_DATA = _load_parks_data()
 
+# 大型公園の入口座標（centroidが遠くても入口が圏内なら徒歩圏と判定）
+PARK_ENTRANCES = {
+    '代々木公園': [
+        (35.6715, 139.6993),  # 原宿口
+        (35.6804, 139.6970),  # 代々木口
+        (35.6700, 139.6918),  # 渋谷口
+        (35.6719, 139.6850),  # 参宮橋口
+    ],
+    '明治神宮': [
+        (35.6763, 139.6993),  # 南参道
+        (35.6830, 139.6986),  # 北参道
+    ],
+    '砧公園': [
+        (35.6291, 139.6216),  # 北口
+        (35.6220, 139.6280),  # 南口（用賀・二子玉川側）
+    ],
+    '上野恩賜公園': [
+        (35.7138, 139.7742),  # 中心
+        (35.7220, 139.7780),  # 鶯谷側
+        (35.7100, 139.7700),  # 根津側
+    ],
+}
+
+def min_dist_to_park(park_name, centroid_lat, centroid_lng, st_lat, st_lng):
+    points = [(centroid_lat, centroid_lng)]
+    points += PARK_ENTRANCES.get(park_name, [])
+    return min(haversine(st_lat, st_lng, p[0], p[1]) for p in points)
+
 def get_nearby_parks(lat, lng, radius=1600):
     return [p for p in PARKS_DATA
-            if haversine(lat, lng, p['lat'], p['lng']) <= radius]
+            if min_dist_to_park(p['name'], p['lat'], p['lng'], lat, lng) <= radius]
 
 # 都市公園データから計算した駅別walkベーススコア（面積別距離係数）
 # 大型公園ほど遠くても価値あり（大型犬オーナーは20分歩いても行く）
@@ -1948,9 +1976,7 @@ STATION_OVERRIDE = {
     # 下赤塚・地下鉄赤塚（medical_base保持）
     '下赤塚_687399':  {'medical_base':55},
     '地下鉄赤塚_cc2b86': {'medical_base':55},
-    # 赤坂見附（PARKS_DATA自動計算=52、清水谷公園が圏内だが面積小・下限保証）
-    '赤坂見附_6c6bf2': {'walk_base':75},  # 赤坂(79)と同エリア・下限保証
-    # 砧公園centroid>1600m・荒川江北橋緑地座標ズレのため引き続きOVERRIDE
+    # 砧公園：PARK_ENTRANCESで入口座標補正済みだが自動=71のため引き続きOVERRIDE
     '二子玉川_e3b826':    {'walk_base':85},  # 砧公園(39ha)隣接、PARKS_DATA自動=71
     '足立小台_5064bc':    {'walk_base':85},  # 荒川江北橋緑地(14ha)285m、PARKS_DATA自動=71
     # 同一エリア調整（PARKS_DATA自動計算でも差が残る）
