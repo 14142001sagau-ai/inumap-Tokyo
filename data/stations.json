@@ -47,8 +47,8 @@
     "lng": 139.7514,
     "walk": 52,
     "housing": 50,
-    "medical": 55,
-    "mobility": 37,
+    "medical": 49,
+    "mobility": 52,
     "safety": 79,
     "child": 67,
     "fl": 2,
@@ -60,12 +60,24 @@
       "神田児童公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "神楽坂ペットクリニック",
+      "Dog café"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Komachi Tokyo"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "Times",
+      "タイムズカー"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "二重橋前_d96dae",
@@ -75,8 +87,8 @@
     "lng": 139.7615,
     "walk": 67,
     "housing": 51,
-    "medical": 40,
-    "mobility": 50,
+    "medical": 55,
+    "mobility": 37,
     "safety": 67,
     "child": 67,
     "fl": 2,
@@ -91,17 +103,9 @@
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [
-      "アナム　本格インド料理　銀座店"
-    ],
-    "carshares": [
-      "タイムズカー"
-    ],
-    "car_rentals": [
-      "トヨタレンタカー",
-      "オリックスレンタカー",
-      "トヨタレンタカー"
-    ]
+    "dog_cafes": [],
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "仲御徒町_7b8444",
@@ -111,8 +115,8 @@
     "lng": 139.7761,
     "walk": 68,
     "housing": 51,
-    "medical": 55,
-    "mobility": 37,
+    "medical": 61,
+    "mobility": 55,
     "safety": 59,
     "child": 67,
     "fl": 2,
@@ -124,12 +128,29 @@
       "芳林公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "みのり動物クリニック",
+      "ねこの病院",
+      "チャト動物病院",
+      "本郷獣医科病院",
+      "すずきペットクリニック"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ポケットドッグ",
+      "犬の美容室 マール"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "Times",
+      "Times Car PLUS",
+      "タイムズカープラス"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "Go-Kart Rentals"
+    ]
   },
   {
     "id": "内幸町_d3a7c8",
@@ -174,7 +195,7 @@
     "walk": 54,
     "housing": 48,
     "medical": 55,
-    "mobility": 37,
+    "mobility": 47,
     "safety": 82,
     "child": 67,
     "fl": 2,
@@ -188,10 +209,17 @@
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Komachi Tokyo",
+      "COO&RIKU"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "四ツ谷_102d14",
@@ -201,8 +229,8 @@
     "lng": 139.7306,
     "walk": 51,
     "housing": 69,
-    "medical": 55,
-    "mobility": 37,
+    "medical": 58,
+    "mobility": 47,
     "safety": 81,
     "child": 67,
     "fl": 2,
@@ -214,12 +242,23 @@
       "外濠公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "四谷どうぶつ病院",
+      "市ヶ谷動物病院",
+      "ロッソ動物病院",
+      "カーサ動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "COO&RIKU"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "国会議事堂前_2bc2ad",
@@ -229,8 +268,8 @@
     "lng": 139.7428,
     "walk": 65,
     "housing": 55,
-    "medical": 55,
-    "mobility": 37,
+    "medical": 58,
+    "mobility": 47,
     "safety": 78,
     "child": 67,
     "fl": 2,
@@ -242,12 +281,22 @@
       "桜田公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "アテナ動物病院",
+      "虎ノ門どうぶつ病院",
+      "花澤犬猫医院",
+      "六本木動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "COO&RIKU"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "大手町_80c1e3",
@@ -396,7 +445,7 @@
     "line": "中央線",
     "lat": 35.6993,
     "lng": 139.7663,
-    "walk": 49,
+    "walk": 59,
     "housing": 46,
     "medical": 55,
     "mobility": 37,
@@ -404,11 +453,11 @@
     "child": 67,
     "fl": 2,
     "parks": [
+      "上野恩賜公園",
       "旧岩崎邸庭園",
       "西神田公園",
       "神田橋公園",
-      "神田児童公園",
-      "錦華公園"
+      "神田児童公園"
     ],
     "dogruns": [],
     "vets": [],
@@ -424,7 +473,7 @@
     "line": "9号線千代田線",
     "lat": 35.6963,
     "lng": 139.7651,
-    "walk": 46,
+    "walk": 56,
     "housing": 48,
     "medical": 55,
     "mobility": 37,
@@ -432,11 +481,11 @@
     "child": 67,
     "fl": 2,
     "parks": [
+      "上野恩賜公園",
       "旧岩崎邸庭園",
       "西神田公園",
       "神田橋公園",
-      "神田児童公園",
-      "錦華公園"
+      "神田児童公園"
     ],
     "dogruns": [],
     "vets": [],
@@ -454,8 +503,8 @@
     "lng": 139.7604,
     "walk": 69,
     "housing": 49,
-    "medical": 45,
-    "mobility": 50,
+    "medical": 55,
+    "mobility": 37,
     "safety": 63,
     "child": 67,
     "fl": 2,
@@ -467,22 +516,12 @@
       "三宅坂小公園"
     ],
     "dogruns": [],
-    "vets": [
-      "虎ノ門どうぶつ病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [
-      "アナム　本格インド料理　銀座店"
-    ],
-    "carshares": [
-      "タイムズカー"
-    ],
-    "car_rentals": [
-      "トヨタレンタカー",
-      "オリックスレンタカー",
-      "トヨタレンタカー"
-    ]
+    "dog_cafes": [],
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "有楽町_ce915d",
@@ -492,8 +531,8 @@
     "lng": 139.764,
     "walk": 79,
     "housing": 46,
-    "medical": 40,
-    "mobility": 47,
+    "medical": 55,
+    "mobility": 37,
     "safety": 62,
     "child": 67,
     "fl": 2,
@@ -508,15 +547,9 @@
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [
-      "アナム　本格インド料理　銀座店"
-    ],
+    "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "トヨタレンタカー",
-      "オリックスレンタカー",
-      "トヨタレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "末広町_cf94cf",
@@ -526,8 +559,8 @@
     "lng": 139.7718,
     "walk": 65,
     "housing": 44,
-    "medical": 55,
-    "mobility": 37,
+    "medical": 58,
+    "mobility": 55,
     "safety": 61,
     "child": 67,
     "fl": 2,
@@ -539,12 +572,28 @@
       "錦華公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "みのり動物クリニック",
+      "ねこの病院",
+      "チャト動物病院",
+      "本郷獣医科病院",
+      "すずきペットクリニック"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ポケットドッグ"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカーシェア",
+      "タイムズカーシェア",
+      "Times"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "Go-Kart Rentals"
+    ]
   },
   {
     "id": "東京_c9b5f6",
@@ -554,8 +603,8 @@
     "lng": 139.7673,
     "walk": 64,
     "housing": 51,
-    "medical": 55,
-    "mobility": 37,
+    "medical": 40,
+    "mobility": 52,
     "safety": 66,
     "child": 67,
     "fl": 2,
@@ -570,9 +619,18 @@
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "dog_cafes": [
+      "アナム　本格インド料理　銀座店"
+    ],
+    "carshares": [
+      "タイムズカーシェア",
+      "タイムズカー"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "オリックスレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "桜田門_03cf93",
@@ -582,8 +640,8 @@
     "lng": 139.7516,
     "walk": 69,
     "housing": 56,
-    "medical": 47,
-    "mobility": 42,
+    "medical": 55,
+    "mobility": 37,
     "safety": 75,
     "child": 67,
     "fl": 2,
@@ -595,20 +653,12 @@
       "数寄屋橋公園"
     ],
     "dogruns": [],
-    "vets": [
-      "虎ノ門どうぶつ病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "COO&RIKU"
-    ],
-    "dog_cafes": [
-      "アナム　本格インド料理　銀座店"
-    ],
+    "groomings": [],
+    "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "トヨタレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "永田町_ca200b",
@@ -674,8 +724,8 @@
     "lng": 139.77,
     "walk": 68,
     "housing": 47,
-    "medical": 55,
-    "mobility": 37,
+    "medical": 61,
+    "mobility": 55,
     "safety": 60,
     "child": 67,
     "fl": 2,
@@ -687,12 +737,29 @@
       "淡路公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "みのり動物クリニック",
+      "ねこの病院",
+      "チャト動物病院",
+      "本郷獣医科病院",
+      "上野の森 どうぶつ病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ポケットドッグ",
+      "犬の美容室 マール"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカーシェア",
+      "タイムズカーシェア",
+      "Times"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "Go-Kart Rentals"
+    ]
   },
   {
     "id": "神保町_fb6cca",
@@ -702,8 +769,8 @@
     "lng": 139.7582,
     "walk": 49,
     "housing": 62,
-    "medical": 55,
-    "mobility": 37,
+    "medical": 47,
+    "mobility": 55,
     "safety": 74,
     "child": 67,
     "fl": 2,
@@ -715,12 +782,23 @@
       "錦華公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "みのり動物クリニック",
+      "本郷獣医科病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "Times",
+      "Times Car PLUS",
+      "Careco"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "Go-Kart Rentals"
+    ]
   },
   {
     "id": "神田_5293d6",
@@ -730,8 +808,8 @@
     "lng": 139.7712,
     "walk": 46,
     "housing": 37,
-    "medical": 55,
-    "mobility": 37,
+    "medical": 54,
+    "mobility": 55,
     "safety": 62,
     "child": 67,
     "fl": 2,
@@ -743,12 +821,26 @@
       "淡路公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ねこの病院",
+      "チャト動物病院",
+      "ラブリー動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ポケットドッグ"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "Times Car PLUS",
+      "タイムズカープラス",
+      "カレコ"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "Go-Kart Rentals"
+    ]
   },
   {
     "id": "秋葉原_4b226d",
@@ -756,27 +848,43 @@
     "line": "東北線",
     "lat": 35.6977,
     "lng": 139.7729,
-    "walk": 57,
+    "walk": 63,
     "housing": 56,
-    "medical": 55,
-    "mobility": 37,
+    "medical": 58,
+    "mobility": 55,
     "safety": 61,
     "child": 67,
     "fl": 2,
     "parks": [
+      "上野恩賜公園",
       "旧岩崎邸庭園",
       "神田橋公園",
       "神田児童公園",
-      "錦華公園",
-      "淡路公園"
+      "錦華公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "みのり動物クリニック",
+      "ねこの病院",
+      "チャト動物病院",
+      "本郷獣医科病院",
+      "すずきペットクリニック"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ポケットドッグ"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "Times",
+      "Times Car PLUS",
+      "タイムズカープラス"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "Go-Kart Rentals"
+    ]
   },
   {
     "id": "竹橋_3b386a",
@@ -787,7 +895,7 @@
     "walk": 46,
     "housing": 57,
     "medical": 55,
-    "mobility": 37,
+    "mobility": 52,
     "safety": 75,
     "child": 67,
     "fl": 2,
@@ -803,8 +911,15 @@
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカーシェア",
+      "タイムズカー"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "Go-Kart Rentals"
+    ]
   },
   {
     "id": "赤坂_1fc8b4",
@@ -814,8 +929,8 @@
     "lng": 139.7364,
     "walk": 51,
     "housing": 63,
-    "medical": 58,
-    "mobility": 47,
+    "medical": 55,
+    "mobility": 37,
     "safety": 78,
     "child": 67,
     "fl": 2,
@@ -827,22 +942,12 @@
       "狸穴公園"
     ],
     "dogruns": [],
-    "vets": [
-      "アテナ動物病院",
-      "虎ノ門どうぶつ病院",
-      "花澤犬猫医院",
-      "六本木動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "COO&RIKU"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "トヨタレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "赤坂見附_6c6bf2",
@@ -850,10 +955,10 @@
     "line": "4号線丸ノ内線",
     "lat": 35.677,
     "lng": 139.7372,
-    "walk": 75,
+    "walk": 52,
     "housing": 45,
-    "medical": 55,
-    "mobility": 37,
+    "medical": 54,
+    "mobility": 47,
     "safety": 79,
     "child": 67,
     "fl": 2,
@@ -865,12 +970,21 @@
       "三河台公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "アテナ動物病院",
+      "虎ノ門どうぶつ病院",
+      "六本木動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "COO&RIKU"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "霞ケ関_33d026",
@@ -944,8 +1058,8 @@
     "lng": 139.7377,
     "walk": 54,
     "housing": 57,
-    "medical": 44,
-    "mobility": 47,
+    "medical": 55,
+    "mobility": 37,
     "safety": 82,
     "child": 67,
     "fl": 2,
@@ -957,20 +1071,12 @@
       "九段坂公園"
     ],
     "dogruns": [],
-    "vets": [
-      "四谷どうぶつ病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "COO&RIKU"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "ニッポンレンタカー",
-      "トヨタレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "三越前_cffcd4",
@@ -1008,8 +1114,8 @@
     "lng": 139.7704,
     "walk": 64,
     "housing": 52,
-    "medical": 55,
-    "mobility": 38,
+    "medical": 40,
+    "mobility": 50,
     "safety": 64,
     "child": 70,
     "fl": 2,
@@ -1024,9 +1130,16 @@
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "dog_cafes": [
+      "アナム　本格インド料理　銀座店"
+    ],
+    "carshares": [
+      "タイムズカー"
+    ],
+    "car_rentals": [
+      "オリックスレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "人形町_660392",
@@ -1036,8 +1149,8 @@
     "lng": 139.7818,
     "walk": 55,
     "housing": 54,
-    "medical": 55,
-    "mobility": 38,
+    "medical": 43,
+    "mobility": 55,
     "safety": 74,
     "child": 70,
     "fl": 2,
@@ -1051,10 +1164,23 @@
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "groomings": [
+      "ポケットドッグ",
+      "Inu to Town"
+    ],
+    "dog_cafes": [
+      "PITMANS"
+    ],
+    "carshares": [
+      "タイムズカープラス",
+      "カレコ",
+      "タイムズカーシェア"
+    ],
+    "car_rentals": [
+      "JR駅レンタカー",
+      "ニッポンレンタカー",
+      "Toyota Rental a Car TCAT"
+    ]
   },
   {
     "id": "八丁堀_ecb881",
@@ -1064,8 +1190,8 @@
     "lng": 139.7786,
     "walk": 55,
     "housing": 46,
-    "medical": 55,
-    "mobility": 38,
+    "medical": 40,
+    "mobility": 47,
     "safety": 74,
     "child": 70,
     "fl": 2,
@@ -1080,9 +1206,15 @@
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [],
+    "dog_cafes": [
+      "PITMANS"
+    ],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "Toyota Rental a Car TCAT",
+      "オリックスレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "勝どき_6b9d66",
@@ -1092,8 +1224,8 @@
     "lng": 139.7767,
     "walk": 65,
     "housing": 65,
-    "medical": 52,
-    "mobility": 47,
+    "medical": 55,
+    "mobility": 38,
     "safety": 80,
     "child": 70,
     "fl": 2,
@@ -1105,22 +1237,12 @@
       "月島第二公園"
     ],
     "dogruns": [],
-    "vets": [
-      "つきしま動物病院",
-      "Pets-First Animal Hospital"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Dear Dog"
-    ],
-    "dog_cafes": [
-      "Team Japan 2020 Village Cafe & Restaurant Centrale"
-    ],
+    "groomings": [],
+    "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "日産レンタカー",
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "宝町_a7b075",
@@ -1186,8 +1308,8 @@
     "lng": 139.7741,
     "walk": 66,
     "housing": 61,
-    "medical": 47,
-    "mobility": 47,
+    "medical": 55,
+    "mobility": 38,
     "safety": 69,
     "child": 70,
     "fl": 2,
@@ -1199,22 +1321,12 @@
       "鉄砲洲公園"
     ],
     "dogruns": [],
-    "vets": [
-      "つきしま動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Dear Dog"
-    ],
-    "dog_cafes": [
-      "アナム　本格インド料理　銀座店"
-    ],
+    "groomings": [],
+    "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "オリックスレンタカー",
-      "トヨタレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "新日本橋_0e073e",
@@ -1287,8 +1399,8 @@
     "lng": 139.759,
     "walk": 77,
     "housing": 58,
-    "medical": 55,
-    "mobility": 38,
+    "medical": 56,
+    "mobility": 49,
     "safety": 80,
     "child": 68,
     "fl": 2,
@@ -1300,12 +1412,22 @@
       "豊海運動公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "どうぶつ整形外科",
+      "芝公園動物病院",
+      "Pets-First Animal Hospital"
+    ],
     "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
+    "groomings": [
+      "トリミング工房Shampoo"
+    ],
+    "dog_cafes": [
+      "Team Japan 2020 Village Cafe & Restaurant Centrale"
+    ],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "日本橋_38cb69",
@@ -1354,8 +1476,8 @@
     "lng": 139.7836,
     "walk": 54,
     "housing": 69,
-    "medical": 55,
-    "mobility": 38,
+    "medical": 49,
+    "mobility": 47,
     "safety": 78,
     "child": 70,
     "fl": 3,
@@ -1367,12 +1489,20 @@
       "月島第一公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "つきしま動物病院",
+      "青柳動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Dear Dog"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "日産レンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "東日本橋_c35183",
@@ -1410,8 +1540,8 @@
     "lng": 139.7673,
     "walk": 79,
     "housing": 51,
-    "medical": 42,
-    "mobility": 47,
+    "medical": 55,
+    "mobility": 38,
     "safety": 66,
     "child": 70,
     "fl": 2,
@@ -1425,18 +1555,10 @@
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Dear Dog"
-    ],
-    "dog_cafes": [
-      "アナム　本格インド料理　銀座店"
-    ],
+    "groomings": [],
+    "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "トヨタレンタカー",
-      "オリックスレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "水天宮前_456c6f",
@@ -1541,7 +1663,7 @@
     "walk": 81,
     "housing": 58,
     "medical": 55,
-    "mobility": 38,
+    "mobility": 45,
     "safety": 80,
     "child": 68,
     "fl": 2,
@@ -1606,8 +1728,8 @@
     "lng": 139.7663,
     "walk": 82,
     "housing": 51,
-    "medical": 55,
-    "mobility": 38,
+    "medical": 47,
+    "mobility": 47,
     "safety": 65,
     "child": 70,
     "fl": 2,
@@ -1619,12 +1741,21 @@
       "鉄砲洲公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "つきしま動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
+    "groomings": [
+      "Dear Dog"
+    ],
+    "dog_cafes": [
+      "アナム　本格インド料理　銀座店"
+    ],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "芝浦ふ頭_0ec412",
@@ -1635,7 +1766,7 @@
     "walk": 50,
     "housing": 69,
     "medical": 55,
-    "mobility": 38,
+    "mobility": 45,
     "safety": 81,
     "child": 68,
     "fl": 3,
@@ -1690,8 +1821,8 @@
     "lng": 139.7638,
     "walk": 80,
     "housing": 51,
-    "medical": 45,
-    "mobility": 47,
+    "medical": 55,
+    "mobility": 38,
     "safety": 61,
     "child": 70,
     "fl": 2,
@@ -1703,20 +1834,12 @@
       "京橋公園"
     ],
     "dogruns": [],
-    "vets": [
-      "虎ノ門どうぶつ病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [
-      "アナム　本格インド料理　銀座店"
-    ],
+    "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "トヨタレンタカー",
-      "オリックスレンタカー",
-      "トヨタレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "銀座一丁目_d9ac1f",
@@ -1800,8 +1923,8 @@
     "lng": 139.7828,
     "walk": 54,
     "housing": 59,
-    "medical": 61,
-    "mobility": 55,
+    "medical": 55,
+    "mobility": 38,
     "safety": 67,
     "child": 70,
     "fl": 2,
@@ -1813,28 +1936,12 @@
       "練成公園"
     ],
     "dogruns": [],
-    "vets": [
-      "ねこの病院",
-      "チャト動物病院",
-      "すずきペットクリニック",
-      "ラブリー動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ポケットドッグ",
-      "Inu to Town"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "Times Car PLUS",
-      "タイムズカープラス",
-      "カレコ"
-    ],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "JR駅レンタカー",
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "お台場海浜公園_664c66",
@@ -1876,11 +1983,7 @@
     "child": 68,
     "fl": 3,
     "parks": [
-      "青海中央ふ頭公園",
-      "水の広場公園",
-      "シンボルプロムナード公園",
-      "青海緑道公園",
-      "東八潮緑道公園"
+      "潮風公園"
     ],
     "dogruns": [],
     "vets": [],
@@ -1899,7 +2002,7 @@
     "walk": 81,
     "housing": 58,
     "medical": 55,
-    "mobility": 38,
+    "mobility": 45,
     "safety": 75,
     "child": 68,
     "fl": 2,
@@ -1926,7 +2029,7 @@
     "lng": 139.7489,
     "walk": 69,
     "housing": 58,
-    "medical": 62,
+    "medical": 55,
     "mobility": 45,
     "safety": 79,
     "child": 68,
@@ -1939,25 +2042,12 @@
       "イタリア公園"
     ],
     "dogruns": [],
-    "vets": [
-      "ハナモ動物病院",
-      "麻布動物",
-      "どうぶつ整形外科",
-      "芝公園動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Doggie-Do",
-      "トリミング工房Shampoo",
-      "Olive Wan"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカーシェア ドゥーエ南麻布"
-    ],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "六本木_ade5b5",
@@ -2065,7 +2155,7 @@
     "walk": 49,
     "housing": 64,
     "medical": 55,
-    "mobility": 38,
+    "mobility": 45,
     "safety": 79,
     "child": 68,
     "fl": 2,
@@ -2120,8 +2210,8 @@
     "lng": 139.7562,
     "walk": 80,
     "housing": 58,
-    "medical": 55,
-    "mobility": 38,
+    "medical": 56,
+    "mobility": 49,
     "safety": 75,
     "child": 68,
     "fl": 2,
@@ -2133,12 +2223,22 @@
       "豊海児童公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "虎ノ門どうぶつ病院",
+      "どうぶつ整形外科",
+      "芝公園動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
+    "groomings": [
+      "トリミング工房Shampoo"
+    ],
+    "dog_cafes": [
+      "アナム　本格インド料理　銀座店"
+    ],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "広尾_1d4703",
@@ -2189,7 +2289,7 @@
     "walk": 80,
     "housing": 50,
     "medical": 55,
-    "mobility": 38,
+    "mobility": 45,
     "safety": 73,
     "child": 68,
     "fl": 2,
@@ -2221,7 +2321,11 @@
     "safety": 83,
     "child": 68,
     "fl": 2,
-    "parks": [],
+    "parks": [
+      "台場公園",
+      "潮風公園",
+      "お台場レインボー公園"
+    ],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -2239,7 +2343,7 @@
     "walk": 48,
     "housing": 64,
     "medical": 49,
-    "mobility": 50,
+    "mobility": 57,
     "safety": 78,
     "child": 68,
     "fl": 2,
@@ -2276,8 +2380,8 @@
     "lng": 139.757,
     "walk": 81,
     "housing": 58,
-    "medical": 55,
-    "mobility": 38,
+    "medical": 52,
+    "mobility": 49,
     "safety": 79,
     "child": 68,
     "fl": 2,
@@ -2289,12 +2393,21 @@
       "豊海運動公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "どうぶつ整形外科",
+      "芝公園動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
+    "groomings": [
+      "トリミング工房Shampoo"
+    ],
+    "dog_cafes": [
+      "アナム　本格インド料理　銀座店"
+    ],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "溜池山王_3a87ce",
@@ -2304,8 +2417,8 @@
     "lng": 139.7413,
     "walk": 64,
     "housing": 46,
-    "medical": 55,
-    "mobility": 38,
+    "medical": 58,
+    "mobility": 47,
     "safety": 78,
     "child": 68,
     "fl": 2,
@@ -2317,12 +2430,22 @@
       "塩釜公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "アテナ動物病院",
+      "虎ノ門どうぶつ病院",
+      "花澤犬猫医院",
+      "六本木動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "COO&RIKU"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "田町_4e7531",
@@ -2333,7 +2456,7 @@
     "walk": 66,
     "housing": 61,
     "medical": 62,
-    "mobility": 45,
+    "mobility": 52,
     "safety": 80,
     "child": 68,
     "fl": 2,
@@ -2373,8 +2496,8 @@
     "lng": 139.725,
     "walk": 46,
     "housing": 64,
-    "medical": 44,
-    "mobility": 47,
+    "medical": 55,
+    "mobility": 45,
     "safety": 79,
     "child": 68,
     "fl": 2,
@@ -2386,19 +2509,12 @@
       "白金公園"
     ],
     "dogruns": [],
-    "vets": [
-      "広尾の森動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Miss Bibi"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "白金高輪_2eb628",
@@ -2436,8 +2552,8 @@
     "lng": 139.7453,
     "walk": 78,
     "housing": 48,
-    "medical": 55,
-    "mobility": 38,
+    "medical": 61,
+    "mobility": 50,
     "safety": 74,
     "child": 68,
     "fl": 2,
@@ -2449,12 +2565,27 @@
       "イタリア公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "アテナ動物病院",
+      "虎ノ門どうぶつ病院",
+      "Mojamoja Animal Clinic",
+      "花澤犬猫医院",
+      "麻布動物"
+    ],
     "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "groomings": [
+      "Olive Wan"
+    ],
+    "dog_cafes": [
+      "アナム　本格インド料理　銀座店"
+    ],
+    "carshares": [
+      "タイムズカーシェア ドゥーエ南麻布"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "芝公園_57cc37",
@@ -2464,7 +2595,7 @@
     "lng": 139.7498,
     "walk": 82,
     "housing": 57,
-    "medical": 62,
+    "medical": 55,
     "mobility": 45,
     "safety": 78,
     "child": 68,
@@ -2477,26 +2608,12 @@
       "浜崎公園"
     ],
     "dogruns": [],
-    "vets": [
-      "ハナモ動物病院",
-      "Mojamoja Animal Clinic",
-      "花澤犬猫医院",
-      "麻布動物",
-      "どうぶつ整形外科"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Doggie-Do",
-      "トリミング工房Shampoo",
-      "Olive Wan"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカーシェア ドゥーエ南麻布"
-    ],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "虎ノ門_4f63be",
@@ -2562,7 +2679,7 @@
     "lng": 139.745,
     "walk": 71,
     "housing": 59,
-    "medical": 62,
+    "medical": 55,
     "mobility": 45,
     "safety": 77,
     "child": 68,
@@ -2575,26 +2692,12 @@
       "イタリア公園"
     ],
     "dogruns": [],
-    "vets": [
-      "ハナモ動物病院",
-      "虎ノ門どうぶつ病院",
-      "Mojamoja Animal Clinic",
-      "花澤犬猫医院",
-      "麻布動物"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Doggie-Do",
-      "トリミング工房Shampoo",
-      "Olive Wan"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカーシェア ドゥーエ南麻布"
-    ],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "青山一丁目_9d2674",
@@ -2604,8 +2707,8 @@
     "lng": 139.7241,
     "walk": 53,
     "housing": 58,
-    "medical": 55,
-    "mobility": 38,
+    "medical": 58,
+    "mobility": 47,
     "safety": 78,
     "child": 68,
     "fl": 2,
@@ -2617,12 +2720,22 @@
       "六本木西公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "光が丘動物病院 麻生クリニック",
+      "アテナ動物病院",
+      "花澤犬猫医院",
+      "六本木動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "COO&RIKU"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "青海_f00389",
@@ -2637,7 +2750,11 @@
     "safety": 83,
     "child": 68,
     "fl": 3,
-    "parks": [],
+    "parks": [
+      "台場公園",
+      "潮風公園",
+      "お台場レインボー公園"
+    ],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -2655,7 +2772,7 @@
     "walk": 47,
     "housing": 54,
     "medical": 55,
-    "mobility": 38,
+    "mobility": 45,
     "safety": 78,
     "child": 68,
     "fl": 2,
@@ -2683,7 +2800,7 @@
     "walk": 48,
     "housing": 67,
     "medical": 55,
-    "mobility": 38,
+    "mobility": 45,
     "safety": 79,
     "child": 68,
     "fl": 2,
@@ -2710,8 +2827,8 @@
     "lng": 139.7368,
     "walk": 67,
     "housing": 52,
-    "medical": 62,
-    "mobility": 50,
+    "medical": 55,
+    "mobility": 38,
     "safety": 80,
     "child": 68,
     "fl": 2,
@@ -2723,27 +2840,12 @@
       "本村公園"
     ],
     "dogruns": [],
-    "vets": [
-      "ハナモ動物病院",
-      "光が丘動物病院 麻生クリニック",
-      "アテナ動物病院",
-      "Mojamoja Animal Clinic",
-      "花澤犬猫医院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Doggie-Do",
-      "Olive Wan",
-      "Miss Lacy"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカーシェア ドゥーエ南麻布"
-    ],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "下落合_6a1a89",
@@ -2753,8 +2855,8 @@
     "lng": 139.6951,
     "walk": 54,
     "housing": 67,
-    "medical": 58,
-    "mobility": 55,
+    "medical": 55,
+    "mobility": 49,
     "safety": 75,
     "child": 41,
     "fl": 2,
@@ -2766,26 +2868,12 @@
       "上落合公園"
     ],
     "dogruns": [],
-    "vets": [
-      "小滝橋動物病院 目白通り高度医療センター",
-      "エンドー動物病院",
-      "マリーペットクリニック",
-      "もとい動物病院",
-      "小滝橋動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ドッグマイスター"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "Timesカーシェアステーション"
-    ],
-    "car_rentals": [
-      "マツダレンタカー",
-      "トヨタレンタカー・リース",
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "中井_5c048a",
@@ -2795,8 +2883,8 @@
     "lng": 139.6866,
     "walk": 52,
     "housing": 68,
-    "medical": 55,
-    "mobility": 42,
+    "medical": 58,
+    "mobility": 66,
     "safety": 76,
     "child": 41,
     "fl": 2,
@@ -2808,12 +2896,23 @@
       "上落合公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "野村獣医科Vセンター",
+      "小滝橋動物病院 目白通り高度医療センター",
+      "エンドー動物病院",
+      "マリーペットクリニック",
+      "こぐま動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ドッグマイスター"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "日産レンタカー"
+    ]
   },
   {
     "id": "信濃町_869010",
@@ -2823,8 +2922,8 @@
     "lng": 139.7211,
     "walk": 53,
     "housing": 55,
-    "medical": 55,
-    "mobility": 42,
+    "medical": 58,
+    "mobility": 52,
     "safety": 82,
     "child": 41,
     "fl": 1,
@@ -2836,12 +2935,24 @@
       "高橋是清翁記念公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "四谷どうぶつ病院",
+      "ロッソ動物病院",
+      "アテナ動物病院",
+      "カーサ動物病院",
+      "六本木動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "COO&RIKU"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "初台_cbcc27",
@@ -2852,7 +2963,7 @@
     "walk": 84,
     "housing": 64,
     "medical": 55,
-    "mobility": 42,
+    "mobility": 49,
     "safety": 76,
     "child": 41,
     "fl": 1,
@@ -2882,7 +2993,7 @@
     "walk": 81,
     "housing": 49,
     "medical": 55,
-    "mobility": 52,
+    "mobility": 42,
     "safety": 53,
     "child": 41,
     "fl": 2,
@@ -2901,11 +3012,7 @@
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "タイムズ渋谷本町第3",
-      "日産レンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "参宮橋_10a2cd",
@@ -2945,8 +3052,8 @@
     "lng": 139.7183,
     "walk": 49,
     "housing": 60,
-    "medical": 58,
-    "mobility": 52,
+    "medical": 55,
+    "mobility": 42,
     "safety": 77,
     "child": 41,
     "fl": 1,
@@ -2958,24 +3065,12 @@
       "三栄公園"
     ],
     "dogruns": [],
-    "vets": [
-      "四谷どうぶつ病院",
-      "市ヶ谷動物病院",
-      "新宿動物病院",
-      "ロッソ動物病院",
-      "カーサ動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Ken21"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "トヨタレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "国立競技場_99b7fe",
@@ -2983,7 +3078,7 @@
     "line": "12号線大江戸線",
     "lat": 35.68,
     "lng": 139.7144,
-    "walk": 55,
+    "walk": 83,
     "housing": 64,
     "medical": 55,
     "mobility": 42,
@@ -2992,12 +3087,14 @@
     "fl": 1,
     "parks": [
       "明治公園",
+      "代々木公園",
       "高橋是清翁記念公園",
       "青葉公園",
-      "青山公園",
-      "若葉公園"
+      "青山公園"
     ],
-    "dogruns": [],
+    "dogruns": [
+      "代々木公園"
+    ],
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
@@ -3014,7 +3111,7 @@
     "walk": 63,
     "housing": 41,
     "medical": 55,
-    "mobility": 42,
+    "mobility": 49,
     "safety": 41,
     "child": 41,
     "fl": 1,
@@ -3041,8 +3138,8 @@
     "lng": 139.6772,
     "walk": 82,
     "housing": 64,
-    "medical": 55,
-    "mobility": 42,
+    "medical": 57,
+    "mobility": 66,
     "safety": 78,
     "child": 41,
     "fl": 1,
@@ -3056,12 +3153,21 @@
     "dogruns": [
       "代々木公園"
     ],
-    "vets": [],
+    "vets": [
+      "タカマ動物病院",
+      "リトルピース動物病院",
+      "ねこの病院",
+      "ダクタリ動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー",
+      "タイムズ渋谷本町第3",
+      "日産レンタカー"
+    ]
   },
   {
     "id": "新大久保_c99d2b",
@@ -3071,8 +3177,8 @@
     "lng": 139.7002,
     "walk": 64,
     "housing": 43,
-    "medical": 55,
-    "mobility": 42,
+    "medical": 57,
+    "mobility": 55,
     "safety": 38,
     "child": 41,
     "fl": 1,
@@ -3084,12 +3190,23 @@
       "新宿公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "エンドー動物病院",
+      "マリーペットクリニック",
+      "新宿動物病院",
+      "小滝橋動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "Timesカーシェアステーション"
+    ],
+    "car_rentals": [
+      "マツダレンタカー",
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "新宿_aa98e2",
@@ -3097,7 +3214,7 @@
     "line": "中央線",
     "lat": 35.69,
     "lng": 139.7006,
-    "walk": 51,
+    "walk": 79,
     "housing": 35,
     "medical": 55,
     "mobility": 42,
@@ -3105,13 +3222,15 @@
     "child": 41,
     "fl": 1,
     "parks": [
+      "代々木公園",
       "大久保公園",
       "西大久保公園",
       "花園東公園",
-      "花園公園",
-      "新宿公園"
+      "花園公園"
     ],
-    "dogruns": [],
+    "dogruns": [
+      "代々木公園"
+    ],
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
@@ -3125,21 +3244,62 @@
     "line": "13号線副都心線",
     "lat": 35.6904,
     "lng": 139.7046,
-    "walk": 48,
+    "walk": 76,
     "housing": 35,
-    "medical": 55,
-    "mobility": 42,
+    "medical": 47,
+    "mobility": 55,
     "safety": 40,
     "child": 41,
     "fl": 1,
     "parks": [
+      "代々木公園",
       "愛住公園",
       "大久保公園",
       "西大久保公園",
-      "花園東公園",
-      "花園公園"
+      "花園東公園"
     ],
-    "dogruns": [],
+    "dogruns": [
+      "代々木公園"
+    ],
+    "vets": [
+      "新宿動物病院",
+      "カーサ動物病院"
+    ],
+    "vets_emergency": [],
+    "groomings": [],
+    "dog_cafes": [],
+    "carshares": [
+      "Timesカーシェアステーション"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー",
+      "ニッポンレンタカー"
+    ]
+  },
+  {
+    "id": "新宿御苑前_9af34f",
+    "name": "新宿御苑前",
+    "line": "4号線丸ノ内線",
+    "lat": 35.6887,
+    "lng": 139.71,
+    "walk": 77,
+    "housing": 48,
+    "medical": 55,
+    "mobility": 42,
+    "safety": 43,
+    "child": 41,
+    "fl": 2,
+    "parks": [
+      "明治公園",
+      "代々木公園",
+      "若葉公園",
+      "愛住公園",
+      "大久保公園"
+    ],
+    "dogruns": [
+      "代々木公園"
+    ],
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
@@ -3148,49 +3308,12 @@
     "car_rentals": []
   },
   {
-    "id": "新宿御苑前_9af34f",
-    "name": "新宿御苑前",
-    "line": "4号線丸ノ内線",
-    "lat": 35.6887,
-    "lng": 139.71,
-    "walk": 49,
-    "housing": 48,
-    "medical": 57,
-    "mobility": 52,
-    "safety": 43,
-    "child": 41,
-    "fl": 2,
-    "parks": [
-      "明治公園",
-      "若葉公園",
-      "愛住公園",
-      "大久保公園",
-      "西大久保公園"
-    ],
-    "dogruns": [],
-    "vets": [
-      "四谷どうぶつ病院",
-      "新宿動物病院",
-      "ロッソ動物病院",
-      "カーサ動物病院"
-    ],
-    "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "ニッポンレンタカー",
-      "トヨタレンタカー"
-    ]
-  },
-  {
     "id": "新宿西口_2d1d9d",
     "name": "新宿西口",
     "line": "12号線大江戸線",
     "lat": 35.6925,
     "lng": 139.6993,
-    "walk": 52,
+    "walk": 80,
     "housing": 34,
     "medical": 52,
     "mobility": 55,
@@ -3198,13 +3321,15 @@
     "child": 41,
     "fl": 1,
     "parks": [
+      "代々木公園",
       "大久保公園",
       "西大久保公園",
       "花園東公園",
-      "花園公園",
-      "新宿公園"
+      "花園公園"
     ],
-    "dogruns": [],
+    "dogruns": [
+      "代々木公園"
+    ],
     "vets": [
       "エンドー動物病院",
       "新宿動物病院",
@@ -3230,8 +3355,8 @@
     "lng": 139.7188,
     "walk": 69,
     "housing": 65,
-    "medical": 55,
-    "mobility": 42,
+    "medical": 56,
+    "mobility": 55,
     "safety": 77,
     "child": 41,
     "fl": 2,
@@ -3243,12 +3368,25 @@
       "甘泉園公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ミラ動物病院",
+      "市ヶ谷動物病院",
+      "Hana Pet clinic"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Ken21",
+      "LaCOCOT"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカープラス"
+    ],
+    "car_rentals": [
+      "マツダレンタカー",
+      "トヨタレンタカー・リース",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "曙橋_4baa4c",
@@ -3314,8 +3452,8 @@
     "lng": 139.7244,
     "walk": 65,
     "housing": 56,
-    "medical": 55,
-    "mobility": 42,
+    "medical": 61,
+    "mobility": 55,
     "safety": 76,
     "child": 41,
     "fl": 1,
@@ -3327,12 +3465,27 @@
       "愛住公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "四谷どうぶつ病院",
+      "ミラ動物病院",
+      "神楽坂ペットクリニック",
+      "市ヶ谷動物病院",
+      "新宿動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Ken21",
+      "Komachi Tokyo"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカープラス"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "牛込神楽坂_d08c11",
@@ -3342,8 +3495,8 @@
     "lng": 139.7353,
     "walk": 54,
     "housing": 62,
-    "medical": 62,
-    "mobility": 52,
+    "medical": 55,
+    "mobility": 42,
     "safety": 79,
     "child": 41,
     "fl": 1,
@@ -3355,26 +3508,12 @@
       "外濠公園"
     ],
     "dogruns": [],
-    "vets": [
-      "四谷どうぶつ病院",
-      "ミラ動物病院",
-      "神楽坂ペットクリニック",
-      "市ヶ谷動物病院",
-      "ロッソ動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Ken21",
-      "LOVE WOOF",
-      "Komachi Tokyo"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "ニッポンレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "神楽坂_cda6d1",
@@ -3384,8 +3523,8 @@
     "lng": 139.7334,
     "walk": 51,
     "housing": 60,
-    "medical": 55,
-    "mobility": 42,
+    "medical": 62,
+    "mobility": 62,
     "safety": 78,
     "child": 41,
     "fl": 1,
@@ -3397,12 +3536,28 @@
       "白銀公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ミラ動物病院",
+      "神楽坂ペットクリニック",
+      "市ヶ谷動物病院",
+      "ロッソ動物病院",
+      "Dog café"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Ken21",
+      "LOVE WOOF",
+      "Komachi Tokyo"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカープラス"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "若松河田_52fa37",
@@ -3440,8 +3595,8 @@
     "lng": 139.6833,
     "walk": 54,
     "housing": 66,
-    "medical": 58,
-    "mobility": 52,
+    "medical": 55,
+    "mobility": 56,
     "safety": 79,
     "child": 41,
     "fl": 1,
@@ -3453,24 +3608,12 @@
       "下落合公園"
     ],
     "dogruns": [],
-    "vets": [
-      "野村獣医科Vセンター",
-      "小滝橋動物病院 目白通り高度医療センター",
-      "マリーペットクリニック",
-      "哲学堂アニマルクリニック",
-      "もとい動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ドッグマイスター"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "レンタルバイク池袋",
-      "ニッポンレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "西新宿_5d0be6",
@@ -3506,27 +3649,39 @@
     "line": "12号線大江戸線",
     "lat": 35.6896,
     "lng": 139.684,
-    "walk": 54,
+    "walk": 82,
     "housing": 60,
-    "medical": 55,
-    "mobility": 42,
+    "medical": 62,
+    "mobility": 59,
     "safety": 70,
     "child": 41,
     "fl": 2,
     "parks": [
+      "代々木公園",
       "柏木公園",
       "新宿中央公園",
       "蜀江坂公園",
-      "北新宿公園",
-      "角筈公園"
+      "北新宿公園"
     ],
-    "dogruns": [],
-    "vets": [],
-    "vets_emergency": [],
+    "dogruns": [
+      "代々木公園"
+    ],
+    "vets": [
+      "本町動物病院",
+      "動物救急センター",
+      "エンドー動物病院"
+    ],
+    "vets_emergency": [
+      "動物救急センター"
+    ],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "タイムズ渋谷本町第3",
+      "日産レンタカー"
+    ]
   },
   {
     "id": "西早稲田_640680",
@@ -3564,8 +3719,8 @@
     "lng": 139.7,
     "walk": 63,
     "housing": 34,
-    "medical": 55,
-    "mobility": 42,
+    "medical": 57,
+    "mobility": 55,
     "safety": 37,
     "child": 41,
     "fl": 1,
@@ -3577,12 +3732,23 @@
       "花園東公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "エンドー動物病院",
+      "新宿動物病院",
+      "小滝橋動物病院",
+      "カーサ動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "Timesカーシェアステーション"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "都庁前_e2172b",
@@ -3590,27 +3756,37 @@
     "line": "12号線大江戸線",
     "lat": 35.6904,
     "lng": 139.6918,
-    "walk": 57,
+    "walk": 85,
     "housing": 54,
-    "medical": 55,
-    "mobility": 42,
+    "medical": 42,
+    "mobility": 62,
     "safety": 47,
     "child": 41,
     "fl": 1,
     "parks": [
+      "代々木公園",
       "大久保公園",
       "西大久保公園",
       "歌舞伎町公園",
-      "柏木公園",
-      "新宿中央公園"
+      "柏木公園"
     ],
-    "dogruns": [],
-    "vets": [],
+    "dogruns": [
+      "代々木公園"
+    ],
+    "vets": [
+      "エンドー動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "Timesカーシェアステーション"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "タイムズ渋谷本町第3",
+      "日産レンタカー"
+    ]
   },
   {
     "id": "高田馬場_8de63e",
@@ -3620,8 +3796,8 @@
     "lng": 139.704,
     "walk": 65,
     "housing": 60,
-    "medical": 54,
-    "mobility": 57,
+    "medical": 55,
+    "mobility": 42,
     "safety": 74,
     "child": 41,
     "fl": 1,
@@ -3633,25 +3809,12 @@
       "大東橋公園"
     ],
     "dogruns": [],
-    "vets": [
-      "マリーペットクリニック",
-      "もとい動物病院",
-      "小滝橋動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "LaCOCOT"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカープラス",
-      "Timesカーシェアステーション"
-    ],
-    "car_rentals": [
-      "マツダレンタカー",
-      "トヨタレンタカー・リース",
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "千石_e9c11a",
@@ -3661,8 +3824,8 @@
     "lng": 139.7454,
     "walk": 56,
     "housing": 64,
-    "medical": 55,
-    "mobility": 43,
+    "medical": 58,
+    "mobility": 67,
     "safety": 77,
     "child": 64,
     "fl": 1,
@@ -3674,12 +3837,25 @@
       "白山公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "なないろ動物病院",
+      "パーク動物病院",
+      "動坂動物病院",
+      "みわエキゾチック動物病院",
+      "茗荷谷とうふつ病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ドッグサロン 優"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "三井のカーシェアーズ",
+      "三井のカーシェアーズ"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "千駄木_4192af",
@@ -3687,19 +3863,19 @@
     "line": "9号線千代田線",
     "lat": 35.7259,
     "lng": 139.7634,
-    "walk": 50,
+    "walk": 61,
     "housing": 63,
     "medical": 57,
-    "mobility": 61,
+    "mobility": 75,
     "safety": 78,
     "child": 64,
     "fl": 1,
     "parks": [
+      "上野恩賜公園",
       "須藤公園",
       "駒込公園",
       "白山公園",
-      "富士前公園",
-      "神明公園"
+      "富士前公園"
     ],
     "dogruns": [],
     "vets": [
@@ -3730,8 +3906,8 @@
     "lng": 139.7518,
     "walk": 58,
     "housing": 59,
-    "medical": 61,
-    "mobility": 61,
+    "medical": 55,
+    "mobility": 50,
     "safety": 78,
     "child": 64,
     "fl": 2,
@@ -3743,29 +3919,12 @@
       "宮本公園"
     ],
     "dogruns": [],
-    "vets": [
-      "神楽坂ペットクリニック",
-      "みのり動物クリニック",
-      "本郷獣医科病院",
-      "パーク動物病院",
-      "かねまき動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "LOVE WOOF",
-      "Komachi Tokyo"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカーシェア",
-      "タイムズカーシェア",
-      "Times"
-    ],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "ニッポンレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "新大塚_f400c0",
@@ -3776,7 +3935,7 @@
     "walk": 54,
     "housing": 59,
     "medical": 55,
-    "mobility": 43,
+    "mobility": 57,
     "safety": 74,
     "child": 64,
     "fl": 1,
@@ -3804,7 +3963,7 @@
     "walk": 67,
     "housing": 59,
     "medical": 55,
-    "mobility": 43,
+    "mobility": 50,
     "safety": 78,
     "child": 64,
     "fl": 2,
@@ -3859,8 +4018,8 @@
     "lng": 139.7538,
     "walk": 51,
     "housing": 60,
-    "medical": 57,
-    "mobility": 49,
+    "medical": 55,
+    "mobility": 57,
     "safety": 80,
     "child": 64,
     "fl": 1,
@@ -3872,20 +4031,11 @@
       "白山公園"
     ],
     "dogruns": [],
-    "vets": [
-      "さいとうラビットクリニック",
-      "なないろ動物病院",
-      "パーク動物病院",
-      "上野の森 どうぶつ病院",
-      "動坂動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカーシェア",
-      "タイムズカーシェア"
-    ],
+    "carshares": [],
     "car_rentals": []
   },
   {
@@ -3897,7 +4047,7 @@
     "walk": 62,
     "housing": 65,
     "medical": 55,
-    "mobility": 43,
+    "mobility": 50,
     "safety": 80,
     "child": 64,
     "fl": 2,
@@ -3981,7 +4131,7 @@
     "walk": 49,
     "housing": 64,
     "medical": 58,
-    "mobility": 49,
+    "mobility": 62,
     "safety": 80,
     "child": 64,
     "fl": 1,
@@ -4020,7 +4170,7 @@
     "walk": 54,
     "housing": 61,
     "medical": 55,
-    "mobility": 43,
+    "mobility": 57,
     "safety": 80,
     "child": 64,
     "fl": 2,
@@ -4045,19 +4195,19 @@
     "line": "2号線日比谷線",
     "lat": 35.7287,
     "lng": 139.7905,
-    "walk": 50,
+    "walk": 60,
     "housing": 57,
     "medical": 61,
-    "mobility": 53,
+    "mobility": 67,
     "safety": 75,
     "child": 40,
     "fl": 2,
     "parks": [
+      "上野恩賜公園",
       "日本堤公園",
       "東盛公園",
       "千束公園",
-      "石浜公園",
-      "玉姫公園"
+      "石浜公園"
     ],
     "dogruns": [],
     "vets": [
@@ -4089,8 +4239,8 @@
     "lng": 139.7784,
     "walk": 70,
     "housing": 39,
-    "medical": 58,
-    "mobility": 61,
+    "medical": 55,
+    "mobility": 43,
     "safety": 66,
     "child": 40,
     "fl": 3,
@@ -4102,28 +4252,12 @@
       "切通公園"
     ],
     "dogruns": [],
-    "vets": [
-      "みのり動物クリニック",
-      "ねこの病院",
-      "内藤動物病院",
-      "チャト動物病院",
-      "本郷獣医科病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "犬の美容室 マール"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "Times Car PLUS",
-      "カレコ",
-      "オリックスカーシェア"
-    ],
-    "car_rentals": [
-      "日産レンタカー",
-      "トヨタレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "上野広小路_cfe21b",
@@ -4218,7 +4352,7 @@
     "walk": 65,
     "housing": 50,
     "medical": 55,
-    "mobility": 43,
+    "mobility": 57,
     "safety": 71,
     "child": 40,
     "fl": 2,
@@ -4273,8 +4407,8 @@
     "lng": 139.7819,
     "walk": 66,
     "housing": 43,
-    "medical": 55,
-    "mobility": 43,
+    "medical": 61,
+    "mobility": 61,
     "safety": 61,
     "child": 40,
     "fl": 2,
@@ -4286,12 +4420,29 @@
       "芳林公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "みのり動物クリニック",
+      "ねこの病院",
+      "チャト動物病院",
+      "すずきペットクリニック",
+      "ラブリー動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ポケットドッグ",
+      "犬の美容室 マール"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "Times Car PLUS",
+      "タイムズカープラス",
+      "カレコ"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "JR駅レンタカー",
+      "Go-Kart Rentals"
+    ]
   },
   {
     "id": "日暮里_a57861",
@@ -4299,27 +4450,40 @@
     "line": "日暮里・舎人線",
     "lat": 35.7291,
     "lng": 139.7715,
-    "walk": 48,
+    "walk": 58,
     "housing": 55,
-    "medical": 55,
-    "mobility": 43,
+    "medical": 57,
+    "mobility": 72,
     "safety": 77,
     "child": 40,
     "fl": 2,
     "parks": [
+      "上野恩賜公園",
       "須藤公園",
       "駒込公園",
       "神明公園",
-      "動坂公園",
-      "神明都電車庫跡公園"
+      "動坂公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "さいとうラビットクリニック",
+      "内藤動物病院",
+      "西日暮里ペットクリニック",
+      "なないろ動物病院",
+      "しん中央動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "オリックスカーシェア",
+      "オリックスカーシェア"
+    ],
+    "car_rentals": [
+      "トヨタレンタカー",
+      "ニッポンレンタカー",
+      "日産レンタカー"
+    ]
   },
   {
     "id": "浅草_0ab6a2",
@@ -4329,8 +4493,8 @@
     "lng": 139.7987,
     "walk": 71,
     "housing": 59,
-    "medical": 58,
-    "mobility": 55,
+    "medical": 55,
+    "mobility": 50,
     "safety": 73,
     "child": 40,
     "fl": 2,
@@ -4342,25 +4506,12 @@
       "精華公園"
     ],
     "dogruns": [],
-    "vets": [
-      "本所どうぶつ病院",
-      "すずきペットクリニック",
-      "いわせ犬猫クリニック",
-      "トリトン動物病院",
-      "大岩"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "犬の美容室 マール"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "カレコ"
-    ],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "トヨタレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "浅草橋_707093",
@@ -4371,7 +4522,7 @@
     "walk": 52,
     "housing": 45,
     "medical": 55,
-    "mobility": 43,
+    "mobility": 50,
     "safety": 71,
     "child": 40,
     "fl": 2,
@@ -4426,8 +4577,8 @@
     "lng": 139.7819,
     "walk": 68,
     "housing": 44,
-    "medical": 61,
-    "mobility": 61,
+    "medical": 55,
+    "mobility": 43,
     "safety": 62,
     "child": 40,
     "fl": 2,
@@ -4439,29 +4590,12 @@
       "佐久間公園"
     ],
     "dogruns": [],
-    "vets": [
-      "みのり動物クリニック",
-      "ねこの病院",
-      "内藤動物病院",
-      "チャト動物病院",
-      "上野の森 どうぶつ病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ポケットドッグ",
-      "犬の美容室 マール"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "Times Car PLUS",
-      "タイムズカープラス",
-      "カレコ"
-    ],
-    "car_rentals": [
-      "日産レンタカー",
-      "トヨタレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "蔵前_13d51e",
@@ -4472,7 +4606,7 @@
     "walk": 64,
     "housing": 49,
     "medical": 55,
-    "mobility": 43,
+    "mobility": 50,
     "safety": 70,
     "child": 40,
     "fl": 2,
@@ -4499,8 +4633,8 @@
     "lng": 139.7682,
     "walk": 49,
     "housing": 60,
-    "medical": 58,
-    "mobility": 58,
+    "medical": 55,
+    "mobility": 50,
     "safety": 77,
     "child": 40,
     "fl": 2,
@@ -4512,27 +4646,12 @@
       "動坂公園"
     ],
     "dogruns": [],
-    "vets": [
-      "さいとうラビットクリニック",
-      "のがみ動物病院",
-      "ふくしま動物病院",
-      "内藤動物病院",
-      "西日暮里ペットクリニック"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ぴーたん"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "オリックスカーシェア",
-      "オリックスカーシェア"
-    ],
-    "car_rentals": [
-      "トヨタレンタカー",
-      "ニッポンレンタカー",
-      "日産レンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "鶯谷_b11fcc",
@@ -4543,7 +4662,7 @@
     "walk": 67,
     "housing": 51,
     "medical": 55,
-    "mobility": 43,
+    "mobility": 57,
     "safety": 71,
     "child": 40,
     "fl": 3,
@@ -4570,8 +4689,8 @@
     "lng": 139.8102,
     "walk": 70,
     "housing": 59,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 54,
+    "mobility": 68,
     "safety": 74,
     "child": 47,
     "fl": 2,
@@ -4583,12 +4702,22 @@
       "待乳山聖天公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "本所どうぶつ病院",
+      "大岩",
+      "土屋動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Pet Salon Poko"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "Nissan Car Rental"
+    ]
   },
   {
     "id": "両国_f98451",
@@ -4598,8 +4727,8 @@
     "lng": 139.7945,
     "walk": 55,
     "housing": 58,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 62,
+    "mobility": 69,
     "safety": 75,
     "child": 47,
     "fl": 2,
@@ -4611,12 +4740,30 @@
       "千代田公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "本所どうぶつ病院",
+      "ねこの病院",
+      "チャト動物病院",
+      "すずきペットクリニック",
+      "刈谷動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ポケットドッグ",
+      "Inu to Town",
+      "犬の美容院　コロコロ"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカープラス",
+      "カレコ",
+      "カレコ"
+    ],
+    "car_rentals": [
+      "トヨタレンタカー",
+      "ニッポンレンタカー",
+      "JR駅レンタカー"
+    ]
   },
   {
     "id": "亀戸水神_276c06",
@@ -4626,8 +4773,8 @@
     "lng": 139.8335,
     "walk": 71,
     "housing": 63,
-    "medical": 42,
-    "mobility": 50,
+    "medical": 55,
+    "mobility": 58,
     "safety": 75,
     "child": 47,
     "fl": 2,
@@ -4639,16 +4786,12 @@
       "中川公園"
     ],
     "dogruns": [],
-    "vets": [
-      "土屋動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "京成曳舟_61daf0",
@@ -4659,7 +4802,7 @@
     "walk": 51,
     "housing": 65,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 78,
     "child": 47,
     "fl": 2,
@@ -4687,7 +4830,7 @@
     "walk": 79,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 83,
     "child": 47,
     "fl": 2,
@@ -4714,8 +4857,8 @@
     "lng": 139.8273,
     "walk": 64,
     "housing": 65,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 52,
+    "mobility": 68,
     "safety": 77,
     "child": 47,
     "fl": 2,
@@ -4727,12 +4870,19 @@
       "原公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "大岩",
+      "吾嬬動物病院",
+      "土屋動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "Nissan Car Rental"
+    ]
   },
   {
     "id": "押上_61bf5a",
@@ -4743,7 +4893,7 @@
     "walk": 67,
     "housing": 59,
     "medical": 54,
-    "mobility": 54,
+    "mobility": 68,
     "safety": 74,
     "child": 47,
     "fl": 2,
@@ -4781,7 +4931,7 @@
     "walk": 76,
     "housing": 64,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 78,
     "child": 47,
     "fl": 2,
@@ -4809,7 +4959,7 @@
     "walk": 70,
     "housing": 60,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 73,
     "child": 47,
     "fl": 2,
@@ -4836,8 +4986,8 @@
     "lng": 139.8314,
     "walk": 68,
     "housing": 65,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 42,
+    "mobility": 63,
     "safety": 77,
     "child": 47,
     "fl": 2,
@@ -4849,12 +4999,16 @@
       "文花公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "土屋動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "東向島_590633",
@@ -4865,7 +5019,7 @@
     "walk": 78,
     "housing": 64,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 80,
     "child": 47,
     "fl": 2,
@@ -4893,7 +5047,7 @@
     "walk": 70,
     "housing": 57,
     "medical": 62,
-    "mobility": 57,
+    "mobility": 71,
     "safety": 69,
     "child": 47,
     "fl": 2,
@@ -4936,7 +5090,7 @@
     "walk": 82,
     "housing": 69,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 81,
     "child": 47,
     "fl": 2,
@@ -4964,7 +5118,7 @@
     "walk": 80,
     "housing": 62,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 72,
     "child": 60,
     "fl": 2,
@@ -4992,7 +5146,7 @@
     "walk": 88,
     "housing": 62,
     "medical": 62,
-    "mobility": 57,
+    "mobility": 71,
     "safety": 72,
     "child": 60,
     "fl": 2,
@@ -5037,7 +5191,7 @@
     "walk": 60,
     "housing": 72,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 80,
     "child": 60,
     "fl": 2,
@@ -5065,7 +5219,7 @@
     "walk": 46,
     "housing": 30,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 52,
     "safety": 83,
     "child": 60,
     "fl": 2,
@@ -5093,7 +5247,7 @@
     "walk": 81,
     "housing": 70,
     "medical": 55,
-    "mobility": 50,
+    "mobility": 58,
     "safety": 74,
     "child": 60,
     "fl": 2,
@@ -5110,9 +5264,7 @@
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "市場前_528ae5",
@@ -5123,7 +5275,7 @@
     "walk": 52,
     "housing": 30,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 81,
     "child": 60,
     "fl": 3,
@@ -5178,7 +5330,7 @@
     "walk": 54,
     "housing": 66,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 80,
     "child": 60,
     "fl": 3,
@@ -5206,7 +5358,7 @@
     "walk": 46,
     "housing": 71,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 52,
     "safety": 83,
     "child": 60,
     "fl": 3,
@@ -5234,7 +5386,7 @@
     "walk": 50,
     "housing": 71,
     "medical": 55,
-    "mobility": 50,
+    "mobility": 58,
     "safety": 82,
     "child": 60,
     "fl": 3,
@@ -5251,9 +5403,7 @@
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "木場_a4a435",
@@ -5263,8 +5413,8 @@
     "lng": 139.8071,
     "walk": 85,
     "housing": 68,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 52,
+    "mobility": 63,
     "safety": 79,
     "child": 60,
     "fl": 2,
@@ -5278,12 +5428,18 @@
     "dogruns": [
       "木場公園"
     ],
-    "vets": [],
+    "vets": [
+      "LUNAペットクリニック潮見",
+      "青柳動物病院",
+      "江東どうぶつ医療センター"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "東京テレポート_a73d89",
@@ -5298,7 +5454,11 @@
     "safety": 83,
     "child": 60,
     "fl": 3,
-    "parks": [],
+    "parks": [
+      "台場公園",
+      "潮風公園",
+      "お台場レインボー公園"
+    ],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -5320,7 +5480,9 @@
     "safety": 81,
     "child": 60,
     "fl": 3,
-    "parks": [],
+    "parks": [
+      "お台場レインボー公園"
+    ],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -5338,7 +5500,7 @@
     "walk": 82,
     "housing": 73,
     "medical": 55,
-    "mobility": 56,
+    "mobility": 58,
     "safety": 78,
     "child": 60,
     "fl": 2,
@@ -5355,9 +5517,7 @@
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "東陽町_463ebe",
@@ -5367,8 +5527,8 @@
     "lng": 139.8164,
     "walk": 84,
     "housing": 71,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 52,
+    "mobility": 61,
     "safety": 79,
     "child": 60,
     "fl": 2,
@@ -5382,12 +5542,19 @@
     "dogruns": [
       "木場公園"
     ],
-    "vets": [],
+    "vets": [
+      "LUNAペットクリニック潮見",
+      "青柳動物病院",
+      "江東どうぶつ医療センター"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "東雲_963537",
@@ -5398,7 +5565,7 @@
     "walk": 51,
     "housing": 72,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 82,
     "child": 60,
     "fl": 2,
@@ -5425,8 +5592,8 @@
     "lng": 139.7982,
     "walk": 82,
     "housing": 65,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 65,
+    "mobility": 61,
     "safety": 78,
     "child": 60,
     "fl": 2,
@@ -5440,12 +5607,27 @@
     "dogruns": [
       "木場公園"
     ],
-    "vets": [],
+    "vets": [
+      "本所どうぶつ病院",
+      "刈谷動物病院",
+      "動物がんクリニック東京",
+      "動物病院モルム"
+    ],
     "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
+    "groomings": [
+      "Inu to Town",
+      "犬の美容院　コロコロ",
+      "Dog Life Planers"
+    ],
+    "dog_cafes": [
+      "PITMANS"
+    ],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー",
+      "ニコニコレンタカー",
+      "JR駅レンタカー"
+    ]
   },
   {
     "id": "清澄白河_c7b149",
@@ -5500,8 +5682,8 @@
     "lng": 139.8178,
     "walk": 67,
     "housing": 71,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 47,
+    "mobility": 56,
     "safety": 82,
     "child": 60,
     "fl": 3,
@@ -5513,12 +5695,17 @@
       "しおかぜ橋塩浜"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "LUNAペットクリニック潮見",
+      "江東どうぶつ医療センター"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "菊川_37aac9",
@@ -5529,7 +5716,7 @@
     "walk": 83,
     "housing": 61,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 74,
     "child": 60,
     "fl": 2,
@@ -5558,8 +5745,8 @@
     "lng": 139.8262,
     "walk": 81,
     "housing": 62,
-    "medical": 51,
-    "mobility": 57,
+    "medical": 55,
+    "mobility": 58,
     "safety": 70,
     "child": 60,
     "fl": 2,
@@ -5571,24 +5758,12 @@
       "錦糸堀公園"
     ],
     "dogruns": [],
-    "vets": [
-      "土屋動物病院",
-      "動物病院モルム"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Pet Salon Poko",
-      "Dog Life Planers"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズコンフォリア錦糸町DEUX"
-    ],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "ニコニコレンタカー",
-      "トヨタレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "豊洲_4c769c",
@@ -5599,7 +5774,7 @@
     "walk": 54,
     "housing": 66,
     "medical": 52,
-    "mobility": 54,
+    "mobility": 68,
     "safety": 80,
     "child": 60,
     "fl": 2,
@@ -5633,8 +5808,8 @@
     "lng": 139.7917,
     "walk": 56,
     "housing": 68,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 50,
+    "mobility": 54,
     "safety": 78,
     "child": 60,
     "fl": 2,
@@ -5646,12 +5821,20 @@
       "月島第一公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "つきしま動物病院",
+      "青柳動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [],
+    "dog_cafes": [
+      "PITMANS"
+    ],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "日産レンタカー",
+      "Toyota Rental a Car TCAT"
+    ]
   },
   {
     "id": "辰巳_3004fa",
@@ -5662,7 +5845,7 @@
     "walk": 65,
     "housing": 72,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 82,
     "child": 60,
     "fl": 2,
@@ -5720,7 +5903,7 @@
     "walk": 56,
     "housing": 65,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 77,
     "child": 57,
     "fl": 2,
@@ -5747,8 +5930,8 @@
     "lng": 139.7137,
     "walk": 50,
     "housing": 67,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 60,
+    "mobility": 63,
     "safety": 80,
     "child": 57,
     "fl": 2,
@@ -5760,12 +5943,25 @@
       "金子山公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ゆめ動物病院",
+      "夫婦坂動物病院",
+      "クラウン動物病院",
+      "星動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "dog_cafes": [
+      "スターバックス"
+    ],
+    "carshares": [
+      "タイムズカープラス",
+      "カレコ",
+      "タイムズポート荏原"
+    ],
+    "car_rentals": [
+      "日産レンタカー"
+    ]
   },
   {
     "id": "五反田_69a9db",
@@ -5776,7 +5972,7 @@
     "walk": 46,
     "housing": 51,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 78,
     "child": 57,
     "fl": 1,
@@ -5804,7 +6000,7 @@
     "walk": 52,
     "housing": 60,
     "medical": 52,
-    "mobility": 56,
+    "mobility": 70,
     "safety": 77,
     "child": 57,
     "fl": 2,
@@ -5841,7 +6037,7 @@
     "walk": 52,
     "housing": 66,
     "medical": 55,
-    "mobility": 46,
+    "mobility": 57,
     "safety": 81,
     "child": 57,
     "fl": 2,
@@ -5857,9 +6053,7 @@
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "カレコ・カーシェアリングクラブ"
-    ],
+    "carshares": [],
     "car_rentals": []
   },
   {
@@ -5870,8 +6064,8 @@
     "lng": 139.7351,
     "walk": 51,
     "housing": 61,
-    "medical": 42,
-    "mobility": 46,
+    "medical": 55,
+    "mobility": 57,
     "safety": 78,
     "child": 57,
     "fl": 2,
@@ -5883,15 +6077,11 @@
       "鈴ヶ森公園"
     ],
     "dogruns": [],
-    "vets": [
-      "大崎動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "カレコ・カーシェアリングクラブ"
-    ],
+    "carshares": [],
     "car_rentals": []
   },
   {
@@ -5902,8 +6092,8 @@
     "lng": 139.7276,
     "walk": 46,
     "housing": 60,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 56,
+    "mobility": 70,
     "safety": 80,
     "child": 57,
     "fl": 2,
@@ -5915,12 +6105,26 @@
       "杜の公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "大崎動物病院",
+      "星動物病院",
+      "北品川どうぶつ病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "groomings": [
+      "Mother Wolf"
+    ],
+    "dog_cafes": [
+      "スターバックス"
+    ],
+    "carshares": [
+      "タイムズポート荏原"
+    ],
+    "car_rentals": [
+      "日産レンタカー",
+      "ニッポンレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "大崎広小路_d369e0",
@@ -5931,7 +6135,7 @@
     "walk": 46,
     "housing": 64,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 80,
     "child": 57,
     "fl": 2,
@@ -5959,7 +6163,7 @@
     "walk": 60,
     "housing": 67,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 82,
     "child": 57,
     "fl": 2,
@@ -5986,8 +6190,8 @@
     "lng": 139.7166,
     "walk": 50,
     "housing": 68,
-    "medical": 54,
-    "mobility": 56,
+    "medical": 56,
+    "mobility": 63,
     "safety": 80,
     "child": 57,
     "fl": 2,
@@ -6008,7 +6212,9 @@
     "groomings": [
       "Mother Wolf"
     ],
-    "dog_cafes": [],
+    "dog_cafes": [
+      "スターバックス"
+    ],
     "carshares": [
       "タイムズポート荏原"
     ],
@@ -6026,8 +6232,8 @@
     "lng": 139.7188,
     "walk": 54,
     "housing": 65,
-    "medical": 54,
-    "mobility": 51,
+    "medical": 56,
+    "mobility": 65,
     "safety": 78,
     "child": 57,
     "fl": 2,
@@ -6048,7 +6254,9 @@
     "groomings": [
       "Mother Wolf"
     ],
-    "dog_cafes": [],
+    "dog_cafes": [
+      "スターバックス"
+    ],
     "carshares": [
       "タイムズポート荏原"
     ],
@@ -6065,7 +6273,7 @@
     "walk": 62,
     "housing": 68,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 80,
     "child": 57,
     "fl": 2,
@@ -6093,7 +6301,7 @@
     "walk": 54,
     "housing": 64,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 78,
     "child": 57,
     "fl": 2,
@@ -6121,7 +6329,7 @@
     "walk": 50,
     "housing": 69,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 81,
     "child": 57,
     "fl": 2,
@@ -6149,7 +6357,7 @@
     "walk": 66,
     "housing": 68,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 78,
     "child": 57,
     "fl": 2,
@@ -6177,7 +6385,7 @@
     "walk": 49,
     "housing": 69,
     "medical": 58,
-    "mobility": 54,
+    "mobility": 61,
     "safety": 80,
     "child": 57,
     "fl": 2,
@@ -6217,7 +6425,7 @@
     "walk": 47,
     "housing": 72,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 50,
     "safety": 81,
     "child": 57,
     "fl": 2,
@@ -6245,7 +6453,7 @@
     "walk": 55,
     "housing": 67,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 79,
     "child": 57,
     "fl": 2,
@@ -6272,8 +6480,8 @@
     "lng": 139.743,
     "walk": 53,
     "housing": 63,
-    "medical": 42,
-    "mobility": 46,
+    "medical": 45,
+    "mobility": 60,
     "safety": 78,
     "child": 57,
     "fl": 2,
@@ -6290,7 +6498,9 @@
     ],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [],
+    "dog_cafes": [
+      "スターバックス"
+    ],
     "carshares": [
       "カレコ・カーシェアリングクラブ"
     ],
@@ -6304,8 +6514,8 @@
     "lng": 139.7428,
     "walk": 55,
     "housing": 66,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 40,
+    "mobility": 60,
     "safety": 78,
     "child": 57,
     "fl": 2,
@@ -6320,8 +6530,12 @@
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
+    "dog_cafes": [
+      "スターバックス"
+    ],
+    "carshares": [
+      "カレコ・カーシェアリングクラブ"
+    ],
     "car_rentals": []
   },
   {
@@ -6332,8 +6546,8 @@
     "lng": 139.713,
     "walk": 66,
     "housing": 67,
-    "medical": 54,
-    "mobility": 56,
+    "medical": 55,
+    "mobility": 57,
     "safety": 80,
     "child": 54,
     "fl": 1,
@@ -6345,24 +6559,12 @@
       "小山台公園"
     ],
     "dogruns": [],
-    "vets": [
-      "大崎動物病院",
-      "MeGuro",
-      "星動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Mother Wolf"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズポート荏原"
-    ],
-    "car_rentals": [
-      "日産レンタカー",
-      "ニッポンレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "中目黒_96c958",
@@ -6400,8 +6602,8 @@
     "lng": 139.6606,
     "walk": 50,
     "housing": 68,
-    "medical": 58,
-    "mobility": 48,
+    "medical": 55,
+    "mobility": 50,
     "safety": 81,
     "child": 54,
     "fl": 1,
@@ -6413,22 +6615,12 @@
       "吹上緑地児童公園"
     ],
     "dogruns": [],
-    "vets": [
-      "けいこくの森動物病院",
-      "玉川動物愛護病院",
-      "てらだ動物病院",
-      "くすの木動物病院",
-      "奥沢すばる動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "coron"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "奥沢_4d6b4f",
@@ -6439,7 +6631,7 @@
     "walk": 50,
     "housing": 67,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 80,
     "child": 54,
     "fl": 1,
@@ -6466,8 +6658,8 @@
     "lng": 139.6856,
     "walk": 67,
     "housing": 68,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 52,
+    "mobility": 62,
     "safety": 80,
     "child": 54,
     "fl": 1,
@@ -6479,12 +6671,18 @@
       "大塚山公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ひろせ動物病院 (Hirose Animal Hospital)",
+      "学芸大学ペットクリニック",
+      "フォレスタ"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "武蔵小山_d1c631",
@@ -6495,7 +6693,7 @@
     "walk": 69,
     "housing": 67,
     "medical": 49,
-    "mobility": 56,
+    "mobility": 70,
     "safety": 81,
     "child": 54,
     "fl": 1,
@@ -6533,7 +6731,7 @@
     "walk": 52,
     "housing": 68,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 80,
     "child": 54,
     "fl": 1,
@@ -6560,8 +6758,8 @@
     "lng": 139.7159,
     "walk": 63,
     "housing": 62,
-    "medical": 49,
-    "mobility": 56,
+    "medical": 55,
+    "mobility": 50,
     "safety": 82,
     "child": 54,
     "fl": 2,
@@ -6573,22 +6771,12 @@
       "希望ヶ丘公園"
     ],
     "dogruns": [],
-    "vets": [
-      "MeGuro",
-      "星動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Mother Wolf"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズポート荏原"
-    ],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "祐天寺_b57f53",
@@ -6627,7 +6815,7 @@
     "walk": 54,
     "housing": 68,
     "medical": 58,
-    "mobility": 48,
+    "mobility": 62,
     "safety": 79,
     "child": 54,
     "fl": 2,
@@ -6664,8 +6852,8 @@
     "lng": 139.6688,
     "walk": 51,
     "housing": 64,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 61,
+    "mobility": 55,
     "safety": 81,
     "child": 54,
     "fl": 1,
@@ -6677,12 +6865,23 @@
       "中根ねむの木公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "玉川動物愛護病院",
+      "てらだ動物病院",
+      "たまご動物病院",
+      "くすの木動物病院",
+      "奥沢すばる動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "coron",
+      "オアシス"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "西小山_9a17d1",
@@ -6693,7 +6892,7 @@
     "walk": 65,
     "housing": 68,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 80,
     "child": 54,
     "fl": 2,
@@ -6721,7 +6920,7 @@
     "walk": 52,
     "housing": 66,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 81,
     "child": 54,
     "fl": 2,
@@ -6749,7 +6948,7 @@
     "walk": 66,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 82,
     "child": 50,
     "fl": 2,
@@ -6776,8 +6975,8 @@
     "lng": 139.6855,
     "walk": 48,
     "housing": 70,
-    "medical": 57,
-    "mobility": 48,
+    "medical": 55,
+    "mobility": 58,
     "safety": 82,
     "child": 50,
     "fl": 2,
@@ -6789,19 +6988,11 @@
       "池上平和児童公園"
     ],
     "dogruns": [],
-    "vets": [
-      "あすなろ 動物病院",
-      "上池台動物病院",
-      "あっぷ猫の病院",
-      "おばら犬猫病院",
-      "久が原動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカープラス"
-    ],
+    "carshares": [],
     "car_rentals": []
   },
   {
@@ -6812,8 +7003,8 @@
     "lng": 139.7243,
     "walk": 49,
     "housing": 57,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 52,
+    "mobility": 71,
     "safety": 70,
     "child": 50,
     "fl": 2,
@@ -6825,12 +7016,21 @@
       "大森中二丁目児童公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "島田動物病院",
+      "しんか動物病院",
+      "もりかわ動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカープラス"
+    ],
+    "car_rentals": [
+      "オリックスレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "六郷土手_a19e18",
@@ -6841,7 +7041,7 @@
     "walk": 82,
     "housing": 70,
     "medical": 44,
-    "mobility": 52,
+    "mobility": 66,
     "safety": 85,
     "child": 50,
     "fl": 2,
@@ -6877,7 +7077,7 @@
     "walk": 56,
     "housing": 69,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 81,
     "child": 50,
     "fl": 2,
@@ -6905,7 +7105,7 @@
     "walk": 63,
     "housing": 69,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 81,
     "child": 50,
     "fl": 2,
@@ -6933,7 +7133,7 @@
     "walk": 60,
     "housing": 69,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 83,
     "child": 50,
     "fl": 2,
@@ -6988,8 +7188,8 @@
     "lng": 139.685,
     "walk": 55,
     "housing": 67,
-    "medical": 58,
-    "mobility": 50,
+    "medical": 55,
+    "mobility": 58,
     "safety": 81,
     "child": 50,
     "fl": 2,
@@ -7001,22 +7201,12 @@
       "洗足ひだまり公園"
     ],
     "dogruns": [],
-    "vets": [
-      "石川台どうぶつ病院",
-      "つばさ動物病院",
-      "玉川動物愛護病院",
-      "たまご動物病院",
-      "奥沢すばる動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "coron"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "大森_2d8b26",
@@ -7026,34 +7216,6 @@
     "lng": 139.728,
     "walk": 67,
     "housing": 67,
-    "medical": 55,
-    "mobility": 45,
-    "safety": 76,
-    "child": 50,
-    "fl": 2,
-    "parks": [
-      "大井海岸公園",
-      "大井水神公園",
-      "鈴ヶ森公園",
-      "大井坂下公園",
-      "金子山公園"
-    ],
-    "dogruns": [],
-    "vets": [],
-    "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
-  },
-  {
-    "id": "大森海岸_a2682f",
-    "name": "大森海岸",
-    "line": "本線",
-    "lat": 35.5874,
-    "lng": 139.7353,
-    "walk": 82,
-    "housing": 69,
     "medical": 47,
     "mobility": 52,
     "safety": 76,
@@ -7082,6 +7244,34 @@
     ]
   },
   {
+    "id": "大森海岸_a2682f",
+    "name": "大森海岸",
+    "line": "本線",
+    "lat": 35.5874,
+    "lng": 139.7353,
+    "walk": 82,
+    "housing": 69,
+    "medical": 55,
+    "mobility": 45,
+    "safety": 76,
+    "child": 50,
+    "fl": 2,
+    "parks": [
+      "大井海岸公園",
+      "大井水神公園",
+      "鈴ヶ森公園",
+      "大井坂下公園",
+      "金子山公園"
+    ],
+    "dogruns": [],
+    "vets": [],
+    "vets_emergency": [],
+    "groomings": [],
+    "dog_cafes": [],
+    "carshares": [],
+    "car_rentals": []
+  },
+  {
     "id": "大森町_50ff21",
     "name": "大森町",
     "line": "本線",
@@ -7089,8 +7279,8 @@
     "lng": 139.7318,
     "walk": 78,
     "housing": 70,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 42,
+    "mobility": 64,
     "safety": 77,
     "child": 50,
     "fl": 2,
@@ -7102,11 +7292,16 @@
       "入新井公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "うみの動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
+    "carshares": [
+      "タイムズカープラス",
+      "タイムズカープラス"
+    ],
     "car_rentals": []
   },
   {
@@ -7118,7 +7313,7 @@
     "walk": 58,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 79,
     "child": 50,
     "fl": 2,
@@ -7151,11 +7346,11 @@
     "child": 50,
     "fl": 2,
     "parks": [
-      "萩中公園",
-      "東糀谷防災公園",
-      "区立海老取川公園",
-      "北前掘緑地",
-      "東糀谷五丁目公園"
+      "旭児童公園",
+      "大鳥居児童公園",
+      "大東児童公園",
+      "大森南五丁目児童公園",
+      "上東児童公園"
     ],
     "dogruns": [],
     "vets": [],
@@ -7207,8 +7402,8 @@
     "lng": 139.7349,
     "walk": 82,
     "housing": 68,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 47,
+    "mobility": 62,
     "safety": 77,
     "child": 50,
     "fl": 2,
@@ -7220,12 +7415,20 @@
       "新井宿第一児童公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "うみの動物病院",
+      "山手動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカープラス",
+      "タイムズカープラス"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "御嶽山_7a5048",
@@ -7236,7 +7439,7 @@
     "walk": 51,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 82,
     "child": 50,
     "fl": 2,
@@ -7269,25 +7472,19 @@
     "child": 50,
     "fl": 2,
     "parks": [
-      "萩中公園",
-      "東糀谷防災公園",
-      "区立海老取川公園",
-      "北前掘緑地",
-      "東糀谷五丁目公園"
+      "旭児童公園",
+      "桜梅公園",
+      "大鳥居児童公園",
+      "大東児童公園",
+      "大森南一丁目公園"
     ],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "オリックスカーシェア"
-    ],
-    "car_rentals": [
-      "スカイレンタカー",
-      "ニッポンレンタカー",
-      "日産レンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "新整備場_02fa51",
@@ -7302,9 +7499,7 @@
     "safety": 84,
     "child": 50,
     "fl": 3,
-    "parks": [
-      "ソラムナード羽田緑地"
-    ],
+    "parks": [],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -7327,11 +7522,11 @@
     "child": 50,
     "fl": 2,
     "parks": [
-      "時計台",
-      "寄り添うアザラシ（遊具）",
-      "大田区立美原児童公園",
-      "大森東一丁目第一公園",
-      "京浜島つばさ公園"
+      "桜梅公園",
+      "大森山谷公園",
+      "大森東一公園",
+      "大森仲町児童公園",
+      "大森東一丁目第一公園"
     ],
     "dogruns": [],
     "vets": [],
@@ -7349,8 +7544,8 @@
     "lng": 139.7279,
     "walk": 63,
     "housing": 62,
-    "medical": 47,
-    "mobility": 57,
+    "medical": 55,
+    "mobility": 58,
     "safety": 72,
     "child": 50,
     "fl": 2,
@@ -7362,20 +7557,12 @@
       "大森北六丁目南児童公園"
     ],
     "dogruns": [],
-    "vets": [
-      "島田動物病院",
-      "しんか動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカープラス"
-    ],
-    "car_rentals": [
-      "オリックスレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "武蔵新田_12f659",
@@ -7385,8 +7572,8 @@
     "lng": 139.6927,
     "walk": 66,
     "housing": 70,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 57,
+    "mobility": 61,
     "safety": 81,
     "child": 50,
     "fl": 2,
@@ -7398,11 +7585,19 @@
       "池上特持南児童公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "フット動物病院",
+      "おばら犬猫病院",
+      "久が原動物病院",
+      "池上ペットクリニック",
+      "もりかわ動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
+    "carshares": [
+      "カレコ"
+    ],
     "car_rentals": []
   },
   {
@@ -7413,8 +7608,8 @@
     "lng": 139.7027,
     "walk": 48,
     "housing": 67,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 57,
+    "mobility": 61,
     "safety": 80,
     "child": 50,
     "fl": 2,
@@ -7426,11 +7621,19 @@
       "池上八丁目児童公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ロイヤルペットクリニック",
+      "あっぷ猫の病院",
+      "フット動物病院",
+      "おばら犬猫病院",
+      "久が原動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
+    "carshares": [
+      "カレコ"
+    ],
     "car_rentals": []
   },
   {
@@ -7441,8 +7644,8 @@
     "lng": 139.6734,
     "walk": 56,
     "housing": 70,
-    "medical": 47,
-    "mobility": 52,
+    "medical": 55,
+    "mobility": 58,
     "safety": 83,
     "child": 50,
     "fl": 2,
@@ -7454,19 +7657,12 @@
       "鵜の木三丁目中央児童公園"
     ],
     "dogruns": [],
-    "vets": [
-      "動物予防医療センター",
-      "あすなろ 動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカープラス"
-    ],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "洗足池_80d6ae",
@@ -7477,7 +7673,7 @@
     "walk": 58,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 81,
     "child": 50,
     "fl": 2,
@@ -7510,23 +7706,19 @@
     "child": 50,
     "fl": 3,
     "parks": [
-      "時計台",
-      "寄り添うアザラシ（遊具）",
-      "大田区立美原児童公園",
-      "大森東一丁目第一公園",
-      "昭和島二丁目公園"
+      "大井海岸公園",
+      "しながわ区民公園",
+      "うさぎ児童公園",
+      "大森北公園",
+      "大森北青空児童公園"
     ],
-    "dogruns": [
-      "しおさいドッグラン"
-    ],
+    "dogruns": [],
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "田園調布_0ec32f",
@@ -7536,8 +7728,8 @@
     "lng": 139.6673,
     "walk": 55,
     "housing": 69,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 47,
+    "mobility": 63,
     "safety": 83,
     "child": 50,
     "fl": 2,
@@ -7549,12 +7741,17 @@
       "石川町上の台公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "玉川動物愛護病院",
+      "奥沢すばる動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "矢口渡_735625",
@@ -7565,7 +7762,7 @@
     "walk": 62,
     "housing": 63,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 78,
     "child": 50,
     "fl": 2,
@@ -7593,7 +7790,7 @@
     "walk": 54,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 81,
     "child": 50,
     "fl": 2,
@@ -7621,7 +7818,7 @@
     "walk": 54,
     "housing": 70,
     "medical": 42,
-    "mobility": 57,
+    "mobility": 64,
     "safety": 83,
     "child": 50,
     "fl": 2,
@@ -7684,8 +7881,8 @@
     "lng": 139.7293,
     "walk": 53,
     "housing": 67,
-    "medical": 47,
-    "mobility": 54,
+    "medical": 55,
+    "mobility": 58,
     "safety": 77,
     "child": 50,
     "fl": 2,
@@ -7697,19 +7894,12 @@
       "大森中二丁目児童公園"
     ],
     "dogruns": [],
-    "vets": [
-      "島田動物病院",
-      "しんか動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "スカイレンタカー",
-      "オリックスレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "羽田空港第1ターミナル_8a7e36",
@@ -7724,9 +7914,7 @@
     "safety": 84,
     "child": 50,
     "fl": 3,
-    "parks": [
-      "ソラムナード羽田緑地"
-    ],
+    "parks": [],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -7770,7 +7958,10 @@
     "safety": 84,
     "child": 50,
     "fl": 2,
-    "parks": [],
+    "parks": [
+      "大東児童公園",
+      "武蔵野の路仲七児童公園"
+    ],
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
@@ -7788,7 +7979,7 @@
     "walk": 49,
     "housing": 62,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 71,
     "child": 50,
     "fl": 2,
@@ -7816,7 +8007,7 @@
     "walk": 48,
     "housing": 62,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 71,
     "child": 50,
     "fl": 2,
@@ -7843,8 +8034,8 @@
     "lng": 139.7068,
     "walk": 49,
     "housing": 70,
-    "medical": 57,
-    "mobility": 53,
+    "medical": 55,
+    "mobility": 58,
     "safety": 81,
     "child": 50,
     "fl": 2,
@@ -7856,21 +8047,11 @@
       "あさひが丘児童公園"
     ],
     "dogruns": [],
-    "vets": [
-      "ゆめ動物病院",
-      "夫婦坂動物病院",
-      "上池台動物病院",
-      "ロイヤルペットクリニック",
-      "西馬込動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカープラス",
-      "タイムズカープラス",
-      "カレコ"
-    ],
+    "carshares": [],
     "car_rentals": []
   },
   {
@@ -7882,7 +8063,7 @@
     "walk": 54,
     "housing": 69,
     "medical": 57,
-    "mobility": 53,
+    "mobility": 67,
     "safety": 80,
     "child": 50,
     "fl": 2,
@@ -7920,7 +8101,7 @@
     "walk": 77,
     "housing": 66,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 83,
     "child": 50,
     "fl": 2,
@@ -7947,8 +8128,8 @@
     "lng": 139.6814,
     "walk": 52,
     "housing": 69,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 57,
+    "mobility": 61,
     "safety": 82,
     "child": 50,
     "fl": 2,
@@ -7960,11 +8141,19 @@
       "石川町二丁目児童公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "あすなろ 動物病院",
+      "石川台どうぶつ病院",
+      "上池台動物病院",
+      "つばさ動物病院",
+      "玉川動物愛護病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
+    "carshares": [
+      "タイムズカープラス"
+    ],
     "car_rentals": []
   },
   {
@@ -7975,8 +8164,8 @@
     "lng": 139.7118,
     "walk": 48,
     "housing": 70,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 57,
+    "mobility": 60,
     "safety": 81,
     "child": 50,
     "fl": 2,
@@ -7988,11 +8177,21 @@
       "滝王子公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ゆめ動物病院",
+      "夫婦坂動物病院",
+      "山手動物病院",
+      "上池台動物病院",
+      "ロイヤルペットクリニック"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
+    "carshares": [
+      "タイムズカープラス",
+      "タイムズカープラス",
+      "カレコ"
+    ],
     "car_rentals": []
   },
   {
@@ -8004,7 +8203,7 @@
     "walk": 63,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 83,
     "child": 50,
     "fl": 2,
@@ -8031,8 +8230,8 @@
     "lng": 139.6712,
     "walk": 54,
     "housing": 68,
-    "medical": 61,
-    "mobility": 49,
+    "medical": 55,
+    "mobility": 58,
     "safety": 78,
     "child": 56,
     "fl": 1,
@@ -8044,24 +8243,12 @@
       "芦毛塚街かど公園"
     ],
     "dogruns": [],
-    "vets": [
-      "アマノ動物病院",
-      "ひろせ動物病院 (Hirose Animal Hospital)",
-      "トト動物病院",
-      "笹木動物病院",
-      "フォレスタ"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Doggy's Island"
-    ],
-    "dog_cafes": [
-      "Cafedict"
-    ],
+    "groomings": [],
+    "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "日産レンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "上北沢_7a4617",
@@ -8072,7 +8259,7 @@
     "walk": 80,
     "housing": 70,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 82,
     "child": 56,
     "fl": 1,
@@ -8102,7 +8289,7 @@
     "walk": 49,
     "housing": 70,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 81,
     "child": 56,
     "fl": 2,
@@ -8127,27 +8314,32 @@
     "line": "大井町線",
     "lat": 35.612,
     "lng": 139.6389,
-    "walk": 65,
+    "walk": 76,
     "housing": 70,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 47,
+    "mobility": 49,
     "safety": 81,
     "child": 56,
     "fl": 2,
     "parks": [
+      "砧公園",
       "尾山台公園",
       "上野毛北公園",
       "上野毛自然公園",
-      "上野毛南公園",
-      "上野毛二丁目公園"
+      "上野毛南公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "けいこくの森動物病院",
+      "くすの木動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "下北沢_1fc901",
@@ -8158,7 +8350,7 @@
     "walk": 52,
     "housing": 61,
     "medical": 57,
-    "mobility": 54,
+    "mobility": 68,
     "safety": 77,
     "child": 56,
     "fl": 1,
@@ -8195,7 +8387,7 @@
     "walk": 55,
     "housing": 69,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 80,
     "child": 56,
     "fl": 1,
@@ -8222,8 +8414,8 @@
     "lng": 139.6504,
     "walk": 52,
     "housing": 70,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 61,
+    "mobility": 58,
     "safety": 80,
     "child": 56,
     "fl": 1,
@@ -8235,10 +8427,19 @@
       "経堂大橋公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ヤマ動物医院",
+      "世田谷通り動物病院",
+      "駒沢どうぶつ病院",
+      "経堂どうぶつ病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
+    "groomings": [
+      "Doggy's Island"
+    ],
+    "dog_cafes": [
+      "Cafedict"
+    ],
     "carshares": [],
     "car_rentals": []
   },
@@ -8251,7 +8452,7 @@
     "walk": 54,
     "housing": 67,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 78,
     "child": 56,
     "fl": 1,
@@ -8284,11 +8485,11 @@
     "child": 56,
     "fl": 2,
     "parks": [
+      "砧公園",
       "上野毛北公園",
       "上野毛自然公園",
       "上野毛南公園",
-      "上野毛二丁目公園",
-      "瀬田農業公園"
+      "上野毛二丁目公園"
     ],
     "dogruns": [],
     "vets": [],
@@ -8307,7 +8508,7 @@
     "walk": 49,
     "housing": 65,
     "medical": 57,
-    "mobility": 54,
+    "mobility": 68,
     "safety": 75,
     "child": 56,
     "fl": 1,
@@ -8345,7 +8546,7 @@
     "walk": 80,
     "housing": 71,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 81,
     "child": 56,
     "fl": 2,
@@ -8375,7 +8576,7 @@
     "walk": 78,
     "housing": 71,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 51,
     "safety": 81,
     "child": 56,
     "fl": 1,
@@ -8405,7 +8606,7 @@
     "walk": 46,
     "housing": 70,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 80,
     "child": 56,
     "fl": 1,
@@ -8432,8 +8633,8 @@
     "lng": 139.5867,
     "walk": 52,
     "housing": 72,
-    "medical": 58,
-    "mobility": 44,
+    "medical": 55,
+    "mobility": 51,
     "safety": 84,
     "child": 56,
     "fl": 2,
@@ -8445,17 +8646,9 @@
       "祖師谷三丁目公園"
     ],
     "dogruns": [],
-    "vets": [
-      "成城こばやし動物病院",
-      "高木動物病院",
-      "みゅう犬猫病院",
-      "みなみ動物病院",
-      "岩田動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "little coon"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
     "car_rentals": []
@@ -8468,8 +8661,8 @@
     "lng": 139.6697,
     "walk": 53,
     "housing": 69,
-    "medical": 61,
-    "mobility": 49,
+    "medical": 55,
+    "mobility": 58,
     "safety": 78,
     "child": 56,
     "fl": 1,
@@ -8481,24 +8674,12 @@
       "淡島通り公園"
     ],
     "dogruns": [],
-    "vets": [
-      "アマノ動物病院",
-      "ひろせ動物病院 (Hirose Animal Hospital)",
-      "トト動物病院",
-      "世田谷通り動物病院",
-      "笹木動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Doggy's Island"
-    ],
-    "dog_cafes": [
-      "Cafedict"
-    ],
+    "groomings": [],
+    "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "日産レンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "宮の坂_b95d6a",
@@ -8509,7 +8690,7 @@
     "walk": 50,
     "housing": 70,
     "medical": 61,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 79,
     "child": 56,
     "fl": 2,
@@ -8545,8 +8726,8 @@
     "lng": 139.6465,
     "walk": 53,
     "housing": 70,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 61,
+    "mobility": 58,
     "safety": 79,
     "child": 56,
     "fl": 2,
@@ -8558,10 +8739,20 @@
       "桜みんなの公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "赤堤動物病院",
+      "エス・エス動物病院",
+      "経堂村田動物病院",
+      "羽根木動物病院",
+      "世田谷通り動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
+    "groomings": [
+      "Doggy's Island"
+    ],
+    "dog_cafes": [
+      "Cafedict"
+    ],
     "carshares": [],
     "car_rentals": []
   },
@@ -8574,7 +8765,7 @@
     "walk": 52,
     "housing": 70,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 81,
     "child": 56,
     "fl": 1,
@@ -8602,7 +8793,7 @@
     "walk": 53,
     "housing": 65,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 76,
     "child": 56,
     "fl": 1,
@@ -8630,7 +8821,7 @@
     "walk": 52,
     "housing": 67,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 80,
     "child": 56,
     "fl": 1,
@@ -8655,21 +8846,23 @@
     "line": "小田原線",
     "lat": 35.6658,
     "lng": 139.6735,
-    "walk": 55,
+    "walk": 83,
     "housing": 66,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 77,
     "child": 56,
     "fl": 1,
     "parks": [
+      "代々木公園",
       "駒場野公園",
       "駒場公園",
       "淡島通り公園",
-      "三宿公園",
-      "あおぞら公園"
+      "三宿公園"
     ],
-    "dogruns": [],
+    "dogruns": [
+      "代々木公園"
+    ],
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
@@ -8686,7 +8879,7 @@
     "walk": 56,
     "housing": 66,
     "medical": 57,
-    "mobility": 54,
+    "mobility": 68,
     "safety": 78,
     "child": 56,
     "fl": 1,
@@ -8723,8 +8916,8 @@
     "lng": 139.6419,
     "walk": 52,
     "housing": 70,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 57,
+    "mobility": 68,
     "safety": 80,
     "child": 56,
     "fl": 2,
@@ -8736,12 +8929,21 @@
       "宮坂ねむの木公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "赤堤動物病院",
+      "エス・エス動物病院",
+      "動物愛護病院",
+      "経堂村田動物病院",
+      "あみ動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ORIXレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "松陰神社前_f35df8",
@@ -8752,7 +8954,7 @@
     "walk": 53,
     "housing": 70,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 79,
     "child": 56,
     "fl": 1,
@@ -8779,8 +8981,8 @@
     "lng": 139.6306,
     "walk": 54,
     "housing": 71,
-    "medical": 57,
-    "mobility": 44,
+    "medical": 55,
+    "mobility": 58,
     "safety": 82,
     "child": 56,
     "fl": 1,
@@ -8792,13 +8994,7 @@
       "上北沢八幡公園"
     ],
     "dogruns": [],
-    "vets": [
-      "赤堤動物病院",
-      "エス・エス動物病院",
-      "経堂村田動物病院",
-      "GREEN CROSS ANIMAL MEDICAL CENTER",
-      "ひまわり動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
@@ -8814,7 +9010,7 @@
     "walk": 80,
     "housing": 69,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 51,
     "safety": 80,
     "child": 56,
     "fl": 1,
@@ -8843,8 +9039,8 @@
     "lng": 139.6528,
     "walk": 57,
     "housing": 68,
-    "medical": 61,
-    "mobility": 54,
+    "medical": 55,
+    "mobility": 58,
     "safety": 80,
     "child": 56,
     "fl": 2,
@@ -8856,25 +9052,12 @@
       "宮坂ねむの木公園"
     ],
     "dogruns": [],
-    "vets": [
-      "アマノ動物病院",
-      "赤堤動物病院",
-      "下北沢動物病院",
-      "動物愛護病院",
-      "経堂村田動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Doggy's Island"
-    ],
-    "dog_cafes": [
-      "Cafedict"
-    ],
+    "groomings": [],
+    "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ORIXレンタカー",
-      "トヨタレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "池ノ上_0bf1d8",
@@ -8884,8 +9067,8 @@
     "lng": 139.673,
     "walk": 56,
     "housing": 65,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 57,
+    "mobility": 61,
     "safety": 79,
     "child": 56,
     "fl": 1,
@@ -8897,12 +9080,21 @@
       "目黒川緑道"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "アマノ動物病院",
+      "下北沢動物病院",
+      "トト動物病院",
+      "聖愛動物病院",
+      "羽根木動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "池尻大橋_6e96cd",
@@ -8912,8 +9104,8 @@
     "lng": 139.6846,
     "walk": 55,
     "housing": 54,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 57,
+    "mobility": 52,
     "safety": 77,
     "child": 56,
     "fl": 2,
@@ -8925,12 +9117,22 @@
       "西郷山公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "アマノ動物病院",
+      "トト動物病院",
+      "聖愛動物病院",
+      "笹木動物病院",
+      "フォレスタ"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカーシェア"
+    ],
+    "car_rentals": [
+      "日産レンタカー"
+    ]
   },
   {
     "id": "用賀_5bd629",
@@ -8940,8 +9142,8 @@
     "lng": 139.6342,
     "walk": 64,
     "housing": 69,
-    "medical": 47,
-    "mobility": 49,
+    "medical": 55,
+    "mobility": 51,
     "safety": 81,
     "child": 56,
     "fl": 2,
@@ -8953,17 +9155,12 @@
       "弦巻三丁目公園"
     ],
     "dogruns": [],
-    "vets": [
-      "ようが動物病院",
-      "ベルヴェット動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "祖師ヶ谷大蔵_0d8eea",
@@ -8974,7 +9171,7 @@
     "walk": 63,
     "housing": 71,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 81,
     "child": 56,
     "fl": 2,
@@ -9001,8 +9198,8 @@
     "lng": 139.6373,
     "walk": 46,
     "housing": 70,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 57,
+    "mobility": 58,
     "safety": 80,
     "child": 56,
     "fl": 1,
@@ -9014,7 +9211,13 @@
       "桜公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "赤堤動物病院",
+      "オリーブ動物病院 (Olive Pet Clinic)",
+      "エス・エス動物病院",
+      "経堂村田動物病院",
+      "あみ動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
@@ -9030,7 +9233,7 @@
     "walk": 79,
     "housing": 71,
     "medical": 57,
-    "mobility": 54,
+    "mobility": 68,
     "safety": 81,
     "child": 56,
     "fl": 1,
@@ -9069,7 +9272,7 @@
     "walk": 53,
     "housing": 68,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 79,
     "child": 56,
     "fl": 2,
@@ -9097,7 +9300,7 @@
     "walk": 52,
     "housing": 69,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 79,
     "child": 56,
     "fl": 2,
@@ -9124,8 +9327,8 @@
     "lng": 139.6468,
     "walk": 53,
     "housing": 69,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 61,
+    "mobility": 58,
     "safety": 80,
     "child": 56,
     "fl": 2,
@@ -9135,6 +9338,44 @@
       "くぬぎ公園",
       "桜公園",
       "桜みんなの公園"
+    ],
+    "dogruns": [],
+    "vets": [
+      "赤堤動物病院",
+      "エス・エス動物病院",
+      "経堂村田動物病院",
+      "羽根木動物病院",
+      "世田谷通り動物病院"
+    ],
+    "vets_emergency": [],
+    "groomings": [
+      "Doggy's Island"
+    ],
+    "dog_cafes": [
+      "Cafedict"
+    ],
+    "carshares": [],
+    "car_rentals": []
+  },
+  {
+    "id": "赤堤_f670a6",
+    "name": "赤堤",
+    "line": "東急世田谷線",
+    "lat": 35.6288,
+    "lng": 139.6406,
+    "walk": 56,
+    "housing": 70,
+    "medical": 55,
+    "mobility": 51,
+    "safety": 80,
+    "child": 56,
+    "fl": 1,
+    "parks": [
+      "砧公園",
+      "駒沢一丁目西公園",
+      "桜公園",
+      "桜みんなの公園",
+      "桜三丁目公園"
     ],
     "dogruns": [],
     "vets": [],
@@ -9150,7 +9391,7 @@
     "line": "井の頭線",
     "lat": 35.6585,
     "lng": 139.685,
-    "walk": 58,
+    "walk": 86,
     "housing": 49,
     "medical": 55,
     "mobility": 44,
@@ -9158,13 +9399,15 @@
     "child": 56,
     "fl": 1,
     "parks": [
+      "代々木公園",
       "松見坂公園",
       "駒場野公園",
       "駒場三丁目もちの木公園",
-      "駒場公園",
-      "西郷山公園"
+      "駒場公園"
     ],
-    "dogruns": [],
+    "dogruns": [
+      "代々木公園"
+    ],
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
@@ -9181,7 +9424,7 @@
     "walk": 85,
     "housing": 70,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 81,
     "child": 56,
     "fl": 1,
@@ -9241,7 +9484,7 @@
     "walk": 84,
     "housing": 64,
     "medical": 57,
-    "mobility": 51,
+    "mobility": 64,
     "safety": 80,
     "child": 50,
     "fl": 2,
@@ -9280,8 +9523,8 @@
     "lng": 139.6891,
     "walk": 88,
     "housing": 50,
-    "medical": 62,
-    "mobility": 41,
+    "medical": 54,
+    "mobility": 51,
     "safety": 75,
     "child": 50,
     "fl": 2,
@@ -9295,12 +9538,20 @@
     "dogruns": [
       "代々木公園"
     ],
-    "vets": [],
+    "vets": [
+      "聖愛動物病院",
+      "ねこの病院",
+      "ダクタリ動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー",
+      "タイムズ渋谷本町第3",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "代々木公園_5a2091",
@@ -9340,8 +9591,8 @@
     "lng": 139.7038,
     "walk": 51,
     "housing": 50,
-    "medical": 61,
-    "mobility": 53,
+    "medical": 55,
+    "mobility": 41,
     "safety": 73,
     "child": 50,
     "fl": 2,
@@ -9353,28 +9604,12 @@
       "大坂緑地"
     ],
     "dogruns": [],
-    "vets": [
-      "小鳥と小動物の病院",
-      "フレンズ動物病院",
-      "中目黒動物病院",
-      "広尾の森動物病院",
-      "ペッツファースト動物病院　代官山高度医療センター"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Miss Bibi"
-    ],
-    "dog_cafes": [
-      "Boku Cafe"
-    ],
-    "carshares": [
-      "タイムズカーシェア"
-    ],
-    "car_rentals": [
-      "Autobacs Nakameguro",
-      "Times Car Rental",
-      "ニッポンレンタカー"
-    ]
+    "groomings": [],
+    "dog_cafes": [],
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "北参道_739392",
@@ -9385,7 +9620,7 @@
     "walk": 83,
     "housing": 59,
     "medical": 55,
-    "mobility": 41,
+    "mobility": 51,
     "safety": 75,
     "child": 50,
     "fl": 2,
@@ -9404,7 +9639,11 @@
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "千駄ヶ谷_a63c5c",
@@ -9412,7 +9651,7 @@
     "line": "中央線",
     "lat": 35.6812,
     "lng": 139.7113,
-    "walk": 54,
+    "walk": 82,
     "housing": 61,
     "medical": 55,
     "mobility": 41,
@@ -9421,12 +9660,14 @@
     "fl": 1,
     "parks": [
       "明治公園",
+      "代々木公園",
       "青山公園",
       "若葉公園",
-      "愛住公園",
-      "四谷見附公園"
+      "愛住公園"
     ],
-    "dogruns": [],
+    "dogruns": [
+      "代々木公園"
+    ],
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
@@ -9534,27 +9775,43 @@
     "line": "13号線副都心線",
     "lat": 35.6591,
     "lng": 139.7025,
-    "walk": 54,
+    "walk": 82,
     "housing": 42,
-    "medical": 55,
-    "mobility": 41,
+    "medical": 60,
+    "mobility": 53,
     "safety": 62,
     "child": 50,
     "fl": 1,
     "parks": [
+      "代々木公園",
       "松見坂公園",
       "駒場三丁目もちの木公園",
       "西郷山公園",
-      "菅刈公園",
-      "菅刈街かど公園"
+      "菅刈公園"
     ],
-    "dogruns": [],
-    "vets": [],
+    "dogruns": [
+      "代々木公園"
+    ],
+    "vets": [
+      "小鳥と小動物の病院",
+      "フレンズ動物病院",
+      "聖愛動物病院",
+      "ダクタリ動物病院",
+      "ペッツファースト動物病院　代官山高度医療センター"
+    ],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "dog_cafes": [
+      "Boku Cafe"
+    ],
+    "carshares": [
+      "タイムズカーシェア"
+    ],
+    "car_rentals": [
+      "Autobacs Nakameguro",
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "神泉_094008",
@@ -9562,27 +9819,43 @@
     "line": "井の頭線",
     "lat": 35.6572,
     "lng": 139.6933,
-    "walk": 51,
+    "walk": 79,
     "housing": 47,
-    "medical": 55,
-    "mobility": 41,
+    "medical": 60,
+    "mobility": 53,
     "safety": 65,
     "child": 50,
     "fl": 1,
     "parks": [
+      "代々木公園",
       "松見坂公園",
       "駒場野公園",
       "駒場三丁目もちの木公園",
-      "駒場公園",
-      "西郷山公園"
+      "駒場公園"
     ],
-    "dogruns": [],
-    "vets": [],
+    "dogruns": [
+      "代々木公園"
+    ],
+    "vets": [
+      "小鳥と小動物の病院",
+      "フレンズ動物病院",
+      "聖愛動物病院",
+      "ねこの病院",
+      "ダクタリ動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "dog_cafes": [
+      "Boku Cafe"
+    ],
+    "carshares": [
+      "タイムズカーシェア"
+    ],
+    "car_rentals": [
+      "Autobacs Nakameguro",
+      "トヨタレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "笹塚_7d9cb8",
@@ -9593,7 +9866,7 @@
     "walk": 50,
     "housing": 68,
     "medical": 55,
-    "mobility": 41,
+    "mobility": 55,
     "safety": 76,
     "child": 50,
     "fl": 2,
@@ -9618,7 +9891,7 @@
     "line": "11号線半蔵門線",
     "lat": 35.6652,
     "lng": 139.7124,
-    "walk": 52,
+    "walk": 80,
     "housing": 49,
     "medical": 55,
     "mobility": 41,
@@ -9628,11 +9901,13 @@
     "parks": [
       "明治公園",
       "青山公園",
+      "代々木公園",
       "笄公園",
-      "六本木西公園",
-      "乃木公園"
+      "六本木西公園"
     ],
-    "dogruns": [],
+    "dogruns": [
+      "代々木公園"
+    ],
     "vets": [],
     "vets_emergency": [],
     "groomings": [],
@@ -9649,7 +9924,7 @@
     "walk": 50,
     "housing": 56,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 72,
     "child": 43,
     "fl": 2,
@@ -9676,8 +9951,8 @@
     "lng": 139.683,
     "walk": 50,
     "housing": 49,
-    "medical": 67,
-    "mobility": 62,
+    "medical": 55,
+    "mobility": 58,
     "safety": 73,
     "child": 43,
     "fl": 1,
@@ -9689,28 +9964,12 @@
       "新宿中央公園"
     ],
     "dogruns": [],
-    "vets": [
-      "もみじ山通りペットクリニック",
-      "本町動物病院",
-      "動物救急センター",
-      "エンドー動物病院",
-      "マリーペットクリニック"
-    ],
-    "vets_emergency": [
-      "動物救急センター"
-    ],
+    "vets": [],
+    "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカープラス",
-      "タイムズカー",
-      "タイムズカー"
-    ],
-    "car_rentals": [
-      "トヨタレンタカー",
-      "日産レンタカー",
-      "タイムズプラス"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "中野富士見町_a97c9e",
@@ -9721,7 +9980,7 @@
     "walk": 46,
     "housing": 62,
     "medical": 68,
-    "mobility": 62,
+    "mobility": 76,
     "safety": 78,
     "child": 43,
     "fl": 2,
@@ -9767,7 +10026,7 @@
     "walk": 48,
     "housing": 62,
     "medical": 68,
-    "mobility": 59,
+    "mobility": 73,
     "safety": 77,
     "child": 43,
     "fl": 2,
@@ -9811,8 +10070,8 @@
     "lng": 139.6687,
     "walk": 47,
     "housing": 56,
-    "medical": 68,
-    "mobility": 62,
+    "medical": 55,
+    "mobility": 58,
     "safety": 74,
     "child": 43,
     "fl": 1,
@@ -9824,30 +10083,12 @@
       "桃園川公園"
     ],
     "dogruns": [],
-    "vets": [
-      "もみじ山通りペットクリニック",
-      "リトルピース動物病院",
-      "本町動物病院",
-      "動物救急センター",
-      "アイルペットクリニック"
-    ],
-    "vets_emergency": [
-      "動物救急センター"
-    ],
-    "groomings": [
-      "PET SALON WITH"
-    ],
+    "vets": [],
+    "vets_emergency": [],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカープラス",
-      "タイムズカー",
-      "タイムズカー"
-    ],
-    "car_rentals": [
-      "日産レンタカー",
-      "トヨタレンタカー",
-      "タイムズプラス"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "新井薬師前_9058a1",
@@ -9858,7 +10099,7 @@
     "walk": 55,
     "housing": 63,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 77,
     "child": 43,
     "fl": 2,
@@ -9886,7 +10127,7 @@
     "walk": 57,
     "housing": 65,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 79,
     "child": 43,
     "fl": 1,
@@ -9914,7 +10155,7 @@
     "walk": 47,
     "housing": 50,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 77,
     "child": 43,
     "fl": 2,
@@ -9941,8 +10182,8 @@
     "lng": 139.6641,
     "walk": 58,
     "housing": 63,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 58,
+    "mobility": 63,
     "safety": 79,
     "child": 43,
     "fl": 2,
@@ -9954,12 +10195,22 @@
       "西落合東公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "野村獣医科Vセンター",
+      "COCONI IRU",
+      "ケペル動物病院",
+      "グリーンパル動物病院",
+      "江古田の森ペットクリニック"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Birthday"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "落合_31c8b7",
@@ -9970,7 +10221,7 @@
     "walk": 50,
     "housing": 52,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 77,
     "child": 43,
     "fl": 1,
@@ -9997,8 +10248,8 @@
     "lng": 139.6448,
     "walk": 49,
     "housing": 67,
-    "medical": 58,
-    "mobility": 44,
+    "medical": 55,
+    "mobility": 58,
     "safety": 79,
     "child": 43,
     "fl": 1,
@@ -10010,17 +10261,9 @@
       "啓明公園"
     ],
     "dogruns": [],
-    "vets": [
-      "みやけ動物病院",
-      "ケペル動物病院",
-      "まつざわ動物病院",
-      "サンテ動物病院",
-      "グリーンパル動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "幸せのしっぽ"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
     "car_rentals": []
@@ -10034,7 +10277,7 @@
     "walk": 54,
     "housing": 64,
     "medical": 61,
-    "mobility": 54,
+    "mobility": 67,
     "safety": 78,
     "child": 43,
     "fl": 1,
@@ -10075,7 +10318,7 @@
     "walk": 49,
     "housing": 69,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 58,
     "safety": 80,
     "child": 43,
     "fl": 2,
@@ -10103,7 +10346,7 @@
     "walk": 82,
     "housing": 72,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 82,
     "child": 51,
     "fl": 2,
@@ -10133,7 +10376,7 @@
     "walk": 50,
     "housing": 71,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 81,
     "child": 51,
     "fl": 1,
@@ -10160,8 +10403,8 @@
     "lng": 139.5998,
     "walk": 46,
     "housing": 71,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 57,
+    "mobility": 56,
     "safety": 83,
     "child": 51,
     "fl": 2,
@@ -10173,12 +10416,20 @@
       "北烏山七丁目公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ペット家族 動物病院",
+      "みやまえ動物病院",
+      "ダクタリ動物病院",
+      "モノカどうぶつ病院",
+      "浅野獣医科医院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "オリックスレンタカー"
+    ]
   },
   {
     "id": "井荻_55532d",
@@ -10189,7 +10440,7 @@
     "walk": 57,
     "housing": 71,
     "medical": 57,
-    "mobility": 54,
+    "mobility": 68,
     "safety": 82,
     "child": 51,
     "fl": 1,
@@ -10225,8 +10476,8 @@
     "lng": 139.6349,
     "walk": 69,
     "housing": 70,
-    "medical": 61,
-    "mobility": 54,
+    "medical": 55,
+    "mobility": 45,
     "safety": 79,
     "child": 51,
     "fl": 1,
@@ -10238,25 +10489,12 @@
       "高円寺南公園"
     ],
     "dogruns": [],
-    "vets": [
-      "成田犬猫病院",
-      "ハナ動物病院",
-      "グラース動物病院",
-      "みきと動物病院",
-      "daktari"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "AndyCafe Dog Salon",
-      "ペットシッターSOS"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "ニッポンレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "富士見ヶ丘_965791",
@@ -10267,7 +10505,7 @@
     "walk": 47,
     "housing": 69,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 51,
     "safety": 82,
     "child": 51,
     "fl": 1,
@@ -10294,8 +10532,8 @@
     "lng": 139.6478,
     "walk": 64,
     "housing": 67,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 62,
+    "mobility": 68,
     "safety": 77,
     "child": 51,
     "fl": 1,
@@ -10307,12 +10545,26 @@
       "もみの木公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "成田犬猫病院",
+      "ハナ動物病院",
+      "みきと動物病院",
+      "高円寺アニマルクリニック",
+      "南阿佐ヶ谷どうぶつ病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "AndyCafe Dog Salon",
+      "PET SALON WITH",
+      "ペットシッターSOS"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "日産レンタカー",
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "方南町_089097",
@@ -10323,7 +10575,7 @@
     "walk": 63,
     "housing": 67,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 80,
     "child": 51,
     "fl": 1,
@@ -10351,7 +10603,7 @@
     "walk": 55,
     "housing": 63,
     "medical": 70,
-    "mobility": 62,
+    "mobility": 76,
     "safety": 75,
     "child": 51,
     "fl": 1,
@@ -10398,7 +10650,7 @@
     "walk": 67,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 51,
     "safety": 80,
     "child": 51,
     "fl": 2,
@@ -10425,8 +10677,8 @@
     "lng": 139.627,
     "walk": 79,
     "housing": 70,
-    "medical": 57,
-    "mobility": 54,
+    "medical": 55,
+    "mobility": 58,
     "safety": 83,
     "child": 51,
     "fl": 1,
@@ -10438,21 +10690,12 @@
       "西永福公園"
     ],
     "dogruns": [],
-    "vets": [
-      "マスナガ動物病院",
-      "かじわら動物病院 (Kajiwara Animal Clinic)",
-      "GREEN CROSS ANIMAL MEDICAL CENTER",
-      "ひまわり動物病院",
-      "ミサキ動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "Times Car PLUS",
-      "オリックスレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "荻窪_e4eb4c",
@@ -10462,8 +10705,8 @@
     "lng": 139.6215,
     "walk": 63,
     "housing": 70,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 58,
+    "mobility": 67,
     "safety": 79,
     "child": 51,
     "fl": 2,
@@ -10475,12 +10718,27 @@
       "桃井公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "グラース動物病院",
+      "なかむらペットクリニック",
+      "塩田動物病院",
+      "daktari",
+      "石垣動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "AndyCafe Dog Salon"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "Times Car PLUS",
+      "タイムズカーシェア"
+    ],
+    "car_rentals": [
+      "トヨタレンタカー",
+      "ニッポンレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "西永福_76d4da",
@@ -10491,7 +10749,7 @@
     "walk": 68,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 82,
     "child": 51,
     "fl": 2,
@@ -10519,7 +10777,7 @@
     "walk": 48,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 82,
     "child": 51,
     "fl": 1,
@@ -10587,8 +10845,8 @@
     "lng": 139.6158,
     "walk": 51,
     "housing": 71,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 57,
+    "mobility": 68,
     "safety": 82,
     "child": 51,
     "fl": 2,
@@ -10600,12 +10858,22 @@
       "松葉山公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "マスナガ動物病院",
+      "かじわら動物病院 (Kajiwara Animal Clinic)",
+      "ペット家族 動物病院",
+      "みやまえ動物病院",
+      "塩田動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー",
+      "Times Car PLUS",
+      "オリックスレンタカー"
+    ]
   },
   {
     "id": "高円寺_fdccb4",
@@ -10616,7 +10884,7 @@
     "walk": 51,
     "housing": 66,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 51,
     "safety": 74,
     "child": 51,
     "fl": 1,
@@ -10644,7 +10912,7 @@
     "walk": 50,
     "housing": 57,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 75,
     "child": 43,
     "fl": 2,
@@ -10672,7 +10940,7 @@
     "walk": 51,
     "housing": 46,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 62,
     "child": 43,
     "fl": 1,
@@ -10700,7 +10968,7 @@
     "walk": 46,
     "housing": 63,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 77,
     "child": 43,
     "fl": 2,
@@ -10728,7 +10996,7 @@
     "walk": 51,
     "housing": 46,
     "medical": 49,
-    "mobility": 59,
+    "mobility": 73,
     "safety": 64,
     "child": 43,
     "fl": 1,
@@ -10766,8 +11034,8 @@
     "lng": 139.7269,
     "walk": 50,
     "housing": 46,
-    "medical": 47,
-    "mobility": 59,
+    "medical": 55,
+    "mobility": 57,
     "safety": 68,
     "child": 43,
     "fl": 2,
@@ -10779,9 +11047,38 @@
       "教育の森公園"
     ],
     "dogruns": [],
+    "vets": [],
+    "vets_emergency": [],
+    "groomings": [],
+    "dog_cafes": [],
+    "carshares": [],
+    "car_rentals": []
+  },
+  {
+    "id": "大塚駅前_64b283",
+    "name": "大塚駅前",
+    "line": "荒川線",
+    "lat": 35.7318,
+    "lng": 139.7295,
+    "walk": 49,
+    "housing": 54,
+    "medical": 52,
+    "mobility": 73,
+    "safety": 69,
+    "child": 43,
+    "fl": 2,
+    "parks": [
+      "六義園",
+      "大塚公園",
+      "大塚窪町公園",
+      "窪町東公園",
+      "大塚仲町公園"
+    ],
+    "dogruns": [],
     "vets": [
       "愛犬病院",
-      "久山獣医科病院"
+      "久山獣医科病院",
+      "戦国ハートワン動物病院"
     ],
     "vets_emergency": [],
     "groomings": [],
@@ -10796,34 +11093,6 @@
     ]
   },
   {
-    "id": "大塚駅前_64b283",
-    "name": "大塚駅前",
-    "line": "荒川線",
-    "lat": 35.7318,
-    "lng": 139.7295,
-    "walk": 49,
-    "housing": 54,
-    "medical": 55,
-    "mobility": 44,
-    "safety": 69,
-    "child": 43,
-    "fl": 2,
-    "parks": [
-      "六義園",
-      "大塚公園",
-      "大塚窪町公園",
-      "窪町東公園",
-      "大塚仲町公園"
-    ],
-    "dogruns": [],
-    "vets": [],
-    "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
-  },
-  {
     "id": "学習院下_30d10a",
     "name": "学習院下",
     "line": "荒川線",
@@ -10831,8 +11100,8 @@
     "lng": 139.7124,
     "walk": 65,
     "housing": 52,
-    "medical": 44,
-    "mobility": 56,
+    "medical": 55,
+    "mobility": 51,
     "safety": 70,
     "child": 43,
     "fl": 2,
@@ -10844,22 +11113,12 @@
       "大久保北公園"
     ],
     "dogruns": [],
-    "vets": [
-      "もとい動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "LaCOCOT"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカープラス"
-    ],
-    "car_rentals": [
-      "マツダレンタカー",
-      "トヨタレンタカー・リース",
-      "ニコニコレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "巣鴨_145e17",
@@ -10870,7 +11129,7 @@
     "walk": 56,
     "housing": 55,
     "medical": 58,
-    "mobility": 54,
+    "mobility": 68,
     "safety": 76,
     "child": 43,
     "fl": 1,
@@ -10910,8 +11169,8 @@
     "lng": 139.7278,
     "walk": 48,
     "housing": 54,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 57,
+    "mobility": 73,
     "safety": 69,
     "child": 43,
     "fl": 1,
@@ -10923,12 +11182,23 @@
       "染井よしの桜の里"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "愛犬病院",
+      "ティアハイムどうぶつ病院",
+      "久山獣医科病院",
+      "飛鳥山動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "三井のカーシェアーズ",
+      "三井のカーシェアーズ"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "庚申塚_ad983c",
@@ -10939,7 +11209,7 @@
     "walk": 49,
     "housing": 55,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 75,
     "child": 43,
     "fl": 1,
@@ -10967,7 +11237,7 @@
     "walk": 51,
     "housing": 46,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 60,
     "child": 43,
     "fl": 1,
@@ -10995,7 +11265,7 @@
     "walk": 51,
     "housing": 46,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 60,
     "child": 43,
     "fl": 2,
@@ -11022,8 +11292,8 @@
     "lng": 139.6825,
     "walk": 51,
     "housing": 63,
-    "medical": 58,
-    "mobility": 56,
+    "medical": 55,
+    "mobility": 57,
     "safety": 78,
     "child": 43,
     "fl": 1,
@@ -11035,26 +11305,12 @@
       "西落合東公園"
     ],
     "dogruns": [],
-    "vets": [
-      "小滝橋動物病院 目白通り高度医療センター",
-      "哲学堂アニマルクリニック",
-      "大塚犬猫病院",
-      "江古田まさ動物病院",
-      "ペアン動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ドッグマイスター"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカーシェア"
-    ],
-    "car_rentals": [
-      "レンタルバイク池袋",
-      "ニッポンレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "椎名町_ce39cc",
@@ -11064,8 +11320,8 @@
     "lng": 139.6937,
     "walk": 51,
     "housing": 48,
-    "medical": 58,
-    "mobility": 56,
+    "medical": 55,
+    "mobility": 57,
     "safety": 76,
     "child": 43,
     "fl": 2,
@@ -11077,25 +11333,12 @@
       "落合中央公園"
     ],
     "dogruns": [],
-    "vets": [
-      "小滝橋動物病院 目白通り高度医療センター",
-      "哲学堂アニマルクリニック",
-      "もとい動物病院",
-      "にしやま動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ドッグマイスター"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "タイムズカーシェア"
-    ],
-    "car_rentals": [
-      "レンタルバイク池袋",
-      "ニッポンレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "江戸川橋_4c7db8",
@@ -11106,7 +11349,7 @@
     "walk": 51,
     "housing": 58,
     "medical": 55,
-    "mobility": 43,
+    "mobility": 50,
     "safety": 79,
     "child": 64,
     "fl": 2,
@@ -11133,8 +11376,8 @@
     "lng": 139.7111,
     "walk": 50,
     "housing": 43,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 47,
+    "mobility": 70,
     "safety": 57,
     "child": 43,
     "fl": 1,
@@ -11146,12 +11389,21 @@
       "大塚台"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "もとい動物病院",
+      "愛犬病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカーシェア"
+    ],
+    "car_rentals": [
+      "レンタルバイク池袋",
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "目白_6a4a6e",
@@ -11162,7 +11414,7 @@
     "walk": 53,
     "housing": 45,
     "medical": 54,
-    "mobility": 56,
+    "mobility": 70,
     "safety": 69,
     "child": 43,
     "fl": 1,
@@ -11202,7 +11454,7 @@
     "walk": 51,
     "housing": 61,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 76,
     "child": 43,
     "fl": 2,
@@ -11230,7 +11482,7 @@
     "walk": 47,
     "housing": 48,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 62,
     "child": 43,
     "fl": 2,
@@ -11258,7 +11510,7 @@
     "walk": 56,
     "housing": 57,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 77,
     "child": 43,
     "fl": 1,
@@ -11285,8 +11537,8 @@
     "lng": 139.7178,
     "walk": 52,
     "housing": 45,
-    "medical": 49,
-    "mobility": 53,
+    "medical": 55,
+    "mobility": 57,
     "safety": 61,
     "child": 43,
     "fl": 1,
@@ -11298,21 +11550,12 @@
       "下落合東公園"
     ],
     "dogruns": [],
-    "vets": [
-      "もとい動物病院",
-      "愛犬病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "LaCOCOT"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "トヨタレンタカー・リース",
-      "ニッポンレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "雑司が谷_68dca9",
@@ -11322,8 +11565,8 @@
     "lng": 139.7139,
     "walk": 54,
     "housing": 46,
-    "medical": 55,
-    "mobility": 44,
+    "medical": 49,
+    "mobility": 70,
     "safety": 70,
     "child": 43,
     "fl": 1,
@@ -11335,12 +11578,23 @@
       "高田馬場駅前公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "もとい動物病院",
+      "愛犬病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "LaCOCOT"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカープラス"
+    ],
+    "car_rentals": [
+      "マツダレンタカー",
+      "トヨタレンタカー・リース",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "面影橋_cb49e0",
@@ -11351,7 +11605,7 @@
     "walk": 68,
     "housing": 53,
     "medical": 55,
-    "mobility": 56,
+    "mobility": 63,
     "safety": 77,
     "child": 43,
     "fl": 2,
@@ -11387,7 +11641,7 @@
     "walk": 57,
     "housing": 62,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 80,
     "child": 43,
     "fl": 2,
@@ -11415,7 +11669,7 @@
     "walk": 53,
     "housing": 47,
     "medical": 55,
-    "mobility": 44,
+    "mobility": 57,
     "safety": 62,
     "child": 43,
     "fl": 1,
@@ -11442,8 +11696,8 @@
     "lng": 139.7467,
     "walk": 58,
     "housing": 69,
-    "medical": 61,
-    "mobility": 54,
+    "medical": 55,
+    "mobility": 58,
     "safety": 79,
     "child": 51,
     "fl": 1,
@@ -11455,24 +11709,12 @@
       "染井吉野桜記念"
     ],
     "dogruns": [],
-    "vets": [
-      "さいとうラビットクリニック",
-      "ふくしま動物病院",
-      "西ヶ原ローズ動物病院",
-      "オダイ動物病院",
-      "松尾犬猫病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ドッグサロン 優",
-      "ピンキー1"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニコニコレンタカー",
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "北赤羽_cff2b5",
@@ -11483,7 +11725,7 @@
     "walk": 66,
     "housing": 72,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 83,
     "child": 51,
     "fl": 2,
@@ -11510,8 +11752,8 @@
     "lng": 139.7223,
     "walk": 53,
     "housing": 69,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 52,
+    "mobility": 76,
     "safety": 77,
     "child": 51,
     "fl": 2,
@@ -11523,12 +11765,23 @@
       "神谷南公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ティアハイムどうぶつ病院",
+      "獣医科まつだ医院",
+      "東十条どうぶつ病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "カレコ・カーシェアリングクラブ",
+      "オリックスカーシェア",
+      "Honda EveryGo 板橋区役所前駅ステーション"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "尾久_076de3",
@@ -11538,8 +11791,8 @@
     "lng": 139.754,
     "walk": 54,
     "housing": 68,
-    "medical": 62,
-    "mobility": 49,
+    "medical": 55,
+    "mobility": 58,
     "safety": 80,
     "child": 51,
     "fl": 2,
@@ -11551,24 +11804,12 @@
       "染井吉野桜記念"
     ],
     "dogruns": [],
-    "vets": [
-      "さいとうラビットクリニック",
-      "のがみ動物病院",
-      "ふくしま動物病院",
-      "しん中央動物病院",
-      "西ヶ原ローズ動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ぴーたん",
-      "トリミングサロンEnzo",
-      "ドッグサロン 優"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニコニコレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "志茂_6f03fb",
@@ -11578,8 +11819,8 @@
     "lng": 139.732,
     "walk": 52,
     "housing": 67,
-    "medical": 47,
-    "mobility": 54,
+    "medical": 55,
+    "mobility": 51,
     "safety": 76,
     "child": 51,
     "fl": 2,
@@ -11591,19 +11832,12 @@
       "赤羽公園"
     ],
     "dogruns": [],
-    "vets": [
-      "なかね動物病院",
-      "東十条どうぶつ病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "日産レンタカー",
-      "トヨタレンタカー",
-      "オリックスレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "新庚申塚_115563",
@@ -11613,8 +11847,8 @@
     "lng": 139.7305,
     "walk": 51,
     "housing": 60,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 61,
+    "mobility": 73,
     "safety": 77,
     "child": 51,
     "fl": 2,
@@ -11626,12 +11860,27 @@
       "駒込西"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "西ヶ原ローズ動物病院",
+      "愛犬病院",
+      "ティアハイムどうぶつ病院",
+      "久山獣医科病院",
+      "駒込動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ドッグサロン 優",
+      "ピンキー1"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "三井のカーシェアーズ",
+      "三井のカーシェアーズ"
+    ],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "東十条_9bca7a",
@@ -11641,8 +11890,8 @@
     "lng": 139.7266,
     "walk": 52,
     "housing": 64,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 47,
+    "mobility": 61,
     "safety": 77,
     "child": 51,
     "fl": 2,
@@ -11654,12 +11903,19 @@
       "北運動公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "松尾犬猫病院",
+      "東十条どうぶつ病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー",
+      "オリックスレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "栄町_06623d",
@@ -11670,7 +11926,7 @@
     "walk": 58,
     "housing": 69,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 51,
     "safety": 80,
     "child": 51,
     "fl": 2,
@@ -11697,8 +11953,8 @@
     "lng": 139.747,
     "walk": 56,
     "housing": 70,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 62,
+    "mobility": 61,
     "safety": 80,
     "child": 51,
     "fl": 2,
@@ -11710,12 +11966,25 @@
       "西中里公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "西ヶ原ローズ動物病院",
+      "オダイ動物病院",
+      "松尾犬猫病院",
+      "駒込動物病院",
+      "飛鳥山動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "トリミングサロンEnzo",
+      "ドッグサロン 優",
+      "ピンキー1"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニコニコレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "浮間舟渡_4ccd38",
@@ -11726,7 +11995,7 @@
     "walk": 71,
     "housing": 72,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 83,
     "child": 51,
     "fl": 2,
@@ -11754,7 +12023,7 @@
     "walk": 57,
     "housing": 67,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 51,
     "safety": 78,
     "child": 51,
     "fl": 2,
@@ -11781,8 +12050,8 @@
     "lng": 139.7389,
     "walk": 58,
     "housing": 69,
-    "medical": 61,
-    "mobility": 49,
+    "medical": 55,
+    "mobility": 51,
     "safety": 80,
     "child": 51,
     "fl": 2,
@@ -11794,11 +12063,72 @@
       "王子本町公園"
     ],
     "dogruns": [],
+    "vets": [],
+    "vets_emergency": [],
+    "groomings": [],
+    "dog_cafes": [],
+    "carshares": [],
+    "car_rentals": []
+  },
+  {
+    "id": "王子神谷_5793df",
+    "name": "王子神谷",
+    "line": "7号線南北線",
+    "lat": 35.7652,
+    "lng": 139.7357,
+    "walk": 50,
+    "housing": 70,
+    "medical": 47,
+    "mobility": 61,
+    "safety": 78,
+    "child": 51,
+    "fl": 2,
+    "parks": [
+      "神谷公園",
+      "志茂町公園",
+      "王子本町公園",
+      "柳田公園",
+      "北運動公園"
+    ],
+    "dogruns": [],
+    "vets": [
+      "松尾犬猫病院",
+      "東十条どうぶつ病院"
+    ],
+    "vets_emergency": [],
+    "groomings": [],
+    "dog_cafes": [],
+    "carshares": [],
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー"
+    ]
+  },
+  {
+    "id": "王子駅前_36ace5",
+    "name": "王子駅前",
+    "line": "荒川線",
+    "lat": 35.7527,
+    "lng": 139.7382,
+    "walk": 67,
+    "housing": 68,
+    "medical": 61,
+    "mobility": 56,
+    "safety": 79,
+    "child": 51,
+    "fl": 2,
+    "parks": [
+      "旧古河庭園",
+      "王子本町公園",
+      "柳田公園",
+      "王子駅前公園",
+      "東王子公園"
+    ],
+    "dogruns": [],
     "vets": [
       "西ヶ原ローズ動物病院",
       "松尾犬猫病院",
       "ティアハイムどうぶつ病院",
-      "駒込動物病院",
       "飛鳥山動物病院"
     ],
     "vets_emergency": [],
@@ -11813,62 +12143,6 @@
     ]
   },
   {
-    "id": "王子神谷_5793df",
-    "name": "王子神谷",
-    "line": "7号線南北線",
-    "lat": 35.7652,
-    "lng": 139.7357,
-    "walk": 50,
-    "housing": 70,
-    "medical": 55,
-    "mobility": 45,
-    "safety": 78,
-    "child": 51,
-    "fl": 2,
-    "parks": [
-      "神谷公園",
-      "志茂町公園",
-      "王子本町公園",
-      "柳田公園",
-      "北運動公園"
-    ],
-    "dogruns": [],
-    "vets": [],
-    "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
-  },
-  {
-    "id": "王子駅前_36ace5",
-    "name": "王子駅前",
-    "line": "荒川線",
-    "lat": 35.7527,
-    "lng": 139.7382,
-    "walk": 67,
-    "housing": 68,
-    "medical": 55,
-    "mobility": 45,
-    "safety": 79,
-    "child": 51,
-    "fl": 2,
-    "parks": [
-      "旧古河庭園",
-      "王子本町公園",
-      "柳田公園",
-      "王子駅前公園",
-      "東王子公園"
-    ],
-    "dogruns": [],
-    "vets": [],
-    "vets_emergency": [],
-    "groomings": [],
-    "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
-  },
-  {
     "id": "田端_da09de",
     "name": "田端",
     "line": "東北線",
@@ -11877,7 +12151,7 @@
     "walk": 50,
     "housing": 65,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 77,
     "child": 51,
     "fl": 2,
@@ -11905,7 +12179,7 @@
     "walk": 59,
     "housing": 66,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 79,
     "child": 51,
     "fl": 2,
@@ -11933,7 +12207,7 @@
     "walk": 54,
     "housing": 64,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 51,
     "safety": 77,
     "child": 51,
     "fl": 2,
@@ -11961,7 +12235,7 @@
     "walk": 54,
     "housing": 66,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 75,
     "child": 51,
     "fl": 2,
@@ -11988,8 +12262,8 @@
     "lng": 139.7208,
     "walk": 57,
     "housing": 69,
-    "medical": 42,
-    "mobility": 54,
+    "medical": 55,
+    "mobility": 58,
     "safety": 77,
     "child": 51,
     "fl": 2,
@@ -12001,18 +12275,12 @@
       "稲付公園"
     ],
     "dogruns": [],
-    "vets": [
-      "なかね動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "日産レンタカー",
-      "トヨタレンタカー",
-      "オリックスレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "飛鳥山_3b08c6",
@@ -12022,8 +12290,8 @@
     "lng": 139.7374,
     "walk": 67,
     "housing": 68,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 61,
+    "mobility": 56,
     "safety": 79,
     "child": 51,
     "fl": 2,
@@ -12035,12 +12303,23 @@
       "南谷端公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "西ヶ原ローズ動物病院",
+      "松尾犬猫病院",
+      "ティアハイムどうぶつ病院",
+      "駒込動物病院",
+      "飛鳥山動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ドッグサロン 優",
+      "ピンキー1"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "三ノ輪橋_5d573c",
@@ -12050,8 +12329,8 @@
     "lng": 139.7913,
     "walk": 49,
     "housing": 64,
-    "medical": 58,
-    "mobility": 57,
+    "medical": 55,
+    "mobility": 58,
     "safety": 77,
     "child": 53,
     "fl": 2,
@@ -12063,25 +12342,12 @@
       "玉姫公園"
     ],
     "dogruns": [],
-    "vets": [
-      "内藤動物病院",
-      "西日暮里ペットクリニック",
-      "日暮里動物病院",
-      "いわせ犬猫クリニック",
-      "千住どうぶつ病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ピノキオ"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "オリックスカーシェア"
-    ],
-    "car_rentals": [
-      "日産レンタカー",
-      "タイムズカーシェア"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "三河島_b48692",
@@ -12089,19 +12355,19 @@
     "line": "常磐線",
     "lat": 35.7333,
     "lng": 139.7777,
-    "walk": 52,
+    "walk": 63,
     "housing": 65,
     "medical": 58,
-    "mobility": 60,
+    "mobility": 74,
     "safety": 75,
     "child": 53,
     "fl": 2,
     "parks": [
+      "上野恩賜公園",
       "須藤公園",
       "東盛公園",
       "金杉公園",
-      "鶯谷公園",
-      "上根岸公園"
+      "鶯谷公園"
     ],
     "dogruns": [],
     "vets": [
@@ -12135,7 +12401,7 @@
     "walk": 78,
     "housing": 67,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 77,
     "child": 53,
     "fl": 2,
@@ -12162,8 +12428,8 @@
     "lng": 139.7659,
     "walk": 68,
     "housing": 70,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 61,
+    "mobility": 68,
     "safety": 80,
     "child": 53,
     "fl": 2,
@@ -12175,12 +12441,24 @@
       "白山堀公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "さいとうラビットクリニック",
+      "のがみ動物病院",
+      "ふくしま動物病院",
+      "しん中央動物病院",
+      "オダイ動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ぴーたん",
+      "トリミングサロンEnzo"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "日産レンタカー",
+      "ニコニコレンタカー"
+    ]
   },
   {
     "id": "小台_761923",
@@ -12191,7 +12469,7 @@
     "walk": 68,
     "housing": 71,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 80,
     "child": 53,
     "fl": 2,
@@ -12218,8 +12496,8 @@
     "lng": 139.7745,
     "walk": 51,
     "housing": 65,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 58,
+    "mobility": 74,
     "safety": 76,
     "child": 53,
     "fl": 2,
@@ -12231,12 +12509,27 @@
       "金曽木公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "さいとうラビットクリニック",
+      "のがみ動物病院",
+      "ふくしま動物病院",
+      "内藤動物病院",
+      "西日暮里ペットクリニック"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ぴーたん"
+    ],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "オリックスカーシェア",
+      "オリックスカーシェア"
+    ],
+    "car_rentals": [
+      "トヨタレンタカー",
+      "ニッポンレンタカー",
+      "日産レンタカー"
+    ]
   },
   {
     "id": "東尾久三丁目_49b761",
@@ -12246,8 +12539,8 @@
     "lng": 139.7738,
     "walk": 66,
     "housing": 67,
-    "medical": 58,
-    "mobility": 54,
+    "medical": 55,
+    "mobility": 58,
     "safety": 78,
     "child": 53,
     "fl": 2,
@@ -12259,23 +12552,12 @@
       "田端新町南むつみ公園"
     ],
     "dogruns": [],
-    "vets": [
-      "さいとうラビットクリニック",
-      "のがみ動物病院",
-      "ふくしま動物病院",
-      "西日暮里ペットクリニック",
-      "しん中央動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ぴーたん"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "日産レンタカー",
-      "ニコニコレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "熊野前_694f0f",
@@ -12286,7 +12568,7 @@
     "walk": 69,
     "housing": 70,
     "medical": 61,
-    "mobility": 54,
+    "mobility": 68,
     "safety": 80,
     "child": 53,
     "fl": 2,
@@ -12326,7 +12608,7 @@
     "walk": 68,
     "housing": 66,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 78,
     "child": 53,
     "fl": 2,
@@ -12353,8 +12635,8 @@
     "lng": 139.7762,
     "walk": 65,
     "housing": 66,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 58,
+    "mobility": 68,
     "safety": 79,
     "child": 53,
     "fl": 2,
@@ -12366,12 +12648,24 @@
       "田端新町南むつみ公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "のがみ動物病院",
+      "ふくしま動物病院",
+      "西日暮里ペットクリニック",
+      "しん中央動物病院",
+      "オダイ動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ぴーたん"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "日産レンタカー",
+      "ニコニコレンタカー"
+    ]
   },
   {
     "id": "町屋駅前_36887e",
@@ -12381,8 +12675,8 @@
     "lng": 139.7809,
     "walk": 52,
     "housing": 65,
-    "medical": 58,
-    "mobility": 50,
+    "medical": 55,
+    "mobility": 58,
     "safety": 79,
     "child": 53,
     "fl": 2,
@@ -12394,22 +12688,12 @@
       "三河島公園"
     ],
     "dogruns": [],
-    "vets": [
-      "のがみ動物病院",
-      "西日暮里ペットクリニック",
-      "しん中央動物病院",
-      "日暮里動物病院",
-      "フジカワ動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ぴーたん"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "日産レンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "荒川一中前_d9cea3",
@@ -12419,8 +12703,8 @@
     "lng": 139.7889,
     "walk": 50,
     "housing": 63,
-    "medical": 58,
-    "mobility": 60,
+    "medical": 55,
+    "mobility": 58,
     "safety": 76,
     "child": 53,
     "fl": 2,
@@ -12432,26 +12716,12 @@
       "一葉記念公園"
     ],
     "dogruns": [],
-    "vets": [
-      "内藤動物病院",
-      "西日暮里ペットクリニック",
-      "日暮里動物病院",
-      "いわせ犬猫クリニック",
-      "千住どうぶつ病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ピノキオ"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "オリックスカーシェア",
-      "オリックスカーシェア"
-    ],
-    "car_rentals": [
-      "日産レンタカー",
-      "タイムズカーシェア"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "荒川七丁目_a1eb4b",
@@ -12462,7 +12732,7 @@
     "walk": 52,
     "housing": 67,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 78,
     "child": 53,
     "fl": 2,
@@ -12490,7 +12760,7 @@
     "walk": 54,
     "housing": 65,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 78,
     "child": 53,
     "fl": 2,
@@ -12517,8 +12787,8 @@
     "lng": 139.7859,
     "walk": 53,
     "housing": 64,
-    "medical": 58,
-    "mobility": 60,
+    "medical": 55,
+    "mobility": 58,
     "safety": 77,
     "child": 53,
     "fl": 2,
@@ -12530,27 +12800,12 @@
       "吉原公園"
     ],
     "dogruns": [],
-    "vets": [
-      "内藤動物病院",
-      "西日暮里ペットクリニック",
-      "日暮里動物病院",
-      "フジカワ動物病院",
-      "千住どうぶつ病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ピノキオ"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "オリックスカーシェア",
-      "オリックスカーシェア"
-    ],
-    "car_rentals": [
-      "トヨタレンタカー",
-      "ニッポンレンタカー",
-      "日産レンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "荒川車庫前_59af11",
@@ -12561,7 +12816,7 @@
     "walk": 56,
     "housing": 69,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 58,
     "safety": 81,
     "child": 53,
     "fl": 2,
@@ -12589,7 +12844,7 @@
     "walk": 68,
     "housing": 71,
     "medical": 61,
-    "mobility": 50,
+    "mobility": 63,
     "safety": 81,
     "child": 53,
     "fl": 2,
@@ -12627,8 +12882,8 @@
     "lng": 139.7692,
     "walk": 64,
     "housing": 66,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 58,
+    "mobility": 68,
     "safety": 78,
     "child": 53,
     "fl": 2,
@@ -12640,12 +12895,24 @@
       "田端公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "さいとうラビットクリニック",
+      "のがみ動物病院",
+      "ふくしま動物病院",
+      "西日暮里ペットクリニック",
+      "しん中央動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ぴーたん"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー",
+      "ニッポンレンタカー",
+      "日産レンタカー"
+    ]
   },
   {
     "id": "ときわ台_ce0bf5",
@@ -12656,7 +12923,7 @@
     "walk": 81,
     "housing": 68,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 78,
     "child": 49,
     "fl": 2,
@@ -12686,7 +12953,7 @@
     "walk": 86,
     "housing": 71,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 79,
     "child": 49,
     "fl": 1,
@@ -12715,8 +12982,8 @@
     "lng": 139.6443,
     "walk": 48,
     "housing": 69,
-    "medical": 44,
-    "mobility": 50,
+    "medical": 55,
+    "mobility": 59,
     "safety": 81,
     "child": 49,
     "fl": 2,
@@ -12728,18 +12995,12 @@
       "二塚公園"
     ],
     "dogruns": [],
-    "vets": [
-      "光が丘動物病院とくまるクリニック"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "クープープラス"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー赤塚営業所"
-    ]
+    "car_rentals": []
   },
   {
     "id": "中板橋_f70e77",
@@ -12749,8 +13010,8 @@
     "lng": 139.6936,
     "walk": 48,
     "housing": 68,
-    "medical": 52,
-    "mobility": 45,
+    "medical": 55,
+    "mobility": 59,
     "safety": 77,
     "child": 49,
     "fl": 1,
@@ -12762,11 +13023,7 @@
       "小茂根二丁目公園"
     ],
     "dogruns": [],
-    "vets": [
-      "あんどう動物病院",
-      "ひなた動物病院",
-      "板橋中央動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
@@ -12782,7 +13039,7 @@
     "walk": 47,
     "housing": 71,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 52,
     "safety": 80,
     "child": 49,
     "fl": 2,
@@ -12810,7 +13067,7 @@
     "walk": 80,
     "housing": 69,
     "medical": 44,
-    "mobility": 50,
+    "mobility": 63,
     "safety": 81,
     "child": 49,
     "fl": 2,
@@ -12845,8 +13102,8 @@
     "lng": 139.7025,
     "walk": 48,
     "housing": 65,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 52,
+    "mobility": 67,
     "safety": 76,
     "child": 49,
     "fl": 2,
@@ -12858,11 +13115,19 @@
       "池袋本町"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "あんどう動物病院",
+      "板橋中央動物病院",
+      "獣医科まつだ医院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
+    "carshares": [
+      "カレコ・カーシェアリングクラブ",
+      "オリックスカーシェア",
+      "Honda EveryGo 板橋区役所前駅ステーション"
+    ],
     "car_rentals": []
   },
   {
@@ -12873,8 +13138,8 @@
     "lng": 139.6533,
     "walk": 50,
     "housing": 73,
-    "medical": 44,
-    "mobility": 58,
+    "medical": 55,
+    "mobility": 59,
     "safety": 79,
     "child": 57,
     "fl": 1,
@@ -12886,21 +13151,12 @@
       "梶山児童遊園"
     ],
     "dogruns": [],
-    "vets": [
-      "光が丘動物病院とくまるクリニック"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "クープープラス"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "平和台駅前 カーステーション"
-    ],
-    "car_rentals": [
-      "練馬北町",
-      "ニッポンレンタカー赤塚営業所"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "志村三丁目_3bae28",
@@ -12911,7 +13167,7 @@
     "walk": 52,
     "housing": 68,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 80,
     "child": 49,
     "fl": 2,
@@ -12939,7 +13195,7 @@
     "walk": 58,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 80,
     "child": 49,
     "fl": 1,
@@ -12966,8 +13222,8 @@
     "lng": 139.6327,
     "walk": 48,
     "housing": 71,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 44,
+    "mobility": 57,
     "safety": 80,
     "child": 49,
     "fl": 2,
@@ -12979,12 +13235,18 @@
       "成増北第一公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "和光動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "クープープラス"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー赤塚営業所"
+    ]
   },
   {
     "id": "新板橋_839dba",
@@ -12995,7 +13257,7 @@
     "walk": 54,
     "housing": 66,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 77,
     "child": 49,
     "fl": 1,
@@ -13022,8 +13284,8 @@
     "lng": 139.6534,
     "walk": 80,
     "housing": 72,
-    "medical": 42,
-    "mobility": 45,
+    "medical": 55,
+    "mobility": 52,
     "safety": 81,
     "child": 49,
     "fl": 2,
@@ -13035,9 +13297,7 @@
       "宮前公園"
     ],
     "dogruns": [],
-    "vets": [
-      "さの動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
@@ -13053,7 +13313,7 @@
     "walk": 53,
     "housing": 69,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 79,
     "child": 49,
     "fl": 1,
@@ -13080,8 +13340,8 @@
     "lng": 139.6617,
     "walk": 49,
     "housing": 71,
-    "medical": 49,
-    "mobility": 60,
+    "medical": 55,
+    "mobility": 59,
     "safety": 79,
     "child": 49,
     "fl": 1,
@@ -13093,23 +13353,12 @@
       "若木第二公園"
     ],
     "dogruns": [],
-    "vets": [
-      "光が丘動物病院とくまるクリニック",
-      "公園通りペットクリニック"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "クープープラス"
-    ],
+    "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "平和台駅前 カーステーション",
-      "カレコ"
-    ],
-    "car_rentals": [
-      "練馬北町",
-      "ニッポンレンタカー赤塚営業所"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "板橋_222887",
@@ -13119,8 +13368,8 @@
     "lng": 139.7192,
     "walk": 52,
     "housing": 55,
-    "medical": 47,
-    "mobility": 58,
+    "medical": 55,
+    "mobility": 59,
     "safety": 76,
     "child": 49,
     "fl": 1,
@@ -13132,21 +13381,12 @@
       "上池袋東"
     ],
     "dogruns": [],
-    "vets": [
-      "ティアハイムどうぶつ病院",
-      "獣医科まつだ医院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "カレコ・カーシェアリングクラブ",
-      "オリックスカーシェア",
-      "Honda EveryGo 板橋区役所前駅ステーション"
-    ],
-    "car_rentals": [
-      "トヨタレンタカー"
-    ]
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "板橋区役所前_544b55",
@@ -13156,8 +13396,8 @@
     "lng": 139.7106,
     "walk": 53,
     "housing": 66,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 52,
+    "mobility": 67,
     "safety": 76,
     "child": 49,
     "fl": 1,
@@ -13169,11 +13409,19 @@
       "池袋本町"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "あんどう動物病院",
+      "ティアハイムどうぶつ病院",
+      "獣医科まつだ医院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
+    "carshares": [
+      "カレコ・カーシェアリングクラブ",
+      "オリックスカーシェア",
+      "Honda EveryGo 板橋区役所前駅ステーション"
+    ],
     "car_rentals": []
   },
   {
@@ -13185,7 +13433,7 @@
     "walk": 48,
     "housing": 67,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 77,
     "child": 49,
     "fl": 1,
@@ -13213,7 +13461,7 @@
     "walk": 84,
     "housing": 72,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 80,
     "child": 57,
     "fl": 2,
@@ -13243,7 +13491,7 @@
     "walk": 54,
     "housing": 69,
     "medical": 42,
-    "mobility": 50,
+    "mobility": 63,
     "safety": 80,
     "child": 49,
     "fl": 2,
@@ -13274,8 +13522,8 @@
     "lng": 139.6717,
     "walk": 78,
     "housing": 68,
-    "medical": 42,
-    "mobility": 50,
+    "medical": 55,
+    "mobility": 59,
     "safety": 79,
     "child": 49,
     "fl": 2,
@@ -13287,16 +13535,12 @@
       "西台田端公園"
     ],
     "dogruns": [],
-    "vets": [
-      "さの動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "西高島平_11426d",
@@ -13307,7 +13551,7 @@
     "walk": 64,
     "housing": 72,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 52,
     "safety": 82,
     "child": 49,
     "fl": 2,
@@ -13335,7 +13579,7 @@
     "walk": 82,
     "housing": 68,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 52,
     "safety": 79,
     "child": 49,
     "fl": 2,
@@ -13363,7 +13607,7 @@
     "walk": 80,
     "housing": 73,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 52,
     "safety": 82,
     "child": 57,
     "fl": 2,
@@ -13392,8 +13636,8 @@
     "lng": 139.6363,
     "walk": 46,
     "housing": 69,
-    "medical": 57,
-    "mobility": 55,
+    "medical": 55,
+    "mobility": 59,
     "safety": 80,
     "child": 57,
     "fl": 1,
@@ -13405,21 +13649,12 @@
       "上鷲東公園"
     ],
     "dogruns": [],
-    "vets": [
-      "サンテ動物病院",
-      "さぎのみや動物病院",
-      "たかぎ動物病院",
-      "ひびの動物病院",
-      "富士見台どうぶつ病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "日産レンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "光が丘_21fde0",
@@ -13429,8 +13664,8 @@
     "lng": 139.6285,
     "walk": 88,
     "housing": 73,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 52,
+    "mobility": 60,
     "safety": 79,
     "child": 57,
     "fl": 2,
@@ -13444,12 +13679,20 @@
     "dogruns": [
       "光が丘公園"
     ],
-    "vets": [],
-    "vets_emergency": [],
+    "vets": [
+      "動物救急センター"
+    ],
+    "vets_emergency": [
+      "動物救急センター"
+    ],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカーシェア"
+    ],
+    "car_rentals": [
+      "オリックスレンタカー"
+    ]
   },
   {
     "id": "大泉学園_77fb55",
@@ -13496,7 +13739,7 @@
     "walk": 46,
     "housing": 73,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 80,
     "child": 57,
     "fl": 1,
@@ -13524,7 +13767,7 @@
     "walk": 48,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 79,
     "child": 57,
     "fl": 2,
@@ -13551,8 +13794,8 @@
     "lng": 139.6684,
     "walk": 51,
     "housing": 68,
-    "medical": 52,
-    "mobility": 55,
+    "medical": 55,
+    "mobility": 59,
     "safety": 79,
     "child": 57,
     "fl": 1,
@@ -13564,19 +13807,12 @@
       "本多山公園"
     ],
     "dogruns": [],
-    "vets": [
-      "江古田まさ動物病院",
-      "ペアン動物病院",
-      "桜台ペットクリニック"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "トヨタレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "桜台_b0deaa",
@@ -13587,7 +13823,7 @@
     "walk": 53,
     "housing": 66,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 78,
     "child": 57,
     "fl": 1,
@@ -13643,7 +13879,7 @@
     "walk": 53,
     "housing": 65,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 79,
     "child": 57,
     "fl": 1,
@@ -13670,8 +13906,8 @@
     "lng": 139.6076,
     "walk": 84,
     "housing": 73,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 57,
+    "mobility": 63,
     "safety": 81,
     "child": 57,
     "fl": 1,
@@ -13685,12 +13921,25 @@
     "dogruns": [
       "石神井公園"
     ],
-    "vets": [],
-    "vets_emergency": [],
+    "vets": [
+      "動物救急センター",
+      "酒井獣医科"
+    ],
+    "vets_emergency": [
+      "動物救急センター"
+    ],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカーシェア",
+      "タイムズカーシェア",
+      "タイムズカーシェア"
+    ],
+    "car_rentals": [
+      "オリックスレンタカー",
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "練馬_0e1e85",
@@ -13700,8 +13949,8 @@
     "lng": 139.6536,
     "walk": 51,
     "housing": 66,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 57,
+    "mobility": 68,
     "safety": 77,
     "child": 57,
     "fl": 1,
@@ -13713,12 +13962,21 @@
       "中新井公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "グリーンパル動物病院",
+      "ひびの動物病院",
+      "江古田まさ動物病院",
+      "桜台ペットクリニック"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー",
+      "日産レンタカー"
+    ]
   },
   {
     "id": "練馬春日町_268219",
@@ -13729,7 +13987,7 @@
     "walk": 51,
     "housing": 73,
     "medical": 55,
-    "mobility": 48,
+    "mobility": 59,
     "safety": 81,
     "child": 57,
     "fl": 1,
@@ -13745,9 +14003,7 @@
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [
-      "平和台駅前 カーステーション"
-    ],
+    "carshares": [],
     "car_rentals": []
   },
   {
@@ -13758,8 +14014,8 @@
     "lng": 139.6177,
     "walk": 49,
     "housing": 71,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 67,
+    "mobility": 70,
     "safety": 80,
     "child": 57,
     "fl": 1,
@@ -13771,12 +14027,27 @@
       "上鷺西公園"
     ],
     "dogruns": [],
-    "vets": [],
-    "vets_emergency": [],
+    "vets": [
+      "動物救急センター",
+      "いぐさ動物病院",
+      "たかぎ動物病院",
+      "富士見台どうぶつ病院",
+      "井荻アニマルメディカルセンター"
+    ],
+    "vets_emergency": [
+      "動物救急センター"
+    ],
     "groomings": [],
     "dog_cafes": [],
-    "carshares": [],
-    "car_rentals": []
+    "carshares": [
+      "タイムズカーシェア",
+      "タイムズカーシェア",
+      "タイムズカーシェア"
+    ],
+    "car_rentals": [
+      "オリックスレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "豊島園_67581d",
@@ -13786,8 +14057,8 @@
     "lng": 139.6492,
     "walk": 47,
     "housing": 68,
-    "medical": 47,
-    "mobility": 55,
+    "medical": 55,
+    "mobility": 59,
     "safety": 78,
     "child": 57,
     "fl": 1,
@@ -13799,19 +14070,40 @@
       "学田公園"
     ],
     "dogruns": [],
-    "vets": [
-      "ひびの動物病院",
-      "桜台ペットクリニック"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "トヨタレンタカー",
-      "日産レンタカー"
-    ]
+    "car_rentals": []
+  },
+  {
+    "id": "赤塚_ad5703",
+    "name": "赤塚",
+    "line": "東武東上線",
+    "lat": 35.7936,
+    "lng": 139.6474,
+    "walk": 74,
+    "housing": 74,
+    "medical": 55,
+    "mobility": 52,
+    "safety": 69,
+    "child": 49,
+    "fl": 2,
+    "parks": [
+      "赤塚公園",
+      "成増北第一公園",
+      "成増北第二公園",
+      "石成公園",
+      "宮前公園"
+    ],
+    "dogruns": [],
+    "vets": [],
+    "vets_emergency": [],
+    "groomings": [],
+    "dog_cafes": [],
+    "carshares": [],
+    "car_rentals": []
   },
   {
     "id": "亀有_ff1044",
@@ -13821,8 +14113,8 @@
     "lng": 139.8476,
     "walk": 78,
     "housing": 72,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 54,
+    "mobility": 69,
     "safety": 78,
     "child": 51,
     "fl": 2,
@@ -13834,12 +14126,21 @@
       "宮元公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "あなざわ動物病院",
+      "毛利動物クリニック",
+      "亀有中央動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Inu Inu"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー",
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "五反野_717d5d",
@@ -13849,8 +14150,8 @@
     "lng": 139.8086,
     "walk": 79,
     "housing": 72,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 44,
+    "mobility": 62,
     "safety": 80,
     "child": 51,
     "fl": 2,
@@ -13862,12 +14163,19 @@
       "五反野公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ベルモどうぶつ病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Dog House"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "日産レンタカー",
+      "オリックスレンタカー"
+    ]
   },
   {
     "id": "京成関屋_f9ddc7",
@@ -13877,8 +14185,8 @@
     "lng": 139.8123,
     "walk": 79,
     "housing": 67,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 56,
+    "mobility": 52,
     "safety": 77,
     "child": 51,
     "fl": 2,
@@ -13890,9 +14198,16 @@
       "梅若公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "りお動物病院",
+      "千住どうぶつ病院",
+      "かねがふち"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Pet Healthcare Salon",
+      "Keddy’s"
+    ],
     "dog_cafes": [],
     "carshares": [],
     "car_rentals": []
@@ -13906,7 +14221,7 @@
     "walk": 53,
     "housing": 73,
     "medical": 42,
-    "mobility": 45,
+    "mobility": 52,
     "safety": 82,
     "child": 51,
     "fl": 2,
@@ -13963,8 +14278,8 @@
     "lng": 139.8321,
     "walk": 81,
     "housing": 73,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 47,
+    "mobility": 64,
     "safety": 81,
     "child": 51,
     "fl": 2,
@@ -13976,12 +14291,17 @@
       "宮元公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ねむの木動物病院",
+      "亀有中央動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "千住大橋_41be62",
@@ -13991,8 +14311,8 @@
     "lng": 139.7975,
     "walk": 65,
     "housing": 63,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 52,
+    "mobility": 57,
     "safety": 74,
     "child": 51,
     "fl": 2,
@@ -14004,12 +14324,21 @@
       "尾竹橋公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "千住どうぶつ病院",
+      "モリタ動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Pet Healthcare Salon",
+      "Keddy’s",
+      "ピノキオ"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "タイムズカーシェア"
+    ]
   },
   {
     "id": "堀切_92988a",
@@ -14020,7 +14349,7 @@
     "walk": 78,
     "housing": 66,
     "medical": 54,
-    "mobility": 45,
+    "mobility": 52,
     "safety": 80,
     "child": 51,
     "fl": 2,
@@ -14053,8 +14382,8 @@
     "lng": 139.7813,
     "walk": 51,
     "housing": 70,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 54,
+    "mobility": 69,
     "safety": 78,
     "child": 51,
     "fl": 2,
@@ -14066,12 +14395,22 @@
       "上沼田第六公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "大師前どうぶつ病院",
+      "クロス動物医療センター",
+      "つるた犬猫病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "フェアリードッグ"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "ニッポンレンタカー",
+      "トヨタレンタリース東京"
+    ]
   },
   {
     "id": "小菅_cdd0f8",
@@ -14082,7 +14421,7 @@
     "walk": 69,
     "housing": 66,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 62,
     "safety": 78,
     "child": 51,
     "fl": 2,
@@ -14096,10 +14435,18 @@
     "dogruns": [],
     "vets": [],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Pet Healthcare Salon",
+      "Dog House",
+      "A-Dod-Plus"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "日産レンタカー",
+      "トヨタレンタカー",
+      "オリックスレンタカー"
+    ]
   },
   {
     "id": "扇大橋_f257bd",
@@ -14110,7 +14457,7 @@
     "walk": 67,
     "housing": 73,
     "medical": 55,
-    "mobility": 50,
+    "mobility": 64,
     "safety": 82,
     "child": 51,
     "fl": 2,
@@ -14142,7 +14489,7 @@
     "walk": 65,
     "housing": 72,
     "medical": 44,
-    "mobility": 55,
+    "mobility": 69,
     "safety": 78,
     "child": 51,
     "fl": 2,
@@ -14176,8 +14523,8 @@
     "lng": 139.7703,
     "walk": 51,
     "housing": 73,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 54,
+    "mobility": 64,
     "safety": 80,
     "child": 51,
     "fl": 2,
@@ -14189,12 +14536,20 @@
       "北宮城町公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "カイペットクリニック",
+      "大師前どうぶつ病院",
+      "つるた犬猫病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "フェアリードッグ"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "牛田_53954b",
@@ -14204,8 +14559,8 @@
     "lng": 139.8114,
     "walk": 78,
     "housing": 67,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 51,
+    "mobility": 52,
     "safety": 77,
     "child": 51,
     "fl": 2,
@@ -14217,9 +14572,15 @@
       "こぶし児童遊園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "りお動物病院",
+      "千住どうぶつ病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "Pet Healthcare Salon",
+      "Keddy’s"
+    ],
     "dog_cafes": [],
     "carshares": [],
     "car_rentals": []
@@ -14232,8 +14593,8 @@
     "lng": 139.791,
     "walk": 49,
     "housing": 71,
-    "medical": 57,
-    "mobility": 55,
+    "medical": 55,
+    "mobility": 52,
     "safety": 77,
     "child": 51,
     "fl": 2,
@@ -14245,21 +14606,12 @@
       "竹の塚第五公園"
     ],
     "dogruns": [],
-    "vets": [
-      "苅谷動物病院",
-      "かなざわ動物病院",
-      "やまもと動物病院",
-      "クロス動物医療センター",
-      "竹の塚動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ニッポンレンタカー",
-      "TOYOTAレンタリース"
-    ]
+    "car_rentals": []
   },
   {
     "id": "綾瀬_07f953",
@@ -14270,7 +14622,7 @@
     "walk": 65,
     "housing": 70,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 52,
     "safety": 79,
     "child": 51,
     "fl": 2,
@@ -14330,7 +14682,7 @@
     "walk": 88,
     "housing": 73,
     "medical": 55,
-    "mobility": 50,
+    "mobility": 45,
     "safety": 81,
     "child": 51,
     "fl": 2,
@@ -14349,9 +14701,7 @@
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "オリックスレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "西新井_6eaf21",
@@ -14362,7 +14712,7 @@
     "walk": 53,
     "housing": 71,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 79,
     "child": 51,
     "fl": 2,
@@ -14390,7 +14740,7 @@
     "walk": 55,
     "housing": 73,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 80,
     "child": 51,
     "fl": 2,
@@ -14418,7 +14768,7 @@
     "walk": 54,
     "housing": 73,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 50,
     "safety": 84,
     "child": 51,
     "fl": 2,
@@ -14435,7 +14785,9 @@
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "オリックスレンタカー"
+    ]
   },
   {
     "id": "谷在家_861183",
@@ -14445,8 +14797,8 @@
     "lng": 139.7701,
     "walk": 86,
     "housing": 73,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 54,
+    "mobility": 57,
     "safety": 81,
     "child": 51,
     "fl": 2,
@@ -14460,12 +14812,20 @@
     "dogruns": [
       "舎人公園"
     ],
-    "vets": [],
+    "vets": [
+      "大師前どうぶつ病院",
+      "クロス動物医療センター",
+      "つるた犬猫病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "フェアリードッグ"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "足立小台_5064bc",
@@ -14476,7 +14836,7 @@
     "walk": 85,
     "housing": 73,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 82,
     "child": 51,
     "fl": 2,
@@ -14504,7 +14864,7 @@
     "walk": 66,
     "housing": 71,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 79,
     "child": 51,
     "fl": 2,
@@ -14532,7 +14892,7 @@
     "walk": 64,
     "housing": 73,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 82,
     "child": 51,
     "fl": 2,
@@ -14559,8 +14919,8 @@
     "lng": 139.8403,
     "walk": 51,
     "housing": 73,
-    "medical": 58,
-    "mobility": 55,
+    "medical": 55,
+    "mobility": 59,
     "safety": 79,
     "child": 54,
     "fl": 2,
@@ -14572,24 +14932,12 @@
       "渋江公園"
     ],
     "dogruns": [],
-    "vets": [
-      "りお動物病院",
-      "ひまわり動物病院",
-      "青戸 やまだ動物病院",
-      "青砥動物病院",
-      "立石動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ジュエル"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ワンズレンタカー",
-      "ニッポンレンタカー",
-      "Jネットレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "京成立石_197c04",
@@ -14600,7 +14948,7 @@
     "walk": 52,
     "housing": 72,
     "medical": 58,
-    "mobility": 55,
+    "mobility": 69,
     "safety": 81,
     "child": 54,
     "fl": 2,
@@ -14639,7 +14987,7 @@
     "lng": 139.8702,
     "walk": 48,
     "housing": 72,
-    "medical": 52,
+    "medical": 55,
     "mobility": 45,
     "safety": 80,
     "child": 54,
@@ -14652,16 +15000,9 @@
       "矢付公園"
     ],
     "dogruns": [],
-    "vets": [
-      "だいき動物病院",
-      "あやめ動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "Inu Inu",
-      "Tail Up",
-      "ペットサロン Fairy"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
     "car_rentals": []
@@ -14674,8 +15015,8 @@
     "lng": 139.8657,
     "walk": 50,
     "housing": 73,
-    "medical": 55,
-    "mobility": 45,
+    "medical": 62,
+    "mobility": 64,
     "safety": 82,
     "child": 54,
     "fl": 2,
@@ -14687,12 +15028,24 @@
       "高砂北公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "青戸 やまだ動物病院",
+      "だいき動物病院",
+      "葛飾アニマルホスピタル",
+      "アルファ動物病院",
+      "青砥動物病院"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "ジュエル",
+      "Inu Inu",
+      "Tail Up"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー"
+    ]
   },
   {
     "id": "四ツ木_95fdce",
@@ -14703,7 +15056,7 @@
     "walk": 67,
     "housing": 73,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 83,
     "child": 54,
     "fl": 2,
@@ -14731,7 +15084,7 @@
     "walk": 62,
     "housing": 72,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 52,
     "safety": 81,
     "child": 54,
     "fl": 2,
@@ -14759,7 +15112,7 @@
     "walk": 57,
     "housing": 69,
     "medical": 55,
-    "mobility": 52,
+    "mobility": 62,
     "safety": 77,
     "child": 54,
     "fl": 2,
@@ -14776,7 +15129,10 @@
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "トヨタレンタカー"
+    ]
   },
   {
     "id": "新柴又_46d00e",
@@ -14787,7 +15143,7 @@
     "walk": 55,
     "housing": 72,
     "medical": 54,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 82,
     "child": 54,
     "fl": 2,
@@ -14821,7 +15177,7 @@
     "walk": 57,
     "housing": 73,
     "medical": 55,
-    "mobility": 45,
+    "mobility": 59,
     "safety": 82,
     "child": 54,
     "fl": 2,
@@ -14876,8 +15232,8 @@
     "lng": 139.8567,
     "walk": 52,
     "housing": 72,
-    "medical": 58,
-    "mobility": 55,
+    "medical": 55,
+    "mobility": 59,
     "safety": 80,
     "child": 54,
     "fl": 2,
@@ -14889,24 +15245,12 @@
       "高砂南公園"
     ],
     "dogruns": [],
-    "vets": [
-      "ひまわり動物病院",
-      "青戸 やまだ動物病院",
-      "アルファ動物病院",
-      "青砥動物病院",
-      "あなざわ動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "ジュエル"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "ワンズレンタカー",
-      "ニッポンレンタカー",
-      "Jネットレンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "ichinoe",
@@ -14944,8 +15288,8 @@
     "lng": 139.883,
     "walk": 80,
     "housing": 71,
-    "medical": 95,
-    "mobility": 45,
+    "medical": 70,
+    "mobility": 62,
     "safety": 79,
     "child": 58,
     "fl": 2,
@@ -14957,12 +15301,22 @@
       "細田公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "マリーン動物病院",
+      "モネ動物病院",
+      "北小岩動物病院",
+      "葛飾アニマルホスピタル"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "フォルトゥナ"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "日産レンタカー"
+    ]
   },
   {
     "id": "koiwa",
@@ -14972,8 +15326,8 @@
     "lng": 139.8811,
     "walk": 58,
     "housing": 70,
-    "medical": 30,
-    "mobility": 45,
+    "medical": 51,
+    "mobility": 62,
     "safety": 78,
     "child": 58,
     "fl": 2,
@@ -14985,12 +15339,22 @@
       "東新小岩二丁目公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "マリーン動物病院",
+      "モネ動物病院",
+      "北小岩動物病院",
+      "葛飾アニマルホスピタル"
+    ],
     "vets_emergency": [],
-    "groomings": [],
+    "groomings": [
+      "フォルトゥナ"
+    ],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "ニッポンレンタカー",
+      "日産レンタカー"
+    ]
   },
   {
     "id": "hirai",
@@ -15001,7 +15365,7 @@
     "walk": 80,
     "housing": 68,
     "medical": 69,
-    "mobility": 45,
+    "mobility": 52,
     "safety": 80,
     "child": 58,
     "fl": 2,
@@ -15028,8 +15392,8 @@
     "lng": 139.8958,
     "walk": 58,
     "housing": 73,
-    "medical": 46,
-    "mobility": 55,
+    "medical": 30,
+    "mobility": 52,
     "safety": 82,
     "child": 58,
     "fl": 2,
@@ -15041,22 +15405,12 @@
       "東小岩二丁目公園"
     ],
     "dogruns": [],
-    "vets": [
-      "苅谷動物病院",
-      "モネ動物病院",
-      "北小岩動物病院"
-    ],
+    "vets": [],
     "vets_emergency": [],
-    "groomings": [
-      "フォルトゥナ"
-    ],
+    "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": [
-      "トヨタレンタカー新千葉",
-      "ニッポンレンタカー",
-      "日産レンタカー"
-    ]
+    "car_rentals": []
   },
   {
     "id": "mizue",
@@ -15160,8 +15514,8 @@
     "lng": 139.8718,
     "walk": 80,
     "housing": 69,
-    "medical": 90,
-    "mobility": 59,
+    "medical": 68,
+    "mobility": 57,
     "safety": 76,
     "child": 58,
     "fl": 2,
@@ -15173,12 +15527,19 @@
       "古川親水公園"
     ],
     "dogruns": [],
-    "vets": [],
+    "vets": [
+      "ACプラザ苅谷動物病院",
+      "西葛西ペットクリニック",
+      "キャミャックひがし東京",
+      "フルール動物病院"
+    ],
     "vets_emergency": [],
     "groomings": [],
     "dog_cafes": [],
     "carshares": [],
-    "car_rentals": []
+    "car_rentals": [
+      "パーキング🅿️"
+    ]
   },
   {
     "id": "kasairinkai",

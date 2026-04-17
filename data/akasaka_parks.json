@@ -1,0 +1,125 @@
+{
+  "count": 20,
+  "parks": [
+    {
+      "name": "清水谷公園",
+      "dist": 510,
+      "area": 10701,
+      "dogrun": false
+    },
+    {
+      "name": "円通寺坂公園",
+      "dist": 583,
+      "area": 1715,
+      "dogrun": false
+    },
+    {
+      "name": "氷川公園",
+      "dist": 724,
+      "area": 3071,
+      "dogrun": false
+    },
+    {
+      "name": "一ツ木公園",
+      "dist": 735,
+      "area": 4654,
+      "dogrun": false
+    },
+    {
+      "name": "三宅坂小公園",
+      "dist": 803,
+      "area": 802,
+      "dogrun": false
+    },
+    {
+      "name": "高橋是清翁記念公園",
+      "dist": 833,
+      "area": 5321,
+      "dogrun": false
+    },
+    {
+      "name": "若葉東公園",
+      "dist": 1008,
+      "area": 5046,
+      "dogrun": false
+    },
+    {
+      "name": "千鳥ヶ淵公園",
+      "dist": 1048,
+      "area": 15845,
+      "dogrun": false
+    },
+    {
+      "name": "みなみもと町公園",
+      "dist": 1066,
+      "area": 9298,
+      "dogrun": false
+    },
+    {
+      "name": "四谷見附公園",
+      "dist": 1078,
+      "area": 3036,
+      "dogrun": false
+    },
+    {
+      "name": "出羽坂児童遊園",
+      "dist": 1203,
+      "area": 197,
+      "dogrun": false
+    },
+    {
+      "name": "檜町公園",
+      "dist": 1242,
+      "area": 16370,
+      "dogrun": false
+    },
+    {
+      "name": "乃木公園",
+      "dist": 1245,
+      "area": 3293,
+      "dogrun": false
+    },
+    {
+      "name": "青葉公園",
+      "dist": 1320,
+      "area": 1003,
+      "dogrun": false
+    },
+    {
+      "name": "もとまち公園",
+      "dist": 1374,
+      "area": 2145,
+      "dogrun": false
+    },
+    {
+      "name": "三河台公園",
+      "dist": 1427,
+      "area": 2588,
+      "dogrun": false
+    },
+    {
+      "name": "よつや児童遊園",
+      "dist": 1491,
+      "area": 246,
+      "dogrun": false
+    },
+    {
+      "name": "東郷元帥記念公園",
+      "dist": 1536,
+      "area": 7119,
+      "dogrun": false
+    },
+    {
+      "name": "若葉公園",
+      "dist": 1544,
+      "area": 2136,
+      "dogrun": false
+    },
+    {
+      "name": "須賀公園",
+      "dist": 1568,
+      "area": 448,
+      "dogrun": false
+    }
+  ]
+}

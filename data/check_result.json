@@ -1,0 +1,568 @@
+{
+  "confirm2": [
+    {
+      "name": "原宿",
+      "base": 71,
+      "ov": false,
+      "nearby": 14,
+      "osm": 90,
+      "walk": 84,
+      "dogrun": [
+        "代々木公園"
+      ]
+    },
+    {
+      "name": "代々木",
+      "base": 57,
+      "ov": false,
+      "nearby": 25,
+      "osm": 90,
+      "walk": 80,
+      "dogrun": [
+        "代々木公園"
+      ]
+    },
+    {
+      "name": "明治神宮前",
+      "base": 65,
+      "ov": false,
+      "nearby": 15,
+      "osm": 90,
+      "walk": 82,
+      "dogrun": [
+        "代々木公園"
+      ]
+    },
+    {
+      "name": "参宮橋",
+      "base": 74,
+      "ov": false,
+      "nearby": 15,
+      "osm": 90,
+      "walk": 85,
+      "dogrun": [
+        "代々木公園"
+      ]
+    },
+    {
+      "name": "上野",
+      "base": 83,
+      "ov": false,
+      "nearby": 32,
+      "osm": 65,
+      "walk": 70,
+      "dogrun": []
+    },
+    {
+      "name": "京成上野",
+      "base": 75,
+      "ov": true,
+      "nearby": 27,
+      "osm": 65,
+      "walk": 75,
+      "dogrun": []
+    },
+    {
+      "name": "根津",
+      "base": 74,
+      "ov": false,
+      "nearby": 21,
+      "osm": 65,
+      "walk": 68,
+      "dogrun": []
+    },
+    {
+      "name": "湯島",
+      "base": 74,
+      "ov": false,
+      "nearby": 25,
+      "osm": 65,
+      "walk": 68,
+      "dogrun": []
+    },
+    {
+      "name": "御徒町",
+      "base": 65,
+      "ov": true,
+      "nearby": 30,
+      "osm": 65,
+      "walk": 65,
+      "dogrun": []
+    },
+    {
+      "name": "石神井公園",
+      "base": 69,
+      "ov": true,
+      "nearby": 62,
+      "osm": 90,
+      "walk": 84,
+      "dogrun": [
+        "石神井公園"
+      ]
+    },
+    {
+      "name": "光が丘",
+      "base": 85,
+      "ov": true,
+      "nearby": 51,
+      "osm": 90,
+      "walk": 88,
+      "dogrun": [
+        "光が丘公園"
+      ]
+    },
+    {
+      "name": "練馬高野台",
+      "base": 48,
+      "ov": false,
+      "nearby": 72,
+      "osm": 50,
+      "walk": 49,
+      "dogrun": []
+    },
+    {
+      "name": "高島平",
+      "base": 85,
+      "ov": false,
+      "nearby": 54,
+      "osm": 80,
+      "walk": 82,
+      "dogrun": []
+    },
+    {
+      "name": "西高島平",
+      "base": 62,
+      "ov": false,
+      "nearby": 37,
+      "osm": 65,
+      "walk": 64,
+      "dogrun": []
+    },
+    {
+      "name": "新高島平",
+      "base": 81,
+      "ov": false,
+      "nearby": 49,
+      "osm": 80,
+      "walk": 80,
+      "dogrun": []
+    },
+    {
+      "name": "成増",
+      "base": 42,
+      "ov": false,
+      "nearby": 54,
+      "osm": 50,
+      "walk": 48,
+      "dogrun": []
+    },
+    {
+      "name": "地下鉄成増",
+      "base": 41,
+      "ov": false,
+      "nearby": 48,
+      "osm": 50,
+      "walk": 47,
+      "dogrun": []
+    },
+    {
+      "name": "中目黒",
+      "base": 56,
+      "ov": false,
+      "nearby": 47,
+      "osm": 50,
+      "walk": 52,
+      "dogrun": []
+    },
+    {
+      "name": "恵比寿",
+      "base": 50,
+      "ov": false,
+      "nearby": 35,
+      "osm": 50,
+      "walk": 50,
+      "dogrun": []
+    },
+    {
+      "name": "代官山",
+      "base": 52,
+      "ov": false,
+      "nearby": 39,
+      "osm": 50,
+      "walk": 51,
+      "dogrun": []
+    },
+    {
+      "name": "神泉",
+      "base": 54,
+      "ov": false,
+      "nearby": 32,
+      "osm": 50,
+      "walk": 51,
+      "dogrun": []
+    },
+    {
+      "name": "沼袋",
+      "base": 78,
+      "ov": false,
+      "nearby": 71,
+      "osm": 50,
+      "walk": 58,
+      "dogrun": []
+    },
+    {
+      "name": "野方",
+      "base": 62,
+      "ov": false,
+      "nearby": 66,
+      "osm": 50,
+      "walk": 54,
+      "dogrun": []
+    },
+    {
+      "name": "新井薬師前",
+      "base": 67,
+      "ov": false,
+      "nearby": 74,
+      "osm": 50,
+      "walk": 55,
+      "dogrun": []
+    },
+    {
+      "name": "駒沢大学",
+      "base": 72,
+      "ov": false,
+      "nearby": 54,
+      "osm": 90,
+      "walk": 85,
+      "dogrun": [
+        "駒沢オリンピック公園"
+      ]
+    },
+    {
+      "name": "二子玉川",
+      "base": 85,
+      "ov": true,
+      "nearby": 38,
+      "osm": 65,
+      "walk": 85,
+      "dogrun": []
+    },
+    {
+      "name": "高輪ゲートウェイ",
+      "base": 39,
+      "ov": false,
+      "nearby": 18,
+      "osm": 50,
+      "walk": 47,
+      "dogrun": []
+    },
+    {
+      "name": "泉岳寺",
+      "base": 45,
+      "ov": false,
+      "nearby": 17,
+      "osm": 50,
+      "walk": 48,
+      "dogrun": []
+    },
+    {
+      "name": "外苑前",
+      "base": 66,
+      "ov": false,
+      "nearby": 20,
+      "osm": 50,
+      "walk": 55,
+      "dogrun": []
+    },
+    {
+      "name": "青山一丁目",
+      "base": 59,
+      "ov": false,
+      "nearby": 28,
+      "osm": 50,
+      "walk": 53,
+      "dogrun": []
+    },
+    {
+      "name": "表参道",
+      "base": 55,
+      "ov": false,
+      "nearby": 18,
+      "osm": 50,
+      "walk": 52,
+      "dogrun": []
+    },
+    {
+      "name": "飯田橋",
+      "base": 66,
+      "ov": false,
+      "nearby": 33,
+      "osm": 50,
+      "walk": 55,
+      "dogrun": []
+    },
+    {
+      "name": "神楽坂",
+      "base": 53,
+      "ov": false,
+      "nearby": 47,
+      "osm": 50,
+      "walk": 51,
+      "dogrun": []
+    },
+    {
+      "name": "早稲田",
+      "base": 77,
+      "ov": false,
+      "nearby": 45,
+      "osm": 65,
+      "walk": 69,
+      "dogrun": []
+    },
+    {
+      "name": "雑司ヶ谷",
+      "error": "座標なし"
+    },
+    {
+      "name": "護国寺",
+      "base": 69,
+      "ov": false,
+      "nearby": 42,
+      "osm": 50,
+      "walk": 56,
+      "dogrun": []
+    },
+    {
+      "name": "面影橋",
+      "base": 75,
+      "ov": false,
+      "nearby": 59,
+      "osm": 65,
+      "walk": 68,
+      "dogrun": []
+    }
+  ],
+  "confirm3": [
+    {
+      "name": "代々木公園",
+      "ov": 85,
+      "ws_base": 85,
+      "auto_walk": 88,
+      "ov_walk": 88,
+      "diff": 0,
+      "judge": "削除候補",
+      "reason": "代々木公園78ha+ドッグランあり"
+    },
+    {
+      "name": "代々木八幡",
+      "ov": 82,
+      "ws_base": 85,
+      "auto_walk": 88,
+      "ov_walk": 88,
+      "diff": 0,
+      "judge": "削除候補",
+      "reason": "代々木公園エリア"
+    },
+    {
+      "name": "北千住",
+      "ov": 54,
+      "ws_base": 70,
+      "auto_walk": 77,
+      "ov_walk": 72,
+      "diff": -5,
+      "judge": "逆効果(削除推奨)",
+      "reason": "荒川千住新橋緑地1092m"
+    },
+    {
+      "name": "赤坂見附",
+      "ov": 75,
+      "ws_base": 57,
+      "auto_walk": 52,
+      "ov_walk": 75,
+      "diff": 23,
+      "judge": "OVERRIDE有効",
+      "reason": "清水谷公園のみ・OSMデータ不足"
+    },
+    {
+      "name": "光が丘",
+      "ov": 85,
+      "ws_base": 85,
+      "auto_walk": 88,
+      "ov_walk": 88,
+      "diff": 0,
+      "judge": "削除候補",
+      "reason": "光が丘公園(61ha)隣接"
+    },
+    {
+      "name": "石神井公園",
+      "ov": 69,
+      "ws_base": 69,
+      "auto_walk": 84,
+      "ov_walk": 84,
+      "diff": 0,
+      "judge": "削除候補",
+      "reason": "石神井公園(20ha)隣接"
+    },
+    {
+      "name": "二子玉川",
+      "ov": 85,
+      "ws_base": 85,
+      "auto_walk": 71,
+      "ov_walk": 85,
+      "diff": 14,
+      "judge": "OVERRIDE有効",
+      "reason": "砧公園(39ha)隣接"
+    },
+    {
+      "name": "足立小台",
+      "ov": 85,
+      "ws_base": 85,
+      "auto_walk": 71,
+      "ov_walk": 85,
+      "diff": 14,
+      "judge": "OVERRIDE有効",
+      "reason": "荒川江北橋緑地285m"
+    },
+    {
+      "name": "谷在家",
+      "ov": 75,
+      "ws_base": 75,
+      "auto_walk": 86,
+      "ov_walk": 86,
+      "diff": 0,
+      "judge": "削除候補",
+      "reason": "舎人公園(61ha)914m"
+    },
+    {
+      "name": "春日",
+      "ov": 67,
+      "ws_base": 75,
+      "auto_walk": 58,
+      "ov_walk": 67,
+      "diff": 9,
+      "judge": "OVERRIDE有効",
+      "reason": "後楽園と同一エリア138m"
+    },
+    {
+      "name": "王子駅前",
+      "ov": 67,
+      "ws_base": 74,
+      "auto_walk": 57,
+      "ov_walk": 67,
+      "diff": 10,
+      "judge": "OVERRIDE有効",
+      "reason": "王子と同一エリア138m"
+    },
+    {
+      "name": "飛鳥山",
+      "ov": 67,
+      "ws_base": 78,
+      "auto_walk": 58,
+      "ov_walk": 67,
+      "diff": 9,
+      "judge": "OVERRIDE有効",
+      "reason": "王子と同一エリア206m"
+    },
+    {
+      "name": "町屋",
+      "ov": 68,
+      "ws_base": 56,
+      "auto_walk": 52,
+      "ov_walk": 68,
+      "diff": 16,
+      "judge": "OVERRIDE有効",
+      "reason": "町屋駅前と同一エリア84m"
+    },
+    {
+      "name": "秋葉原",
+      "ov": 57,
+      "ws_base": 40,
+      "auto_walk": 47,
+      "ov_walk": 57,
+      "diff": 10,
+      "judge": "OVERRIDE有効",
+      "reason": "岩本町と同一エリア307m"
+    },
+    {
+      "name": "東日本橋",
+      "ov": 63,
+      "ws_base": 70,
+      "auto_walk": 56,
+      "ov_walk": 63,
+      "diff": 7,
+      "judge": "OVERRIDE有効",
+      "reason": "馬喰横山と同一エリア220m"
+    },
+    {
+      "name": "新御茶ノ水",
+      "ov": 41,
+      "ws_base": 36,
+      "auto_walk": 46,
+      "ov_walk": 47,
+      "diff": 1,
+      "judge": "削除候補",
+      "reason": "小川町と同一エリア186m"
+    },
+    {
+      "name": "京成上野",
+      "ov": 75,
+      "ws_base": 85,
+      "auto_walk": 71,
+      "ov_walk": 75,
+      "diff": 4,
+      "judge": "OVERRIDE有効",
+      "reason": "上野公園エリア・OSM0件"
+    },
+    {
+      "name": "上野広小路",
+      "ov": 65,
+      "ws_base": 78,
+      "auto_walk": 69,
+      "ov_walk": 65,
+      "diff": -4,
+      "judge": "逆効果(削除推奨)",
+      "reason": "上野公園徒歩圏・OSM0件"
+    },
+    {
+      "name": "上野御徒町",
+      "ov": 65,
+      "ws_base": 79,
+      "auto_walk": 69,
+      "ov_walk": 65,
+      "diff": -4,
+      "judge": "逆効果(削除推奨)",
+      "reason": "上野公園徒歩圏・OSM0件"
+    },
+    {
+      "name": "御徒町",
+      "ov": 65,
+      "ws_base": 80,
+      "auto_walk": 70,
+      "ov_walk": 65,
+      "diff": -5,
+      "judge": "逆効果(削除推奨)",
+      "reason": "上野公園徒歩圏・OSM0件"
+    },
+    {
+      "name": "新御徒町",
+      "ov": 60,
+      "ws_base": 70,
+      "auto_walk": 66,
+      "ov_walk": 64,
+      "diff": -2,
+      "judge": "削除候補",
+      "reason": "アメ横隣接・OSM0件"
+    },
+    {
+      "name": "東大前",
+      "ov": 50,
+      "ws_base": 55,
+      "auto_walk": 62,
+      "ov_walk": 60,
+      "diff": -2,
+      "judge": "削除候補",
+      "reason": "東大キャンパス周辺"
+    }
+  ]
+}

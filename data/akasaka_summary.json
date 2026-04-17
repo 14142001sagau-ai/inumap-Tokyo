@@ -1,0 +1,10 @@
+{
+  "nearby_count": 20,
+  "park_score": 50,
+  "dogrun_score": 0,
+  "bonus": 0,
+  "osm_score": 50,
+  "ws_base": 57,
+  "auto_walk": 52,
+  "override_walk": 75
+}
