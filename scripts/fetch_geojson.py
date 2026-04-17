@@ -1,4 +1,4 @@
-import requests, json, os, time, math, openpyxl, hashlib, re, unicodedata
+import requests, json, os, time, math, openpyxl, hashlib, re, unicodedata, shapefile
 
 OVERPASS = 'https://overpass-api.de/api/interpreter'
 EXCEL    = 'data/master.xlsx'
@@ -1390,6 +1390,46 @@ LARGE_PARKS = [
     {'name':'小金井公園','lat':35.7208,'lng':139.5021,'area':788000,
      'entrances':[(35.7048,139.5043),(35.7360,139.4993)]},  # 武蔵小金井駅側南口・花小金井駅側北口
 ]
+
+# ============================================================
+# 国土数値情報 公園データ（P13-11_13.shp）→ PARKS_DATA
+# ============================================================
+_DOGRUN_PARKS = {
+    '蘆花恒春園', '城北中央公園', '舎人公園', '水元公園', '篠崎公園',
+    '代々木公園', '木場公園', '駒沢オリンピック公園', '光が丘公園', '石神井公園',
+}
+
+def _load_parks_data():
+    try:
+        sf = shapefile.Reader('data/parks/P13-11_13.shp', encoding='shift_jis')
+        fields = [f[0] for f in sf.fields[1:]]
+        result = []
+        for sr in sf.shapeRecords():
+            rec = dict(zip(fields, sr.record))
+            name = rec.get('P13_003', '')
+            area = rec.get('P13_008', 0)
+            if not name:
+                continue
+            lng, lat = sr.shape.points[0]
+            result.append({
+                'name': name,
+                'lat': lat,
+                'lng': lng,
+                'area': int(area) if area else 0,
+                'dogrun': name in _DOGRUN_PARKS,
+            })
+        print(f'公園データ読み込み完了: {len(result)}件')
+        return result
+    except Exception as e:
+        print(f'公園データ読み込みエラー: {e}')
+        return []
+
+PARKS_DATA = _load_parks_data()
+
+def get_nearby_parks(lat, lng, radius=1600):
+    return [p for p in PARKS_DATA
+            if haversine(lat, lng, p['lat'], p['lng']) <= radius]
+
 # 都市公園データから計算した駅別walkベーススコア（面積別距離係数）
 # 大型公園ほど遠くても価値あり（大型犬オーナーは20分歩いても行く）
 # 10万㎡+: 最低0.55, 3万㎡+: 最低0.45, 1万㎡+: 最低0.35, 3000㎡+: 最低0.15
@@ -2205,10 +2245,6 @@ def get_fac(lat, lng):
     a, c = str(RADIUS), f'{lat},{lng}'
     q = (
         '[out:json][timeout:60];('
-        f'node[leisure=park](around:{a},{c});'
-        f'way[leisure=park](around:{a},{c});'
-        f'node[leisure=dog_park](around:{a},{c});'
-        f'way[leisure=dog_park](around:{a},{c});'
         f'node[amenity=veterinary](around:{a},{c});'
         f'node[shop=pet](around:{a},{c});'
         f'node[shop=pet_grooming](around:{a},{c});'
@@ -2224,23 +2260,18 @@ def get_fac(lat, lng):
     try:
         r = requests.post(OVERPASS, data={'data': q}, timeout=60)
         els = r.json().get('elements', [])
-        parks, vets, vets_emergency, dogruns = [], [], [], []
+        vets, vets_emergency = [], []
         groomings, dog_cafes, carshares, car_rentals = [], [], [], []
         for el in els:
             tags = el.get('tags', {})
             n = tags.get('name', '')
             if not n: continue
-            leisure = tags.get('leisure', '')
             amenity = tags.get('amenity', '')
             shop    = tags.get('shop', '')
             dogs    = tags.get('dogs', tags.get('dog', ''))
             hours   = tags.get('opening_hours', '')
             emerg   = tags.get('emergency', '')
-            if leisure == 'park':
-                parks.append(n)
-            elif leisure == 'dog_park':
-                dogruns.append(n)
-            elif amenity == 'veterinary':
+            if amenity == 'veterinary':
                 vets.append(n)
                 if '24/7' in hours or 'emergency' in emerg or '夜間' in n or '救急' in n:
                     vets_emergency.append(n)
@@ -2253,13 +2284,13 @@ def get_fac(lat, lng):
             elif amenity == 'car_rental':
                 car_rentals.append(n)
         return {
-            'parks':parks[:5],'dogruns':dogruns[:3],'vets':vets[:5],
-            'vets_emergency':vets_emergency[:2],'groomings':groomings[:3],
-            'dog_cafes':dog_cafes[:3],'carshares':carshares[:3],'car_rentals':car_rentals[:3],
+            'vets':vets[:5],'vets_emergency':vets_emergency[:2],
+            'groomings':groomings[:3],'dog_cafes':dog_cafes[:3],
+            'carshares':carshares[:3],'car_rentals':car_rentals[:3],
         }
     except Exception as e:
         print(f'  OSMエラー: {e}')
-        return {'parks':[],'dogruns':[],'vets':[],'vets_emergency':[],
+        return {'vets':[],'vets_emergency':[],
                 'groomings':[],'dog_cafes':[],'carshares':[],'car_rentals':[]}
 
 # ============================================================
@@ -2280,38 +2311,21 @@ def min_park_dist(st_lat, st_lng, p):
     points.append((p['lat'], p['lng']))  # 重心も含む
     return min(haversine(st_lat, st_lng, la, lo) for la, lo in points)
 
-def calc_walk_score(fac, base, st_lat=None, st_lng=None, base_is_override=False):
-    park_score   = min(len(fac['parks']) * 10, 50)
-    dogrun_score = 40 if fac['dogruns'] else 0
-    big_parks    = [p for p in fac['parks'] if any(k in p for k in BIG_PARK_KEYWORDS)]
+def calc_walk_score(nearby_parks, base, base_is_override=False):
+    park_score   = min(len(nearby_parks) * 10, 50)
+    dogrun_score = 40 if any(p['dogrun'] for p in nearby_parks) else 0
+    big_parks    = [p for p in nearby_parks if p['area'] >= 100000]
     bonus        = min(len(big_parks) * 15, 30)
-    # 国土交通省公園データで大型公園ボーナスを補完（入口がある場合は最近傍入口で距離判定）
-    if st_lat and st_lng:
-        near_large = [p for p in LARGE_PARKS
-                      if min_park_dist(st_lat, st_lng, p) <= 1600]
-        if near_large:
-            max_area = max(p['area'] for p in near_large)
-            if max_area >= 100000: bonus = max(bonus, 30)   # 10万㎡以上
-            elif max_area >= 30000: bonus = max(bonus, 20)  # 3万㎡以上
-            elif max_area >= 10000: bonus = max(bonus, 10)  # 1万㎡以上
-            if not fac['dogruns']:
-                dogrun_parks = [p for p in near_large if 'ドッグ' in p['name'] or p.get('dogrun', False)]
-                if dogrun_parks: dogrun_score = 40
     osm_score    = min(park_score + dogrun_score + bonus, 90)
-    no_osm_data  = not fac['parks'] and not fac['dogruns'] and not (st_lat and any(
-            min_park_dist(st_lat, st_lng, p) <= 1600 for p in LARGE_PARKS))
-    if no_osm_data:
-        return base
     if osm_score == 0:
-        blended = base
+        walk = base
     elif osm_score < base * 0.5:
-        blended = round(osm_score * 0.4 + base * 0.6)
+        walk = round(osm_score * 0.4 + base * 0.6)
     else:
-        blended = round(osm_score * 0.7 + base * 0.3)
-    # STATION_OVERRIDEのwalk_baseは下限保証として機能させる
+        walk = round(osm_score * 0.7 + base * 0.3)
     if base_is_override:
-        return max(blended, base)
-    return blended
+        return max(walk, base)
+    return walk
 
 def calc_medical_score(fac, base):
     vet_score   = min(len(fac['vets']) * 15, 60)
@@ -2356,9 +2370,10 @@ for st in stations:
     ov  = STATION_OVERRIDE.get(sid, {})
 
     # walk: STATION_OVERRIDEのwalk_baseを優先、なければWALK_STATIONの国交省計算値を使用
+    nearby_parks = get_nearby_parks(st['lat'], st['lng'])
     walk_base = ov.get('walk_base', WALK_STATION.get(st['name'], WALK_BASE_DEFAULT))
     walk_is_override = 'walk_base' in ov
-    walk  = calc_walk_score(fac, walk_base, st['lat'], st['lng'], base_is_override=walk_is_override)
+    walk  = calc_walk_score(nearby_parks, walk_base, base_is_override=walk_is_override)
     med   = calc_medical_score(fac, ov.get('medical_base', MEDICAL_BASE_DEFAULT))
     mob   = calc_mobility_score(fac, sid, st['lat'], st['lng'], ku)
 
@@ -2379,8 +2394,8 @@ for st in stations:
         'safety':   SAFETY_STATION.get(st['name'], SAFETY_WARD.get(ku, 70)),
         'child':    CHILD_WARD.get(ku, 50),
         'fl':       fl_val,
-        'parks':    fac['parks'],
-        'dogruns':  fac['dogruns'],
+        'parks':    [p['name'] for p in nearby_parks[:5]],
+        'dogruns':  [p['name'] for p in nearby_parks if p.get('dogrun')][:3],
         'vets':     fac['vets'],
         'vets_emergency': fac['vets_emergency'],
         'groomings':fac['groomings'],
