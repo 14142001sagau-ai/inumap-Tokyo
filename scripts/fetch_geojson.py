@@ -1397,6 +1397,7 @@ LARGE_PARKS = [
 _DOGRUN_PARKS = {
     '蘆花恒春園', '城北中央公園', '舎人公園', '水元公園', '篠崎公園',
     '代々木公園', '木場公園', '駒沢オリンピック公園', '光が丘公園', '石神井公園',
+    '小山内裏公園', '桜ヶ丘公園', '小金井公園', '神代植物公園',
 }
 
 def _load_parks_data():
@@ -1941,41 +1942,26 @@ NON_RESIDENTIAL_STATIONS = {
 }
 
 STATION_OVERRIDE = {
-    # 代々木エリア（代々木公園78ha+ドッグランあり・OSMエラー対策）
-    '代々木公園_5a2091':  {'walk_base':85, 'medical_base':65},
-    '代々木八幡_80028d': {'walk_base':82, 'medical_base':62},
-    # ※境界点追加後に自動計算値≥OVERRIDE値となったため削除:
-    #   代々木, 明治神宮前, 参宮橋, 千駄ヶ谷, 木場, 金町, 渋谷, 荒川二丁目, 見沼代親水公園
-    # 荒川・大型公園隣接
-    '北千住_93f4e2':      {'walk_base':54},  # 荒川千住新橋緑地1092m圏内、新式blended=54
-    # 下赤塚・地下鉄赤塚（medical_base保持、walk_baseは自動計算で十分）
+    # 代々木エリア（medical_baseのみ維持・walk_baseはPARKS_DATA自動計算が上回るため削除）
+    '代々木公園_5a2091':  {'medical_base':65},
+    '代々木八幡_80028d': {'medical_base':62},
+    # 下赤塚・地下鉄赤塚（medical_base保持）
     '下赤塚_687399':  {'medical_base':55},
     '地下鉄赤塚_cc2b86': {'medical_base':55},
-    # 赤坂見附（OSMクエリで公園0件ヒット→清水谷公園のみLARGE_PARKS判定でblended=24に低下）
+    # 赤坂見附（PARKS_DATA自動計算=52、清水谷公園が圏内だが面積小・下限保証）
     '赤坂見附_6c6bf2': {'walk_base':75},  # 赤坂(79)と同エリア・下限保証
-    # 【作業2】WALK_STATION base≥60、walk<base-20、大型公園隣接でOSMデータ不足によるスコア低下
-    '光が丘_21fde0':      {'walk_base':85},  # 光が丘公園(61ha)隣接、OSM0件でblended=46
-    '石神井公園_d3b96b':   {'walk_base':69},  # 石神井公園(20ha)隣接、OSM0件でblended=42
-    '二子玉川_e3b826':    {'walk_base':85},  # 砧公園(39ha)隣接、OSM少数でblended=46
-    '足立小台_5064bc':    {'walk_base':85},  # 荒川江北橋緑地(14ha)285m、OSM0件でblended=46
-    '谷在家_861183':      {'walk_base':75},  # 舎人公園(61ha)914m、OSM0件でblended=44
-    # 【作業3】優先度A（200m以内同一エリア）
-    '春日_3187bc':        {'walk_base':67},  # 後楽園(walk=72, 0m)と同一エリア
+    # 砧公園centroid>1600m・荒川江北橋緑地座標ズレのため引き続きOVERRIDE
+    '二子玉川_e3b826':    {'walk_base':85},  # 砧公園(39ha)隣接、PARKS_DATA自動=71
+    '足立小台_5064bc':    {'walk_base':85},  # 荒川江北橋緑地(14ha)285m、PARKS_DATA自動=71
+    # 同一エリア調整（PARKS_DATA自動計算でも差が残る）
+    '春日_3187bc':        {'walk_base':67},  # 後楽園(walk=72, 138m)と同一エリア
     '王子駅前_36ace5':    {'walk_base':67},  # 王子(walk=72, 138m)と同一エリア
     '飛鳥山_3b08c6':      {'walk_base':67},  # 王子(walk=72, 206m)と同一エリア
     '町屋_20cc14':        {'walk_base':68},  # 町屋駅前(walk=73, 84m)と同一エリア
-    # 【作業3】優先度B（300m以内ほぼ同一エリア）
     '秋葉原_4b226d':      {'walk_base':57},  # 岩本町(walk=62, 307m)と同一エリア
     '東日本橋_c35183':    {'walk_base':63},  # 馬喰横山(walk=68, 220m)と同一エリア
-    # 荒川二丁目は自動計算=69(=OVERRIDE値)のため削除
-    '新御茶ノ水_a485f1':  {'walk_base':41},  # 小川町(walk=46, 186m)と同一エリア
-    # 【作業】上野エリア（OSMデータ不足でblendedが大幅低下）
-    '京成上野_fabb1f':   {'walk_base':75},  # 上野(81)から300m同一エリア、OSM0件でblended=63
-    '上野広小路_cfe21b': {'walk_base':65},  # 上野公園徒歩圏、OSM0件でblended=44
-    '上野御徒町_4bc376': {'walk_base':65},  # 上野公園徒歩圏、OSM0件でblended=45
-    '御徒町_1d1560':     {'walk_base':65},  # 上野公園徒歩圏、OSM0件でblended=45
-    '新御徒町_92e5e3':   {'walk_base':60},  # アメ横隣接エリア、OSM0件でblended=42
-    '東大前_df831c':     {'walk_base':50},  # 東大キャンパス周辺、OSM0件でblended=38
+    # 上野エリア（PARKS_DATA自動計算でも調整が必要）
+    '京成上野_fabb1f':   {'walk_base':75},  # 上野公園エリア、PARKS_DATA自動=71
     # 江戸川区12駅（実測値）
     'nishikasai': {'medical_base':78, 'walk_base':80},
     'kasai':      {'medical_base':90, 'walk_base':80},
