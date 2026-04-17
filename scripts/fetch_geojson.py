@@ -1396,7 +1396,7 @@ LARGE_PARKS = [
 # ============================================================
 _DOGRUN_PARKS = {
     '蘆花恒春園', '城北中央公園', '舎人公園', '水元公園', '篠崎公園',
-    '代々木公園', '木場公園', '駒沢オリンピック公園', '光が丘公園', '石神井公園',
+    '代々木公園', '木場公園', '駒沢オリンピック公園', '石神井公園',
     '小山内裏公園', '桜ヶ丘公園', '小金井公園', '神代植物公園',
 }
 
@@ -1431,7 +1431,7 @@ PARKS_DATA = _load_parks_data()
 PARK_ENTRANCES = {
     '代々木公園': [
         (35.6715, 139.6993),  # 原宿口
-        (35.6804, 139.6970),  # 代々木口
+        (35.6804, 139.6970),  # 代々木口（代々木駅側）
         (35.6700, 139.6918),  # 渋谷口
         (35.6719, 139.6850),  # 参宮橋口
     ],
@@ -1447,6 +1447,15 @@ PARK_ENTRANCES = {
         (35.7138, 139.7742),  # 中心
         (35.7220, 139.7780),  # 鶯谷側
         (35.7100, 139.7700),  # 根津側
+    ],
+    '光が丘公園': [
+        (35.7590, 139.6285),  # 光が丘駅口（南口）
+        (35.7690, 139.6270),  # 成増・下赤塚側北口
+        (35.7633, 139.6390),  # 東口
+        (35.7635, 139.6185),  # 西口
+    ],
+    '赤塚公園': [
+        (35.7699, 139.6293),  # 成増・地下鉄成増側南口
     ],
 }
 
@@ -1978,6 +1987,8 @@ STATION_OVERRIDE = {
     '地下鉄赤塚_cc2b86': {'medical_base':55},
     # 砧公園：PARK_ENTRANCESで入口座標補正済みだが自動=71のため引き続きOVERRIDE
     '二子玉川_e3b826':    {'walk_base':85},  # 砧公園(39ha)隣接、PARKS_DATA自動=71
+    # 都庁前：代々木公園代々木口が1207m圏内だが新宿区立地のため上限設定
+    '都庁前_e2172b':      {'walk_max':55},
     '足立小台_5064bc':    {'walk_base':85},  # 荒川江北橋緑地(14ha)285m、PARKS_DATA自動=71
     # 同一エリア調整（PARKS_DATA自動計算でも差が残る）
     '春日_3187bc':        {'walk_base':67},  # 後楽園(walk=72, 138m)と同一エリア
@@ -2323,7 +2334,7 @@ def min_park_dist(st_lat, st_lng, p):
     points.append((p['lat'], p['lng']))  # 重心も含む
     return min(haversine(st_lat, st_lng, la, lo) for la, lo in points)
 
-def calc_walk_score(nearby_parks, base, base_is_override=False):
+def calc_walk_score(nearby_parks, base, base_is_override=False, walk_max=None):
     park_score   = min(len(nearby_parks) * 10, 50)
     dogrun_score = 40 if any(p['dogrun'] for p in nearby_parks) else 0
     big_parks    = [p for p in nearby_parks if p['area'] >= 100000]
@@ -2336,7 +2347,9 @@ def calc_walk_score(nearby_parks, base, base_is_override=False):
     else:
         walk = round(osm_score * 0.7 + base * 0.3)
     if base_is_override:
-        return max(walk, base)
+        walk = max(walk, base)
+    if walk_max is not None:
+        walk = min(walk, walk_max)
     return walk
 
 def calc_medical_score(fac, base):
@@ -2369,7 +2382,7 @@ print(f'読み込み完了: {len(stations)}駅')
 
 results = []
 for st in stations:
-    print(f'📍 {st["ku"]} {st["name"]}')
+    print(f'>> {st["ku"]} {st["name"]}')
     fac = get_fac(st['lat'], st['lng'])
     # 洪水リスク: タイルから取得、失敗時はmaster.xlsxの値を使う
     fl_val = get_flood_level(st['lat'], st['lng'])
@@ -2385,7 +2398,8 @@ for st in stations:
     nearby_parks = get_nearby_parks(st['lat'], st['lng'])
     walk_base = ov.get('walk_base', WALK_STATION.get(st['name'], WALK_BASE_DEFAULT))
     walk_is_override = 'walk_base' in ov
-    walk  = calc_walk_score(nearby_parks, walk_base, base_is_override=walk_is_override)
+    walk_max = ov.get('walk_max', None)
+    walk  = calc_walk_score(nearby_parks, walk_base, base_is_override=walk_is_override, walk_max=walk_max)
     med   = calc_medical_score(fac, ov.get('medical_base', MEDICAL_BASE_DEFAULT))
     mob   = calc_mobility_score(fac, sid, st['lat'], st['lng'], ku)
 
@@ -2419,4 +2433,4 @@ for st in stations:
 os.makedirs('data', exist_ok=True)
 with open('data/stations.json', 'w', encoding='utf-8') as f:
     json.dump(results, f, ensure_ascii=False, indent=2)
-print(f'✅ {len(results)}駅保存完了')
+print(f'Done: {len(results)} stations saved')

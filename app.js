@@ -93,12 +93,12 @@ function calc(areas,w,personaKey){
   return areas.map((d,i)=>({...d,dev:rs[i]===null?null:Math.round((rs[i]-avg)/sd*10+50)+pen(d)}));
 }
 function gs(v){
-  if(v>=75)return{c:'#0d3b1e',b:'SS'};
-  if(v>=65)return{c:'#1b5e20',b:'S'};
-  if(v>=58)return{c:'#2e7d32',b:'A'};
-  if(v>=50)return{c:'#e65100',b:'B'};
-  if(v>=42)return{c:'#bf360c',b:'C'};
-  if(v>=35)return{c:'#b71c1c',b:'D'};
+  if(v>=78)return{c:'#0d3b1e',b:'SS'};
+  if(v>=70)return{c:'#1b5e20',b:'S'};
+  if(v>=62)return{c:'#2e7d32',b:'A'};
+  if(v>=54)return{c:'#e65100',b:'B'};
+  if(v>=46)return{c:'#bf360c',b:'C'};
+  if(v>=38)return{c:'#b71c1c',b:'D'};
   return{c:'#7b1fa2',b:'E'};
 }
 function getNote(station,key){
@@ -357,7 +357,7 @@ function App(){
       React.createElement(MapView,{scored,selId:sel,onSel:setSel,flood}),
       React.createElement('div',{style:{position:'absolute',top:8,left:8,background:'rgba(255,255,255,0.92)',borderRadius:8,padding:'5px 8px',zIndex:1000,boxShadow:'0 2px 8px rgba(0,0,0,0.15)'}},
         React.createElement('div',{style:{fontSize:6.5,fontWeight:700,color:'#2e7d32',marginBottom:3,paddingLeft:20}},'SCORE'),
-        [{d:77,l:'SS 75+'},{d:68,l:'S 65-74'},{d:60,l:'A 58-64'},{d:53,l:'B 50-57'},{d:45,l:'C 42-49'},{d:38,l:'D 35-41'},{d:30,l:'E ~34'}].map(item=>{const s=gs(item.d);return React.createElement('div',{key:item.l,style:{display:'flex',alignItems:'center',gap:4,marginBottom:2,paddingLeft:20}},
+        [{d:80,l:'SS 78+'},{d:73,l:'S 70-77'},{d:65,l:'A 62-69'},{d:57,l:'B 54-61'},{d:49,l:'C 46-53'},{d:41,l:'D 38-45'},{d:30,l:'E ~37'}].map(item=>{const s=gs(item.d);return React.createElement('div',{key:item.l,style:{display:'flex',alignItems:'center',gap:4,marginBottom:2,paddingLeft:20}},
           React.createElement('div',{style:{width:8,height:8,borderRadius:'50%',background:s.c}}),
           React.createElement('span',{style:{fontSize:7.5,color:'#3a5a3a'}},item.l)
         );}),
