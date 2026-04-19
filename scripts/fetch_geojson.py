@@ -1396,8 +1396,9 @@ LARGE_PARKS = [
 # ============================================================
 _DOGRUN_PARKS = {
     '蘆花恒春園', '城北中央公園', '舎人公園', '水元公園', '篠崎公園',
-    '代々木公園', '木場公園', '駒沢オリンピック公園', '石神井公園',
+    '代々木公園', '木場公園', '駒沢オリンピック公園',
     '小山内裏公園', '桜ヶ丘公園', '小金井公園', '神代植物公園',
+    # 石神井公園・光が丘公園はドッグランなし
 }
 
 def _load_parks_data():
@@ -1412,12 +1413,14 @@ def _load_parks_data():
             if not name:
                 continue
             lng, lat = sr.shape.points[0]
+            park_type = 'greenway' if rec.get('P13_004') in (11, 12) else 'park'
             result.append({
                 'name': name,
                 'lat': lat,
                 'lng': lng,
                 'area': int(area) if area else 0,
                 'dogrun': name in _DOGRUN_PARKS,
+                'type': park_type,
             })
         print(f'公園データ読み込み完了: {len(result)}件')
         return result
@@ -1451,11 +1454,12 @@ PARK_ENTRANCES = {
     '光が丘公園': [
         (35.7590, 139.6285),  # 光が丘駅口（南口）
         (35.7690, 139.6270),  # 成増・下赤塚側北口
+        (35.7699209, 139.6292939),  # 北口
         (35.7633, 139.6390),  # 東口
         (35.7635, 139.6185),  # 西口
     ],
     '赤塚公園': [
-        (35.7699, 139.6293),  # 成増・地下鉄成増側南口
+        (35.7835034, 139.6415758),  # 西口（地下鉄赤塚・下赤塚・成増から到達可能）
     ],
 }
 
@@ -2334,12 +2338,63 @@ def min_park_dist(st_lat, st_lng, p):
     points.append((p['lat'], p['lng']))  # 重心も含む
     return min(haversine(st_lat, st_lng, la, lo) for la, lo in points)
 
+# 都営12公園特例：面積に関わらず大型総合（35pt）として扱う
+METROPOLITAN_PARKS = {
+    '蘆花恒春園', '小山内裏公園', '桜ヶ丘公園', '駒沢オリンピック公園',
+    '城北中央公園', '舎人公園', '水元公園', '篠崎公園',
+    '代々木公園', '木場公園', '小金井公園', '神代植物公園',
+}
+
+def _classify_park(p):
+    if p.get('type') == 'greenway':
+        return 'greenway'
+    if p['name'] in METROPOLITAN_PARKS:
+        return 'large_general'   # 都営公園特例
+    if p['area'] >= 500000:
+        return 'large_wide'
+    if p['area'] >= 150000:
+        return 'large_general'
+    if p['area'] >= 50000:
+        return 'medium'
+    if p['area'] >= 10000:
+        return 'small'
+    return 'tiny'
+
 def calc_walk_score(nearby_parks, base, base_is_override=False, walk_max=None):
-    park_score   = min(len(nearby_parks) * 10, 50)
-    dogrun_score = 40 if any(p['dogrun'] for p in nearby_parks) else 0
-    big_parks    = [p for p in nearby_parks if p['area'] >= 100000]
-    bonus        = min(len(big_parks) * 15, 30)
-    osm_score    = min(park_score + dogrun_score + bonus, 90)
+    # 公園スコア（種別11・12緑地・緑道を除く）
+    large_wide    = [p for p in nearby_parks if _classify_park(p) == 'large_wide']
+    large_general = [p for p in nearby_parks if _classify_park(p) == 'large_general']
+    medium        = [p for p in nearby_parks if _classify_park(p) == 'medium']
+    small         = [p for p in nearby_parks if _classify_park(p) == 'small']
+    park_score = (
+        min(len(large_wide)    * 50, 50) +   # 大型広域：1つで上限
+        min(len(large_general) * 35, 35) +   # 大型総合（都営特例含む）：1つで上限
+        min(len(medium)        * 20, 40) +   # 中型地区：2つまで
+        min(len(small)         *  8, 16)     # 小型近隣：2つまで
+    )
+    # 緑地・緑道スコア（種別11・12のみ、別軸）
+    greenways  = [p for p in nearby_parks if p.get('type') == 'greenway']
+    large_gw   = [p for p in greenways if p['area'] >= 100000]
+    medium_gw  = [p for p in greenways if 10000 <= p['area'] < 100000]
+    greenway_score = (
+        min(len(large_gw)  * 15, 15) +   # 大型緑地：1つで上限
+        min(len(medium_gw) *  8, 16)     # 中型緑地：2つまで
+    )
+    # ドッグランボーナス（公園規模別・緑地除く）
+    dogrun_parks = [p for p in nearby_parks if p['dogrun'] and p.get('type') != 'greenway']
+    if dogrun_parks:
+        max_dogrun = max(dogrun_parks, key=lambda p: p['area'])
+        if max_dogrun['area'] >= 500000:
+            dogrun_bonus = 30
+        elif max_dogrun['area'] >= 150000:
+            dogrun_bonus = 28
+        elif max_dogrun['area'] >= 50000:
+            dogrun_bonus = 25
+        else:
+            dogrun_bonus = 0
+    else:
+        dogrun_bonus = 0
+    osm_score = min(park_score + greenway_score + dogrun_bonus, 90)
     if osm_score == 0:
         walk = base
     elif osm_score < base * 0.5:
