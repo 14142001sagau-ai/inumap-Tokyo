@@ -1461,6 +1461,20 @@ PARK_ENTRANCES = {
     '赤塚公園': [
         (35.7835034, 139.6415758),  # 西口（地下鉄赤塚・下赤塚・成増から到達可能）
     ],
+    '石神井公園': [
+        (35.7430, 139.6030),  # 石神井公園駅側北口
+        (35.7390, 139.6140),  # 練馬高野台側東口
+        (35.7320, 139.5990),  # 南口
+        (35.7388, 139.5912),  # 西口
+    ],
+    '蘆花恒春園': [
+        (35.6575, 139.6165),  # 芦花公園駅側東口
+        (35.6635, 139.6140),  # 北口（千歳烏山側）
+    ],
+    '駒沢オリンピック公園': [
+        (35.6299, 139.6601),  # 駒沢大学駅側北口
+        (35.6241, 139.6696),  # 桜新町駅側東口
+    ],
 }
 
 def min_dist_to_park(park_name, centroid_lat, centroid_lng, st_lat, st_lng):
@@ -1923,40 +1937,63 @@ def _classify_park(p):
 
 MIN_WALK = 35
 
-def calc_osm_score(nearby_parks):
-    """公園・緑地・ドッグランからosm_score（blend前）を計算"""
-    large_wide    = [p for p in nearby_parks if _classify_park(p) == 'large_wide']
-    large_general = [p for p in nearby_parks if _classify_park(p) == 'large_general']
-    medium        = [p for p in nearby_parks if _classify_park(p) == 'medium']
-    small         = [p for p in nearby_parks if _classify_park(p) == 'small']
-    park_score = (
-        min(len(large_wide)    * 60, 60) +   # 大型広域：60pt・1つで上限
-        min(len(large_general) * 50, 50) +   # 大型総合（都営特例含む）：50pt・1つで上限
-        min(len(medium)        * 20, 40) +   # 中型地区：2つまで上限40pt
-        min(len(small)         *  8, 16)     # 小型近隣：2つまで上限16pt
-    )
-    greenways  = [p for p in nearby_parks if p.get('type') == 'greenway']
-    large_gw   = [p for p in greenways if p['area'] >= 100000]
-    medium_gw  = [p for p in greenways if 10000 <= p['area'] < 100000]
-    greenway_score = (
-        min(len(large_gw)  * 15, 15) +   # 大型緑地：1つで上限
-        min(len(medium_gw) *  8, 16)     # 中型緑地：2つまで
-    )
+def _distance_factor(dist):
+    if dist <= 500:   return 1.0
+    elif dist <= 1000: return 0.85
+    elif dist <= 1500: return 0.65
+    elif dist <= 2000: return 0.45
+    else:              return 0.0
+
+def _park_base_score(p):
+    cls = _classify_park(p)
+    if cls == 'large_wide':    return 60
+    elif cls == 'large_general': return 55
+    elif cls == 'medium':        return 20
+    elif cls == 'small':         return 4
+    else:                        return 0
+
+def calc_osm_score(nearby_parks, st_lat, st_lng):
+    """公園・緑地・ドッグラン・河川からosm_score（距離係数適用）を計算"""
+    # 公園スコア（緑地除く・距離係数適用）
+    park_score = 0
+    for p in nearby_parks:
+        if p.get('type') == 'greenway':
+            continue
+        dist = min_dist_to_park(p['name'], p['lat'], p['lng'], st_lat, st_lng)
+        park_score += _park_base_score(p) * _distance_factor(dist)
+    park_score = min(round(park_score), 90)
+
+    # 緑地スコア（距離係数適用）
+    greenway_score = 0
+    for p in nearby_parks:
+        if p.get('type') != 'greenway':
+            continue
+        dist = min_dist_to_park(p['name'], p['lat'], p['lng'], st_lat, st_lng)
+        if p['area'] >= 100000:  gw_base = 20
+        elif p['area'] >= 10000: gw_base = 8
+        else: continue
+        greenway_score += gw_base * _distance_factor(dist)
+    greenway_score = min(round(greenway_score), 30)
+
+    # ドッグランボーナス（距離係数適用）
     dogrun_parks = [p for p in nearby_parks if p['dogrun'] and p.get('type') != 'greenway']
     if dogrun_parks:
         max_dogrun = max(dogrun_parks, key=lambda p: p['area'])
-        max_dogrun_class = _classify_park(max_dogrun)
-        if max_dogrun['area'] >= 500000 or max_dogrun_class == 'large_wide':
-            dogrun_bonus = 20   # 大型広域DR
-        elif max_dogrun_class == 'large_general':
-            dogrun_bonus = 18   # 大型総合DR
-        elif max_dogrun_class == 'medium':
-            dogrun_bonus = 22   # 中型DR
-        else:
-            dogrun_bonus = 0
+        dist = min_dist_to_park(max_dogrun['name'], max_dogrun['lat'], max_dogrun['lng'], st_lat, st_lng)
+        factor = _distance_factor(dist)
+        cls = _classify_park(max_dogrun)
+        if cls == 'large_wide':      dr_base = 20
+        elif cls == 'large_general': dr_base = 18
+        elif cls == 'medium':        dr_base = 22
+        else:                        dr_base = 0
+        dogrun_bonus = round(dr_base * factor)
     else:
         dogrun_bonus = 0
-    return min(park_score + greenway_score + dogrun_bonus, 90)
+
+    # 河川ボーナス（500m以内+10pt）
+    river_bonus = get_river_bonus(st_lat, st_lng)
+
+    return min(park_score + greenway_score + dogrun_bonus + river_bonus, 90)
 
 
 def get_walk_base(st, osm_cache, stations, ward_default):
@@ -2027,7 +2064,7 @@ print('=== パス1: osm_scoreキャッシュ計算中 ===')
 osm_cache = {}
 for st in stations:
     nearby = get_nearby_parks(st['lat'], st['lng'])
-    osm_cache[st['id']] = calc_osm_score(nearby)
+    osm_cache[st['id']] = calc_osm_score(nearby, st['lat'], st['lng'])
 print(f'osm_cacheキャッシュ完了: {len(osm_cache)}件')
 
 # パス2: メイン処理（API呼び出し・walkスコア確定）
@@ -2045,13 +2082,12 @@ for st in stations:
     ku  = st['ku']
     ov  = STATION_OVERRIDE.get(sid, {})
 
-    # walk: 2パス設計（公園あり→osm+河川直接使用、公園なし→近隣平均or区デフォルト）
+    # walk: 2パス設計（osm_scoreに距離係数・河川ボーナス込み）
     nearby_parks = get_nearby_parks(st['lat'], st['lng'])
     osm      = osm_cache.get(sid, 0)
-    river    = get_river_bonus(st['lat'], st['lng'])
     walk_max = ov.get('walk_max', None)
     if osm > 0:
-        walk = min(osm + river, 90)
+        walk = osm
     else:
         nearby_osm = [
             osm_cache[s['id']] for s in stations
@@ -2064,7 +2100,7 @@ for st in stations:
             base = round(sum(nearby_osm) / len(nearby_osm))
         else:
             base = WALK_WARD_DEFAULT.get(ku, 40)
-        walk = base + river
+        walk = base
     walk = max(walk, MIN_WALK)
     if walk_max:
         walk = min(walk, walk_max)
