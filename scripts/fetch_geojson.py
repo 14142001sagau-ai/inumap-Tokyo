@@ -1468,508 +1468,72 @@ def min_dist_to_park(park_name, centroid_lat, centroid_lng, st_lat, st_lng):
     points += PARK_ENTRANCES.get(park_name, [])
     return min(haversine(st_lat, st_lng, p[0], p[1]) for p in points)
 
-def get_nearby_parks(lat, lng, radius=1600):
+def get_nearby_parks(lat, lng, radius=2000):
     return [p for p in PARKS_DATA
             if min_dist_to_park(p['name'], p['lat'], p['lng'], lat, lng) <= radius]
 
-# 都市公園データから計算した駅別walkベーススコア（面積別距離係数）
-# 大型公園ほど遠くても価値あり（大型犬オーナーは20分歩いても行く）
-# 10万㎡+: 最低0.55, 3万㎡+: 最低0.45, 1万㎡+: 最低0.35, 3000㎡+: 最低0.15
-WALK_STATION = {
-    'お台場海浜公園':69,
-    'お花茶屋':52,
-    'とうきょうスカイツリー':80,
-    'ときわ台':61,
-    'テレコムセンター':57,
-    'モノレール浜松町':82,
-    '一之江':52,
-    '三ノ輪':50,
-    '三ノ輪橋':46,
-    '三河島':57,
-    '三田':77,
-    '三越前':48,
-    '三軒茶屋':65,
-    '上中里':76,
-    '上井草':64,
-    '上北沢':57,
-    '上板橋':76,
-    '上町':48,
-    '上石神井':58,
-    '上野':83,
-    '上野広小路':78,
-    '上野御徒町':79,
-    '上野毛':65,
-    '下丸子':69,
-    '下井草':51,
-    '下北沢':56,
-    '下板橋':50,
-    '下神明':69,
-    '下落合':63,
-    '下赤塚':43,
-    '下高井戸':66,
-    '不動前':69,
-    '世田谷':56,
-    '世田谷代田':65,
-    '両国':66,
-    '中井':56,
-    '中延':49,
-    '中村橋':35,
-    '中板橋':43,
-    '中目黒':56,
-    '中野':51,
-    '中野坂上':50,
-    '中野富士見町':36,
-    '中野新橋':42,
-    '乃木坂':78,
-    '久が原':45,
-    '久我山':35,
-    '九品仏':49,
-    '九段下':56,
-    '亀戸':79,
-    '亀戸水神':85,
-    '亀有':73,
-    '二子玉川':85,
-    '二重橋前':71,
-    '五反田':35,
-    '五反野':77,
-    '井荻':72,
-    '京急蒲田':47,
-    '京成上野':85,
-    '京成小岩':43,
-    '京成曳舟':54,
-    '京成立石':56,
-    '京成金町':43,
-    '京成関屋':77,
-    '京成高砂':50,
-    '京橋':61,
-    '人形町':67,
-    '代々木':57,
-    '代々木上原':69,
-    '代々木八幡':85,
-    '代々木公園':85,
-    '代官山':52,
-    '代田橋':47,
-    '仲御徒町':74,
-    '住吉':85,
-    '信濃町':61,
-    '光が丘':85,
-    '入谷':64,
-    '八丁堀':66,
-    '八幡山':58,
-    '八広':76,
-    '六本木':70,
-    '六本木一丁目':63,
-    '六町':60,
-    '六郷土手':85,
-    '内幸町':85,
-    '初台':69,
-    '勝どき':64,
-    '北千住':70,
-    '北千束':70,
-    '北参道':67,
-    '北品川':57,
-    '北池袋':52,
-    '北綾瀬':82,
-    '北赤羽':67,
-    '十条':60,
-    '千住大橋':66,
-    '千川':35,
-    '千歳烏山':49,
-    '千歳船橋':37,
-    '千石':71,
-    '千駄ヶ谷':65,
-    '千駄木':51,
-    '千鳥町':59,
-    '半蔵門':64,
-    '南千住':75,
-    '南新宿':60,
-    '南砂町':83,
-    '南阿佐ヶ谷':78,
-    '原宿':71,
-    '参宮橋':74,
-    '台場':85,
-    '向原':53,
-    '品川':48,
-    '品川シーサイド':57,
-    '喜多見':55,
-    '四ツ木':71,
-    '四ツ谷':54,
-    '四谷三丁目':47,
-    '国会議事堂前':64,
-    '国立競技場':68,
-    '国際展示場':36,
-    '地下鉄成増':41,
-    '地下鉄赤塚':56,
-    '堀切':73,
-    '堀切菖蒲園':56,
-    '外苑前':66,
-    '多摩川':85,
-    '大久保':58,
-    '大井町':54,
-    '大井競馬場前':72,
-    '大塚':51,
-    '大塚駅前':48,
-    '大山':43,
-    '大岡山':68,
-    '大島':82,
-    '大崎':37,
-    '大崎広小路':35,
-    '大師前':53,
-    '大手町':55,
-    '大森':73,
-    '大森海岸':85,
-    '大森町':75,
-    '大泉学園':54,
-    '大門':81,
-    '大鳥居':78,
-    '天王洲アイル':84,
-    '天空橋':47,
-    '太子堂':61,
-    '奥沢':50,
-    '学習院下':65,
-    '学芸大学':73,
-    '宝町':59,
-    '宮の坂':50,
-    '宮ノ前':75,
-    '富士見ヶ丘':41,
-    '富士見台':38,
-    '小伝馬町':59,
-    '小台':75,
-    '小岩':56,
-    '小川町':35,
-    '小村井':63,
-    '小竹向原':42,
-    '小菅':77,
-    '尾久':64,
-    '尾山台':69,
-    '山下':59,
-    '岩本町':43,
-    '巣鴨':69,
-    '巣鴨新田':43,
-    '市ケ谷':68,
-    '市場前':58,
-    '幡ヶ谷':62,
-    '平井':76,
-    '平和台':49,
-    '平和島':85,
-    '広尾':74,
-    '庚申塚':46,
-    '後楽園':75,
-    '御嶽山':53,
-    '御徒町':80,
-    '御成門':80,
-    '御茶ノ水':46,
-    '志村三丁目':55,
-    '志村坂上':76,
-    '志茂':57,
-    '恵比寿':50,
-    '成城学園前':58,
-    '成増':42,
-    '戸越':51,
-    '戸越公園':64,
-    '戸越銀座':55,
-    '扇大橋':71,
-    '押上':73,
-    '整備場':56,
-    '新三河島':52,
-    '新中野':41,
-    '新井薬師前':67,
-    '新代田':60,
-    '新大久保':63,
-    '新大塚':63,
-    '新宿':54,
-    '新宿三丁目':45,
-    '新宿御苑前':48,
-    '新宿西口':56,
-    '新富町':67,
-    '新小岩':72,
-    '新庚申塚':52,
-    '新御徒町':70,
-    '新御茶ノ水':36,
-    '新整備場':35,
-    '新日本橋':48,
-    '新木場':72,
-    '新板橋':65,
-    '新柴又':67,
-    '新桜台':53,
-    '新橋':83,
-    '新江古田':74,
-    '新豊洲':65,
-    '新馬場':62,
-    '新高円寺':60,
-    '新高島平':81,
-    '方南町':58,
-    '旗の台':50,
-    '日の出':70,
-    '日暮里':42,
-    '日本橋':52,
-    '日比谷':78,
-    '早稲田':77,
-    '明大前':55,
-    '明治神宮前':65,
-    '春日':75,
-    '昭和島':78,
-    '曙橋':56,
-    '曳舟':67,
-    '月島':63,
-    '有明':35,
-    '有明テニスの森':51,
-    '有楽町':78,
-    '木場':74,
-    '末広町':65,
-    '本所吾妻橋':83,
-    '本蓮沼':60,
-    '本郷三丁目':63,
-    '本駒込':54,
-    '東あずま':74,
-    '東中野':41,
-    '東京':60,
-    '東京テレポート':74,
-    '東京ビッグサイト':35,
-    '東京国際クルーズターミナル':81,
-    '東北沢':66,
-    '東十条':55,
-    '東向島':74,
-    '東大前':55,
-    '東大島':85,
-    '東尾久三丁目':69,
-    '東新宿':78,
-    '東日本橋':70,
-    '東松原':69,
-    '東武練馬':46,
-    '東池袋':54,
-    '東池袋四丁目':54,
-    '東銀座':76,
-    '東長崎':54,
-    '東陽町':70,
-    '東雲':52,
-    '東高円寺':67,
-    '松原':56,
-    '松陰神社前':60,
-    '板橋':55,
-    '板橋区役所前':59,
-    '板橋本町':45,
-    '柴又':73,
-    '栄町':78,
-    '根津':74,
-    '桜上水':62,
-    '桜台':59,
-    '桜新町':55,
-    '桜田門':79,
-    '梅ヶ丘':73,
-    '梅屋敷':59,
-    '梅島':66,
-    '梶原':69,
-    '森下':65,
-    '椎名町':54,
-    '武蔵小山':78,
-    '武蔵新田':68,
-    '武蔵関':63,
-    '水天宮前':68,
-    '水道橋':68,
-    '氷川台':70,
-    '永田町':59,
-    '永福町':73,
-    '汐留':85,
-    '江北':54,
-    '江古田':59,
-    '江戸川':75,
-    '江戸川橋':52,
-    '池ノ上':70,
-    '池上':45,
-    '池尻大橋':68,
-    '池袋':49,
-    '沼袋':78,
-    '沼部':69,
-    '泉岳寺':45,
-    '洗足':57,
-    '洗足池':75,
-    '流通センター':79,
-    '浅草':84,
-    '浅草橋':58,
-    '浜松町':84,
-    '浜田山':77,
-    '浜町':80,
-    '浮間舟渡':84,
-    '淡路町':35,
-    '清澄白河':78,
-    '渋谷':62,
-    '湯島':74,
-    '溜池山王':61,
-    '滝野川一丁目':73,
-    '潮見':71,
-    '熊野前':77,
-    '牛田':75,
-    '牛込柳町':66,
-    '牛込神楽坂':64,
-    '王子':77,
-    '王子神谷':50,
-    '王子駅前':74,
-    '瑞江':44,
-    '用賀':63,
-    '田原町':63,
-    '田園調布':68,
-    '田町':69,
-    '田端':50,
-    '町屋':56,
-    '町屋二丁目':65,
-    '町屋駅前':56,
-    '白山':48,
-    '白金台':38,
-    '白金高輪':49,
-    '目白':59,
-    '目黒':58,
-    '矢口渡':55,
-    '石川台':65,
-    '石神井公園':69,
-    '祐天寺':52,
-    '祖師ヶ谷大蔵':57,
-    '神保町':47,
-    '神楽坂':53,
-    '神泉':54,
-    '神田':35,
-    '神谷町':73,
-    '秋葉原':40,
-    '稲荷町':74,
-    '穴守稲荷':64,
-    '立会川':69,
-    '竹ノ塚':48,
-    '竹橋':35,
-    '竹芝':82,
-    '笹塚':50,
-    '等々力':78,
-    '築地':73,
-    '築地市場':85,
-    '篠崎':64,
-    '糀谷':60,
-    '経堂':35,
-    '綾瀬':64,
-    '緑が丘':64,
-    '練馬':53,
-    '練馬春日町':54,
-    '練馬高野台':48,
-    '羽田空港第1ターミナル':35,
-    '羽田空港第2ターミナル':35,
-    '羽田空港第3ターミナル':35,
-    '自由が丘':52,
-    '舎人':71,
-    '舎人公園':85,
-    '船堀':60,
-    '芝公園':85,
-    '芝浦ふ頭':49,
-    '芦花公園':53,
-    '若松河田':75,
-    '若林':59,
-    '茅場町':55,
-    '茗荷谷':62,
-    '荏原中延':47,
-    '荏原町':40,
-    '荒川一中前':51,
-    '荒川七丁目':55,
-    '荒川二丁目':62,
-    '荒川区役所前':60,
-    '荒川車庫前':69,
-    '荒川遊園地前':75,
-    '荻窪':59,
-    '菊川':68,
-    '落合':50,
-    '落合南長崎':63,
-    '葛西':61,
-    '葛西臨海公園':85,
-    '蒲田':46,
-    '蓮根':63,
-    '蓮沼':42,
-    '蔵前':63,
-    '虎ノ門':79,
-    '虎ノ門ヒルズ':71,
-    '表参道':55,
-    '西ケ原':80,
-    '西ケ原四丁目':63,
-    '西台':72,
-    '西大井':68,
-    '西大島':83,
-    '西太子堂':55,
-    '西小山':66,
-    '西巣鴨':53,
-    '西新井':60,
-    '西新井大師西':68,
-    '西新宿':63,
-    '西新宿五丁目':65,
-    '西日暮里':47,
-    '西早稲田':81,
-    '西武新宿':58,
-    '西永福':76,
-    '西荻窪':42,
-    '西葛西':67,
-    '西馬込':48,
-    '西高島平':62,
-    '要町':40,
-    '見沼代親水公園':62,
-    '護国寺':69,
-    '谷在家':75,
-    '豊島園':41,
-    '豊洲':65,
-    '豪徳寺':59,
-    '赤土小学校前':61,
-    '赤坂':53,
-    '赤坂見附':57,
-    '赤堤':36,
-    '赤羽':65,
-    '赤羽岩淵':72,
-    '赤羽橋':85,
-    '越中島':71,
-    '足立小台':85,
-    '辰巳':66,
-    '都庁前':72,
-    '都立大学':58,
-    '都立家政':46,
-    '都電雑司ヶ谷':56,
-    '野方':62,
-    '金町':42,
-    '銀座':80,
-    '銀座一丁目':72,
-    '錦糸町':82,
-    '鐘ヶ淵':85,
-    '長原':64,
-    '門前仲町':69,
-    '阿佐ヶ谷':67,
-    '雑司が谷':63,
-    '雑色':70,
-    '雪が谷大塚':56,
-    '霞ケ関':83,
-    '青井':68,
-    '青山一丁目':59,
-    '青海':65,
-    '青物横丁':60,
-    '青砥':56,
-    '面影橋':75,
-    '飛鳥山':78,
-    '飯田橋':66,
-    '馬喰横山':64,
-    '馬喰町':62,
-    '馬込':42,
-    '駒場東大前':76,
-    '駒沢大学':72,
-    '駒込':72,
-    '高井戸':54,
-    '高円寺':52,
-    '高島平':85,
-    '高田馬場':64,
-    '高輪ゲートウェイ':39,
-    '高輪台':45,
-    '高野':60,
-    '鬼子母神前':61,
-    '鮫洲':68,
-    '鵜の木':59,
-    '鶯谷':71,
-    '鷺ノ宮':47,
-    '麹町':64,
-    '麻布十番':72,
+# ============================================================
+# 河川データ（国土数値情報 W05-08_13-g_Stream.shp）
+# ============================================================
+MAJOR_RIVERS = {
+    '多摩川', '荒川', '隅田川', '江戸川',
+    '綾瀬川', '野川', '神田川', '目黒川',
+    '石神井川', '白子川', '善福寺川',
 }
-# MEDICAL_BASE・WALK_BASE: 新駅はOSMが上書きするため一律デフォルト値
-# 江戸川区12駅は実データから引き継ぎ（STATION_OVERRIDEで上書き）
+
+def _load_river_data():
+    try:
+        sf = shapefile.Reader(
+            'data/parks/W05-08_13-g_Stream.shp',
+            encoding='shift_jis')
+        fields = [f[0] for f in sf.fields[1:]]
+        points = []
+        for shape, record in zip(sf.shapes(), sf.records()):
+            d = dict(zip(fields, record))
+            if d['W05_004'] not in MAJOR_RIVERS:
+                continue
+            points.extend((pt[1], pt[0]) for pt in shape.points)
+        print(f'河川データ読み込み完了: {len(points)}点')
+        return points
+    except Exception as e:
+        print(f'河川データ読み込みエラー: {e}')
+        return []
+
+RIVER_DATA = _load_river_data()
+
+def get_river_bonus(lat, lng, radius=500):
+    for pt in RIVER_DATA:
+        if haversine(lat, lng, pt[0], pt[1]) <= radius:
+            return 10
+    return 0
+
+# 区ごとのwalkベーススコアデフォルト値（OSMデータのblend baseとして使用）
+WALK_WARD_DEFAULT = {
+    '千代田区': 37,
+    '中央区':   47,
+    '港区':     37,
+    '新宿区':   48,
+    '文京区':   44,
+    '台東区':   50,
+    '墨田区':   52,
+    '江東区':   57,
+    '品川区':   44,
+    '目黒区':   40,
+    '大田区':   42,
+    '世田谷区': 58,
+    '渋谷区':   57,
+    '中野区':   49,
+    '杉並区':   48,
+    '豊島区':   38,
+    '北区':     37,
+    '荒川区':   44,
+    '板橋区':   55,
+    '練馬区':   48,
+    '足立区':   54,
+    '葛飾区':   55,
+    '江戸川区': 57,
+}
 MEDICAL_BASE_DEFAULT = 55
-WALK_BASE_DEFAULT    = 60
 
 # ============================================================
 # 非居住駅リスト（再実行時も"-"が保持されるよう組み込み）
@@ -1983,39 +1547,27 @@ NON_RESIDENTIAL_STATIONS = {
 }
 
 STATION_OVERRIDE = {
-    # 代々木エリア（medical_baseのみ維持・walk_baseはPARKS_DATA自動計算が上回るため削除）
+    # 代々木エリア（medical_baseのみ）
     '代々木公園_5a2091':  {'medical_base':65},
     '代々木八幡_80028d': {'medical_base':62},
     # 下赤塚・地下鉄赤塚（medical_base保持）
     '下赤塚_687399':  {'medical_base':55},
     '地下鉄赤塚_cc2b86': {'medical_base':55},
-    # 砧公園：PARK_ENTRANCESで入口座標補正済みだが自動=71のため引き続きOVERRIDE
-    '二子玉川_e3b826':    {'walk_base':85},  # 砧公園(39ha)隣接、PARKS_DATA自動=71
     # 都庁前：代々木公園代々木口が1207m圏内だが新宿区立地のため上限設定
     '都庁前_e2172b':      {'walk_max':55},
-    '足立小台_5064bc':    {'walk_base':85},  # 荒川江北橋緑地(14ha)285m、PARKS_DATA自動=71
-    # 同一エリア調整（PARKS_DATA自動計算でも差が残る）
-    '春日_3187bc':        {'walk_base':67},  # 後楽園(walk=72, 138m)と同一エリア
-    '王子駅前_36ace5':    {'walk_base':67},  # 王子(walk=72, 138m)と同一エリア
-    '飛鳥山_3b08c6':      {'walk_base':67},  # 王子(walk=72, 206m)と同一エリア
-    '町屋_20cc14':        {'walk_base':68},  # 町屋駅前(walk=73, 84m)と同一エリア
-    '秋葉原_4b226d':      {'walk_base':57},  # 岩本町(walk=62, 307m)と同一エリア
-    '東日本橋_c35183':    {'walk_base':63},  # 馬喰横山(walk=68, 220m)と同一エリア
-    # 上野エリア（PARKS_DATA自動計算でも調整が必要）
-    '京成上野_fabb1f':   {'walk_base':75},  # 上野公園エリア、PARKS_DATA自動=71
-    # 江戸川区12駅（実測値）
-    'nishikasai': {'medical_base':78, 'walk_base':80},
-    'kasai':      {'medical_base':90, 'walk_base':80},
-    'kasairinkai':{'medical_base':30, 'walk_base':80},
-    'funabori':   {'medical_base':78, 'walk_base':80},
-    'ichinoe':    {'medical_base':30, 'walk_base':40},
-    'mizue':      {'medical_base':66, 'walk_base':80},
-    'shinozaki':  {'medical_base':66, 'walk_base':80},
-    'koiwa':      {'medical_base':30, 'walk_base':40},
-    'shinkoiwa':  {'medical_base':81, 'walk_base':80},
-    'hirai':      {'medical_base':69, 'walk_base':80},
-    'edogawa':    {'medical_base':30, 'walk_base':40},
-    'keiseikoiwa':{'medical_base':95, 'walk_base':80},
+    # 江戸川区12駅（medical_baseのみ・walk_baseは廃止）
+    'nishikasai': {'medical_base':78},
+    'kasai':      {'medical_base':90},
+    'kasairinkai':{'medical_base':30},
+    'funabori':   {'medical_base':78},
+    'ichinoe':    {'medical_base':30},
+    'mizue':      {'medical_base':66},
+    'shinozaki':  {'medical_base':66},
+    'koiwa':      {'medical_base':30},
+    'shinkoiwa':  {'medical_base':81},
+    'hirai':      {'medical_base':69},
+    'edogawa':    {'medical_base':30},
+    'keiseikoiwa':{'medical_base':95},
 }
 
 # ============================================================
@@ -2338,11 +1890,20 @@ def min_park_dist(st_lat, st_lng, p):
     points.append((p['lat'], p['lng']))  # 重心も含む
     return min(haversine(st_lat, st_lng, la, lo) for la, lo in points)
 
-# 都営12公園特例：面積に関わらず大型総合（35pt）として扱う
+# 都営12公園特例：面積に関わらず大型総合（50pt）として扱う
 METROPOLITAN_PARKS = {
-    '蘆花恒春園', '小山内裏公園', '桜ヶ丘公園', '駒沢オリンピック公園',
-    '城北中央公園', '舎人公園', '水元公園', '篠崎公園',
-    '代々木公園', '木場公園', '小金井公園', '神代植物公園',
+    '蘆花恒春園',
+    '小山内裏公園',
+    '桜ヶ丘公園',
+    '駒沢オリンピック公園',
+    '城北中央公園',
+    '舎人公園',
+    '水元公園',
+    '篠崎公園',
+    '代々木公園',
+    '木場公園',
+    '小金井公園',
+    '神代植物公園',
 }
 
 def _classify_park(p):
@@ -2360,19 +1921,20 @@ def _classify_park(p):
         return 'small'
     return 'tiny'
 
-def calc_walk_score(nearby_parks, base, base_is_override=False, walk_max=None):
-    # 公園スコア（種別11・12緑地・緑道を除く）
+MIN_WALK = 35
+
+def calc_osm_score(nearby_parks):
+    """公園・緑地・ドッグランからosm_score（blend前）を計算"""
     large_wide    = [p for p in nearby_parks if _classify_park(p) == 'large_wide']
     large_general = [p for p in nearby_parks if _classify_park(p) == 'large_general']
     medium        = [p for p in nearby_parks if _classify_park(p) == 'medium']
     small         = [p for p in nearby_parks if _classify_park(p) == 'small']
     park_score = (
-        min(len(large_wide)    * 50, 50) +   # 大型広域：1つで上限
-        min(len(large_general) * 35, 35) +   # 大型総合（都営特例含む）：1つで上限
-        min(len(medium)        * 20, 40) +   # 中型地区：2つまで
-        min(len(small)         *  8, 16)     # 小型近隣：2つまで
+        min(len(large_wide)    * 60, 60) +   # 大型広域：60pt・1つで上限
+        min(len(large_general) * 50, 50) +   # 大型総合（都営特例含む）：50pt・1つで上限
+        min(len(medium)        * 20, 40) +   # 中型地区：2つまで上限40pt
+        min(len(small)         *  8, 16)     # 小型近隣：2つまで上限16pt
     )
-    # 緑地・緑道スコア（種別11・12のみ、別軸）
     greenways  = [p for p in nearby_parks if p.get('type') == 'greenway']
     large_gw   = [p for p in greenways if p['area'] >= 100000]
     medium_gw  = [p for p in greenways if 10000 <= p['area'] < 100000]
@@ -2380,29 +1942,54 @@ def calc_walk_score(nearby_parks, base, base_is_override=False, walk_max=None):
         min(len(large_gw)  * 15, 15) +   # 大型緑地：1つで上限
         min(len(medium_gw) *  8, 16)     # 中型緑地：2つまで
     )
-    # ドッグランボーナス（公園規模別・緑地除く）
     dogrun_parks = [p for p in nearby_parks if p['dogrun'] and p.get('type') != 'greenway']
     if dogrun_parks:
         max_dogrun = max(dogrun_parks, key=lambda p: p['area'])
-        if max_dogrun['area'] >= 500000:
-            dogrun_bonus = 30
-        elif max_dogrun['area'] >= 150000:
-            dogrun_bonus = 28
-        elif max_dogrun['area'] >= 50000:
-            dogrun_bonus = 25
+        max_dogrun_class = _classify_park(max_dogrun)
+        if max_dogrun['area'] >= 500000 or max_dogrun_class == 'large_wide':
+            dogrun_bonus = 20   # 大型広域DR
+        elif max_dogrun_class == 'large_general':
+            dogrun_bonus = 18   # 大型総合DR
+        elif max_dogrun_class == 'medium':
+            dogrun_bonus = 22   # 中型DR
         else:
             dogrun_bonus = 0
     else:
         dogrun_bonus = 0
-    osm_score = min(park_score + greenway_score + dogrun_bonus, 90)
-    if osm_score == 0:
+    return min(park_score + greenway_score + dogrun_bonus, 90)
+
+
+def get_walk_base(st, osm_cache, stations, ward_default):
+    """2km圏内の居住駅のosm_score平均をbaseとする。該当なければ区デフォルト"""
+    nearby_osms = []
+    for other in stations:
+        if other['id'] == st['id']:
+            continue
+        if other['name'] in NON_RESIDENTIAL_STATIONS:
+            continue
+        dist = haversine(st['lat'], st['lng'], other['lat'], other['lng'])
+        if dist <= 2000:
+            other_osm = osm_cache.get(other['id'], 0)
+            if other_osm > 0:
+                nearby_osms.append(other_osm)
+    if nearby_osms:
+        return round(sum(nearby_osms) / len(nearby_osms))
+    return ward_default.get(st.get('ku', ''), 40)
+
+
+def apply_walk_score(osm, base, base_is_override=False, walk_max=None):
+    """osm_scoreとbaseからwalkスコアを確定"""
+    if osm == 0:
         walk = base
-    elif osm_score < base * 0.5:
-        walk = round(osm_score * 0.4 + base * 0.6)
+    elif osm < base * 0.5:
+        walk = round(osm * 0.4 + base * 0.6)
     else:
-        walk = round(osm_score * 0.7 + base * 0.3)
+        walk = osm   # 公園データ十分 → osm直接使用
     if base_is_override:
         walk = max(walk, base)
+    if walk_max is not None:
+        walk = min(walk, walk_max)
+    walk = max(walk, MIN_WALK)
     if walk_max is not None:
         walk = min(walk, walk_max)
     return walk
@@ -2435,6 +2022,15 @@ def calc_mobility_score(fac, sid, st_lat, st_lng, ku):
 stations = load_stations()
 print(f'読み込み完了: {len(stations)}駅')
 
+# パス1: 全駅のosm_scoreをキャッシュ（APIなし・公園データのみ）
+print('=== パス1: osm_scoreキャッシュ計算中 ===')
+osm_cache = {}
+for st in stations:
+    nearby = get_nearby_parks(st['lat'], st['lng'])
+    osm_cache[st['id']] = calc_osm_score(nearby)
+print(f'osm_cacheキャッシュ完了: {len(osm_cache)}件')
+
+# パス2: メイン処理（API呼び出し・walkスコア確定）
 results = []
 for st in stations:
     print(f'>> {st["ku"]} {st["name"]}')
@@ -2449,12 +2045,29 @@ for st in stations:
     ku  = st['ku']
     ov  = STATION_OVERRIDE.get(sid, {})
 
-    # walk: STATION_OVERRIDEのwalk_baseを優先、なければWALK_STATIONの国交省計算値を使用
+    # walk: 2パス設計（公園あり→osm+河川直接使用、公園なし→近隣平均or区デフォルト）
     nearby_parks = get_nearby_parks(st['lat'], st['lng'])
-    walk_base = ov.get('walk_base', WALK_STATION.get(st['name'], WALK_BASE_DEFAULT))
-    walk_is_override = 'walk_base' in ov
+    osm      = osm_cache.get(sid, 0)
+    river    = get_river_bonus(st['lat'], st['lng'])
     walk_max = ov.get('walk_max', None)
-    walk  = calc_walk_score(nearby_parks, walk_base, base_is_override=walk_is_override, walk_max=walk_max)
+    if osm > 0:
+        walk = min(osm + river, 90)
+    else:
+        nearby_osm = [
+            osm_cache[s['id']] for s in stations
+            if s['id'] != sid
+            and s['name'] not in NON_RESIDENTIAL_STATIONS
+            and haversine(st['lat'], st['lng'], s['lat'], s['lng']) <= 2000
+            and osm_cache.get(s['id'], 0) > 0
+        ]
+        if nearby_osm:
+            base = round(sum(nearby_osm) / len(nearby_osm))
+        else:
+            base = WALK_WARD_DEFAULT.get(ku, 40)
+        walk = base + river
+    walk = max(walk, MIN_WALK)
+    if walk_max:
+        walk = min(walk, walk_max)
     med   = calc_medical_score(fac, ov.get('medical_base', MEDICAL_BASE_DEFAULT))
     mob   = calc_mobility_score(fac, sid, st['lat'], st['lng'], ku)
 
