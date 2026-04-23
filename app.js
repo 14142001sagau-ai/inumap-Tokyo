@@ -5,7 +5,7 @@ const WW={
   AY:{walk:49,housing:22,medical:10,mobility:19},
   AZ:{walk:20,housing:15,medical:60,mobility:5},
   BX:{walk:20,housing:34,medical:38,mobility:8},
-  BY:{walk:45,housing:34,medical:8,mobility:13},
+  BY:{walk:42,housing:36,medical:9,mobility:13},
   BZ:{walk:18,housing:29,medical:50,mobility:3}
 };
 const AXES=[

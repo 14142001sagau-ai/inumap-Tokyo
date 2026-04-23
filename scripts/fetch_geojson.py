@@ -652,7 +652,7 @@ HOUSING_STATION = {
     '四谷三丁目':60,
     '国会議事堂前':55,
     '国立競技場':64,
-    '国際展示場':30,
+    '国際展示場':71,
     '地下鉄成増':71,
     '地下鉄赤塚':69,
     '堀切':66,
@@ -1489,10 +1489,17 @@ def get_nearby_parks(lat, lng, radius=2000):
 # ============================================================
 # 河川データ（国土数値情報 W05-08_13-g_Stream.shp）
 # ============================================================
-MAJOR_RIVERS = {
-    '多摩川', '荒川', '隅田川', '江戸川',
-    '綾瀬川', '野川', '神田川', '目黒川',
-    '石神井川', '白子川', '善福寺川',
+LARGE_RIVER_BONUS = {
+    '多摩川':   40,
+    '荒川':     40,
+    '江戸川':   20,
+    '隅田川':   20,
+    '綾瀬川':   10,
+    '神田川':   10,
+    '目黒川':   10,
+    '石神井川': 10,
+    '白子川':   10,
+    '善福寺川': 10,
 }
 
 def _load_river_data():
@@ -1501,25 +1508,35 @@ def _load_river_data():
             'data/parks/W05-08_13-g_Stream.shp',
             encoding='shift_jis')
         fields = [f[0] for f in sf.fields[1:]]
-        points = []
+        rivers = {}
         for shape, record in zip(sf.shapes(), sf.records()):
             d = dict(zip(fields, record))
-            if d['W05_004'] not in MAJOR_RIVERS:
+            name = d['W05_004']
+            if name not in LARGE_RIVER_BONUS:
                 continue
-            points.extend((pt[1], pt[0]) for pt in shape.points)
-        print(f'河川データ読み込み完了: {len(points)}点')
-        return points
+            if name not in rivers:
+                rivers[name] = []
+            rivers[name].extend((pt[1], pt[0]) for pt in shape.points)
+        total = sum(len(v) for v in rivers.values())
+        print(f'河川データ読み込み完了: {len(rivers)}河川 {total}点')
+        return rivers
     except Exception as e:
         print(f'河川データ読み込みエラー: {e}')
-        return []
+        return {}
 
 RIVER_DATA = _load_river_data()
 
-def get_river_bonus(lat, lng, radius=500):
-    for pt in RIVER_DATA:
-        if haversine(lat, lng, pt[0], pt[1]) <= radius:
-            return 10
-    return 0
+def get_river_bonus(lat, lng):
+    max_bonus = 0
+    for name, points in RIVER_DATA.items():
+        if name not in LARGE_RIVER_BONUS:
+            continue
+        for pt in points:
+            if haversine(lat, lng, pt[0], pt[1]) <= 500:
+                bonus = LARGE_RIVER_BONUS[name]
+                max_bonus = max(max_bonus, bonus)
+                break  # この河川での最大ボーナス確定
+    return max_bonus
 
 # 区ごとのwalkベーススコアデフォルト値（OSMデータのblend baseとして使用）
 WALK_WARD_DEFAULT = {
@@ -2056,7 +2073,9 @@ def calc_mobility_score(fac, sid, st_lat, st_lng, ku):
 # ============================================================
 # メイン処理
 # ============================================================
+EXCLUDED_STATIONS = {'赤塚', '赤堤'}
 stations = load_stations()
+stations = [s for s in stations if s['name'] not in EXCLUDED_STATIONS]
 print(f'読み込み完了: {len(stations)}駅')
 
 # パス1: 全駅のosm_scoreをキャッシュ（APIなし・公園データのみ）
@@ -2133,6 +2152,11 @@ for st in stations:
         'carshares':fac['carshares'],
         'car_rentals':fac['car_rentals'],
     })
+
+# 非居住駅のスコアを確実にnullに強制上書き（ループ内処理の保証）
+for r in results:
+    if r['name'] in NON_RESIDENTIAL_STATIONS:
+        r['walk'] = r['housing'] = r['medical'] = r['mobility'] = None
 
 os.makedirs('data', exist_ok=True)
 with open('data/stations.json', 'w', encoding='utf-8') as f:
