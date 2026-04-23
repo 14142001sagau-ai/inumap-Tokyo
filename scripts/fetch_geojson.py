@@ -1463,6 +1463,7 @@ PARK_ENTRANCES = {
     ],
     '石神井公園': [
         (35.7430, 139.6030),  # 石神井公園駅側北口
+        (35.7406, 139.6060),  # 石神井公園駅側南口
         (35.7390, 139.6140),  # 練馬高野台側東口
         (35.7320, 139.5990),  # 南口
         (35.7388, 139.5912),  # 西口
@@ -1526,6 +1527,11 @@ def _load_river_data():
 
 RIVER_DATA = _load_river_data()
 
+# シェープファイルで未収録の河川ポイントを手動補完
+MANUAL_RIVER_POINTS = [
+    ('江戸川', 35.7368, 139.8999),  # 江戸川駅付近（都データ未収録エリア）
+]
+
 def get_river_bonus(lat, lng):
     max_bonus = 0
     for name, points in RIVER_DATA.items():
@@ -1535,7 +1541,11 @@ def get_river_bonus(lat, lng):
             if haversine(lat, lng, pt[0], pt[1]) <= 500:
                 bonus = LARGE_RIVER_BONUS[name]
                 max_bonus = max(max_bonus, bonus)
-                break  # この河川での最大ボーナス確定
+                break
+    for name, rlat, rlng in MANUAL_RIVER_POINTS:
+        if haversine(lat, lng, rlat, rlng) <= 500:
+            bonus = LARGE_RIVER_BONUS.get(name, 10)
+            max_bonus = max(max_bonus, bonus)
     return max_bonus
 
 # 区ごとのwalkベーススコアデフォルト値（OSMデータのblend baseとして使用）
