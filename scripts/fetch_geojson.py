@@ -1784,6 +1784,16 @@ def haversine(lat1, lng1, lat2, lng2):
     a = math.sin((lat2-lat1)*p/2)**2 + math.cos(lat1*p)*math.cos(lat2*p)*math.sin((lng2-lng1)*p/2)**2
     return R * 2 * math.asin(math.sqrt(a))
 
+def _load_vets_data():
+    path = os.path.join(os.path.dirname(__file__), '..', 'data', 'vets.json')
+    with open(path, encoding='utf-8') as f:
+        return json.load(f)
+
+VETS_DATA = _load_vets_data()
+
+def get_nearby_vets(lat, lng, radius=1600):
+    return [v for v in VETS_DATA if haversine(lat, lng, v['lat'], v['lng']) <= radius]
+
 # ============================================================
 # ID生成
 # ============================================================
@@ -1862,10 +1872,15 @@ def get_flood_level(lat, lng):
 # OSMクエリ
 # ============================================================
 def get_fac(lat, lng):
+    # 動物病院はvets.jsonから取得（一括キャッシュ）
+    nearby_vets = get_nearby_vets(lat, lng)
+    vets = [v['name'] for v in nearby_vets if v['name']][:5]
+    vets_emergency = [v['name'] for v in nearby_vets
+                      if v['name'] and ('夜間' in v['name'] or '救急' in v['name'] or '24' in v['name'])][:2]
+
     a, c = str(RADIUS), f'{lat},{lng}'
     q = (
         '[out:json][timeout:60];('
-        f'node[amenity=veterinary](around:{a},{c});'
         f'node[shop=pet](around:{a},{c});'
         f'node[shop=pet_grooming](around:{a},{c});'
         f'node[amenity=animal_boarding](around:{a},{c});'
@@ -1880,7 +1895,6 @@ def get_fac(lat, lng):
     try:
         r = requests.post(OVERPASS, data={'data': q}, timeout=60)
         els = r.json().get('elements', [])
-        vets, vets_emergency = [], []
         groomings, dog_cafes, carshares, car_rentals = [], [], [], []
         for el in els:
             tags = el.get('tags', {})
@@ -1889,13 +1903,7 @@ def get_fac(lat, lng):
             amenity = tags.get('amenity', '')
             shop    = tags.get('shop', '')
             dogs    = tags.get('dogs', tags.get('dog', ''))
-            hours   = tags.get('opening_hours', '')
-            emerg   = tags.get('emergency', '')
-            if amenity == 'veterinary':
-                vets.append(n)
-                if '24/7' in hours or 'emergency' in emerg or '夜間' in n or '救急' in n:
-                    vets_emergency.append(n)
-            elif shop in ('pet_grooming','grooming') or amenity == 'animal_boarding':
+            if shop in ('pet_grooming','grooming') or amenity == 'animal_boarding':
                 groomings.append(n)
             elif amenity in ('cafe','restaurant') and dogs in ('yes','permitted','leashed'):
                 dog_cafes.append(n)
@@ -1904,13 +1912,13 @@ def get_fac(lat, lng):
             elif amenity == 'car_rental':
                 car_rentals.append(n)
         return {
-            'vets':vets[:5],'vets_emergency':vets_emergency[:2],
+            'vets':vets,'vets_emergency':vets_emergency,
             'groomings':groomings[:3],'dog_cafes':dog_cafes[:3],
             'carshares':carshares[:3],'car_rentals':car_rentals[:3],
         }
     except Exception as e:
         print(f'  OSMエラー: {e}')
-        return {'vets':[],'vets_emergency':[],
+        return {'vets':vets,'vets_emergency':vets_emergency,
                 'groomings':[],'dog_cafes':[],'carshares':[],'car_rentals':[]}
 
 # ============================================================
