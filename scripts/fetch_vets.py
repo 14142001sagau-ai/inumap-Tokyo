@@ -3,12 +3,11 @@ sys.stdout.reconfigure(encoding='utf-8')
 import requests, json, time
 
 OVERPASS = 'https://overpass-api.de/api/interpreter'
-query = """[out:json][timeout:120];
-area["name"="東京都"]["admin_level"="4"]->.tokyo;
+query = """[out:json][timeout:180];
 (
-  node["amenity"="veterinary"](area.tokyo);
-  way["amenity"="veterinary"](area.tokyo);
-  relation["amenity"="veterinary"](area.tokyo);
+  node["amenity"="veterinary"](35.50,139.60,35.85,139.95);
+  way["amenity"="veterinary"](35.50,139.60,35.85,139.95);
+  relation["amenity"="veterinary"](35.50,139.60,35.85,139.95);
 );
 out center;
 """
