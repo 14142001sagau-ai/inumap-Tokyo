@@ -9,52 +9,23 @@ with open('data/stations.json', encoding='utf-8') as f:
 
 GOURMET_URL = 'https://webservice.recruit.co.jp/hotpepper/gourmet/v1/'
 
-PET_KEYWORDS = [
-    'ペット可',
-    'ペット同伴',
-    'ペットOK',
-    'ペットok',
-    '犬OK',
-    '犬ok',
-    '犬可',
-    'ワンちゃんOK',
-    'わんちゃんOK',
-    'ドッグOK',
-    'dog ok',
-    'pet ok',
-    'ペットウェルカム',
-]
-
-def fetch_shops(lat, lng, extra_params):
-    try:
-        r = requests.get(GOURMET_URL, params={
-            'key': API_KEY, 'lat': lat, 'lng': lng,
-            'range': 4, 'format': 'json', 'count': 100,
-            **extra_params,
-        }, timeout=15)
-        return r.json().get('results', {}).get('shop', [])
-    except Exception as e:
-        return []
-
 all_results = []
 
 active = [s for s in stations if s.get('walk') is not None]
-print(f'対象駅数: {len(active)}駅 / クエリ数: {len(active) * (1 + len(PET_KEYWORDS))}')
+print(f'対象駅数: {len(active)}駅')
 
 for i, st in enumerate(active):
     lat, lng = st['lat'], st['lng']
-
-    # pet=1 フラグ検索
-    for shop in fetch_shops(lat, lng, {'pet': 1}):
-        all_results.append({'name': shop['name'], 'lat': float(shop['lat']), 'lng': float(shop['lng'])})
-    time.sleep(0.15)
-
-    # freeword検索
-    for kw in PET_KEYWORDS:
-        for shop in fetch_shops(lat, lng, {'freeword': kw}):
+    try:
+        r = requests.get(GOURMET_URL, params={
+            'key': API_KEY, 'lat': lat, 'lng': lng,
+            'range': 4, 'pet': 1, 'format': 'json', 'count': 100,
+        }, timeout=15)
+        for shop in r.json().get('results', {}).get('shop', []):
             all_results.append({'name': shop['name'], 'lat': float(shop['lat']), 'lng': float(shop['lng'])})
-        time.sleep(0.15)
-
+    except Exception as e:
+        print(f'  エラー {st["name"]}: {e}')
+    time.sleep(0.3)
     if (i + 1) % 50 == 0:
         print(f'  {i+1}/{len(active)}駅完了 (累計raw: {len(all_results)}件)')
 
