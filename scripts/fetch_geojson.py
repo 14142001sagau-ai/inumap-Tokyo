@@ -1784,15 +1784,31 @@ def haversine(lat1, lng1, lat2, lng2):
     a = math.sin((lat2-lat1)*p/2)**2 + math.cos(lat1*p)*math.cos(lat2*p)*math.sin((lng2-lng1)*p/2)**2
     return R * 2 * math.asin(math.sqrt(a))
 
-def _load_vets_data():
-    path = os.path.join(os.path.dirname(__file__), '..', 'data', 'vets.json')
+def _load_data(filename):
+    path = os.path.join(os.path.dirname(__file__), '..', 'data', filename)
     with open(path, encoding='utf-8') as f:
         return json.load(f)
 
-VETS_DATA = _load_vets_data()
+VETS_DATA       = _load_data('vets.json')
+PET_CAFE_DATA   = _load_data('pet_cafe.json')
+GROOMING_DATA   = _load_data('grooming.json')
+CARSHARE_DATA   = _load_data('carshares.json')
+CAR_RENTAL_DATA = _load_data('car_rentals.json')
 
 def get_nearby_vets(lat, lng, radius=1600):
     return [v for v in VETS_DATA if haversine(lat, lng, v['lat'], v['lng']) <= radius]
+
+def get_nearby_pet_cafes(lat, lng, radius=1600):
+    return [c for c in PET_CAFE_DATA if haversine(lat, lng, c['lat'], c['lng']) <= radius]
+
+def get_nearby_grooming(lat, lng, radius=1600):
+    return [g for g in GROOMING_DATA if haversine(lat, lng, g['lat'], g['lng']) <= radius]
+
+def get_nearby_carshares(lat, lng, radius=1600):
+    return [c for c in CARSHARE_DATA if haversine(lat, lng, c['lat'], c['lng']) <= radius]
+
+def get_nearby_car_rentals(lat, lng, radius=1600):
+    return [c for c in CAR_RENTAL_DATA if haversine(lat, lng, c['lat'], c['lng']) <= radius]
 
 # ============================================================
 # ID生成
@@ -1872,54 +1888,27 @@ def get_flood_level(lat, lng):
 # OSMクエリ
 # ============================================================
 def get_fac(lat, lng):
-    # 動物病院はvets.jsonから取得（一括キャッシュ）
-    nearby_vets = get_nearby_vets(lat, lng)
+    # 動物病院・カフェ・グルーミングはJSONキャッシュから取得
+    nearby_vets     = get_nearby_vets(lat, lng)
+    nearby_cafes    = get_nearby_pet_cafes(lat, lng)
+    nearby_grooming = get_nearby_grooming(lat, lng)
     vets = [v['name'] for v in nearby_vets if v['name']][:5]
     vets_emergency = [v['name'] for v in nearby_vets
                       if v['name'] and ('夜間' in v['name'] or '救急' in v['name'] or '24' in v['name'])][:2]
+    dog_cafes  = [c['name'] for c in nearby_cafes if c['name']][:5]
+    groomings  = [g['name'] for g in nearby_grooming if g['name']][:3]
 
-    a, c = str(RADIUS), f'{lat},{lng}'
-    q = (
-        '[out:json][timeout:60];('
-        f'node[shop=pet](around:{a},{c});'
-        f'node[shop=pet_grooming](around:{a},{c});'
-        f'node[amenity=animal_boarding](around:{a},{c});'
-        f'node[amenity=cafe][dogs=yes](around:{a},{c});'
-        f'node[amenity=cafe][dog=yes](around:{a},{c});'
-        f'node[amenity=restaurant][dogs=yes](around:{a},{c});'
-        f'node[amenity=restaurant][dog=yes](around:{a},{c});'
-        f'node[amenity=car_sharing](around:{a},{c});'
-        f'node[amenity=car_rental](around:{a},{c});'
-        ');out center;'
-    )
-    try:
-        r = requests.post(OVERPASS, data={'data': q}, timeout=60)
-        els = r.json().get('elements', [])
-        groomings, dog_cafes, carshares, car_rentals = [], [], [], []
-        for el in els:
-            tags = el.get('tags', {})
-            n = tags.get('name', '')
-            if not n: continue
-            amenity = tags.get('amenity', '')
-            shop    = tags.get('shop', '')
-            dogs    = tags.get('dogs', tags.get('dog', ''))
-            if shop in ('pet_grooming','grooming') or amenity == 'animal_boarding':
-                groomings.append(n)
-            elif amenity in ('cafe','restaurant') and dogs in ('yes','permitted','leashed'):
-                dog_cafes.append(n)
-            elif amenity == 'car_sharing':
-                carshares.append(n)
-            elif amenity == 'car_rental':
-                car_rentals.append(n)
-        return {
-            'vets':vets,'vets_emergency':vets_emergency,
-            'groomings':groomings[:3],'dog_cafes':dog_cafes[:3],
-            'carshares':carshares[:3],'car_rentals':car_rentals[:3],
-        }
-    except Exception as e:
-        print(f'  OSMエラー: {e}')
-        return {'vets':vets,'vets_emergency':vets_emergency,
-                'groomings':[],'dog_cafes':[],'carshares':[],'car_rentals':[]}
+    nearby_carshares   = get_nearby_carshares(lat, lng)
+    nearby_car_rentals = get_nearby_car_rentals(lat, lng)
+    carshares  = [c['name'] for c in nearby_carshares   if c['name']][:3]
+    car_rentals= [c['name'] for c in nearby_car_rentals if c['name']][:3]
+    return {
+        'vets': vets, 'vets_emergency': vets_emergency,
+        'nearby_vets': nearby_vets, 'nearby_cafes': nearby_cafes,
+        'nearby_grooming': nearby_grooming,
+        'groomings': groomings, 'dog_cafes': dog_cafes,
+        'carshares': carshares, 'car_rentals': car_rentals,
+    }
 
 # ============================================================
 # スコア計算
@@ -2066,14 +2055,18 @@ def apply_walk_score(osm, base, base_is_override=False, walk_max=None):
         walk = min(walk, walk_max)
     return walk
 
-def calc_medical_score(fac, base):
-    vet_score   = min(len(fac['vets']) * 15, 60)
-    emerg_score = 30 if fac['vets_emergency'] else 0
-    cafe_score  = min(len(fac['dog_cafes']) * 8, 24)
-    groom_score = min(len(fac['groomings']) * 5, 15)
-    osm_raw     = vet_score + emerg_score + cafe_score + groom_score
-    osm_score   = round(30 + (osm_raw / 129) * 60)
-    if len(fac['vets']) == 0 and len(fac['dog_cafes']) == 0:
+def calc_medical_score(nearby_vets, nearby_cafes, nearby_grooming, base):
+    cafe_score  = min(len(nearby_cafes)   * 5,  55)
+    vet_score   = min(len(nearby_vets)    * 10, 30)
+    groom_score = min(len(nearby_grooming)* 5,  15)
+    emerg = any(
+        any(kw in v.get('name', '') for kw in ['夜間', '救急', '24'])
+        for v in nearby_vets
+    )
+    emerg_score = 20 if emerg else 0
+    raw       = cafe_score + vet_score + emerg_score + groom_score  # max 120
+    osm_score = max(30, min(90, round(30 + (raw / 120) * 60)))
+    if len(nearby_cafes) == 0 and len(nearby_vets) == 0:
         return base
     return max(30, min(90, round(osm_score * 0.7 + base * 0.3)))
 
@@ -2113,7 +2106,7 @@ for st in stations:
     fl_val = get_flood_level(st['lat'], st['lng'])
     if fl_val is None:
         fl_val = st['fl']  # フォールバック
-    time.sleep(1.5)
+    time.sleep(0)
 
     sid = st['id']
     ku  = st['ku']
@@ -2141,7 +2134,7 @@ for st in stations:
     walk = max(walk, MIN_WALK)
     if walk_max:
         walk = min(walk, walk_max)
-    med   = calc_medical_score(fac, ov.get('medical_base', MEDICAL_BASE_DEFAULT))
+    med   = calc_medical_score(fac['nearby_vets'], fac['nearby_cafes'], fac['nearby_grooming'], ov.get('medical_base', MEDICAL_BASE_DEFAULT))
     mob   = calc_mobility_score(fac, sid, st['lat'], st['lng'], ku)
 
     # 非居住駅はスコアをNoneに上書き（app.jsがnullを"-"マーカーで表示するため）
