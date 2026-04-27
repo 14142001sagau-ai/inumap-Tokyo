@@ -2087,6 +2087,16 @@ def calc_mobility_score(fac, sid, st_lat, st_lng, ku):
 EXCLUDED_STATIONS = {'赤塚', '赤堤'}
 stations = load_stations()
 stations = [s for s in stations if s['name'] not in EXCLUDED_STATIONS]
+
+# calc_safety.pyで計算済みのsafety値をstations.jsonから読み込む
+_safety_cache_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'stations.json')
+if os.path.exists(_safety_cache_path):
+    with open(_safety_cache_path, encoding='utf-8') as _f:
+        _prev = json.load(_f)
+    _safety_map = {d['name']: d['safety'] for d in _prev if 'safety' in d}
+else:
+    _safety_map = {}
+print(f'safety_map読み込み: {len(_safety_map)}駅')
 print(f'読み込み完了: {len(stations)}駅')
 
 # パス1: 全駅のosm_scoreをキャッシュ（APIなし・公園データのみ）
@@ -2142,7 +2152,9 @@ for st in stations:
         walk = med = mob = None
         housing_val = None
     else:
-        housing_val = HOUSING_STATION.get(st['name'], HOUSING_WARD.get(ku, 65))
+        rent_score  = HOUSING_STATION.get(st['name'], HOUSING_WARD.get(ku, 65))
+        safety_val  = _safety_map.get(st['name'], SAFETY_WARD.get(ku, 70))
+        housing_val = round(rent_score * 0.3 + safety_val * 0.7)
 
     results.append({
         'id': sid, 'name': st['name'], 'line': st['line'],
@@ -2151,7 +2163,7 @@ for st in stations:
         'housing':  housing_val,
         'medical':  med,
         'mobility': mob,
-        'safety':   SAFETY_STATION.get(st['name'], SAFETY_WARD.get(ku, 70)),
+        'safety':   _safety_map.get(st['name'], SAFETY_WARD.get(ku, 70)),
         'child':    CHILD_WARD.get(ku, 50),
         'fl':       fl_val,
         'parks':    [p['name'] for p in nearby_parks[:5]],
