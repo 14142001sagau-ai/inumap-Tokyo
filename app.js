@@ -5,7 +5,7 @@ const WW={
   AY:{walk:49,housing:22,medical:10,mobility:19},
   AZ:{walk:20,housing:15,medical:60,mobility:5},
   BX:{walk:20,housing:34,medical:38,mobility:8},
-  BY:{walk:46,housing:34,medical:9,mobility:11},
+  BY:{walk:48,housing:32,medical:9,mobility:11},
   BZ:{walk:18,housing:29,medical:50,mobility:3}
 };
 const AXES=[
@@ -50,8 +50,8 @@ const COMMENTS_URL='./data/comments.json';
 
 // 治安ペナルティ（凶悪・粗暴犯重み60%+総犯罪率40%）
 const safetyPen=(d,fam,single)=>{
-  if(d.safety<45) return fam?-12:single?-10:-5;  // D（新宿等）: 大幅減点
-  if(d.safety<55) return fam? -5:single? -5:-2;  // C（渋谷・豊島等）: 要注意
+  if(d.safety<43) return fam?-12:single?-10:-5;  // D（新宿等）: 大幅減点
+  if(d.safety<50) return fam? -5:single? -5:-2;  // C（渋谷・豊島等）: 要注意
   return 0;                                        // B以上: ペナルティなし
 };
 
