@@ -1455,7 +1455,7 @@ PARK_ENTRANCES = {
         (35.7590, 139.6285),  # 光が丘駅口（南口）
         (35.7690, 139.6270),  # 成増・下赤塚側北口
         (35.7699209, 139.6292939),  # 北口
-        (35.7633, 139.6390),  # 東口
+        (35.7645, 139.6328),  # 東口
         (35.7635, 139.6185),  # 西口
     ],
     '赤塚公園': [
@@ -1538,12 +1538,12 @@ def get_river_bonus(lat, lng):
         if name not in LARGE_RIVER_BONUS:
             continue
         for pt in points:
-            if haversine(lat, lng, pt[0], pt[1]) <= 500:
+            if haversine(lat, lng, pt[0], pt[1]) <= 800:
                 bonus = LARGE_RIVER_BONUS[name]
                 max_bonus = max(max_bonus, bonus)
                 break
     for name, rlat, rlng in MANUAL_RIVER_POINTS:
-        if haversine(lat, lng, rlat, rlng) <= 500:
+        if haversine(lat, lng, rlat, rlng) <= 800:
             bonus = LARGE_RIVER_BONUS.get(name, 10)
             max_bonus = max(max_bonus, bonus)
     return max_bonus
