@@ -2056,19 +2056,35 @@ def apply_walk_score(osm, base, base_is_override=False, walk_max=None):
     return walk
 
 def calc_medical_score(nearby_vets, nearby_cafes, nearby_grooming, base):
-    cafe_score  = min(len(nearby_cafes)   * 5,  55)
-    vet_score   = min(len(nearby_vets)    * 10, 30)
-    groom_score = min(len(nearby_grooming)* 5,  15)
+    cafe_score  = min(len(nearby_cafes) * 5, 40)
+    vet_score   = min(len(nearby_vets) * 12, 40)
+    groom_score = min(len(nearby_grooming) * 8, 20)
+
     emerg = any(
-        any(kw in v.get('name', '') for kw in ['夜間', '救急', '24'])
+        any(kw in v.get('name','') for kw in ['夜間','救急','24'])
         for v in nearby_vets
     )
     emerg_score = 20 if emerg else 0
-    raw       = cafe_score + vet_score + emerg_score + groom_score  # max 120
-    osm_score = max(30, min(90, round(30 + (raw / 120) * 60)))
+
+    raw = cafe_score + vet_score + groom_score + emerg_score
+    osm_score = round(30 + (raw / 120) * 60)
+    osm_score = max(30, min(90, osm_score))
+
     if len(nearby_cafes) == 0 and len(nearby_vets) == 0:
-        return base
-    return max(30, min(90, round(osm_score * 0.7 + base * 0.3)))
+        return {
+            'medical': base,
+            'medical_cafe': 0,
+            'medical_vet': 0,
+            'medical_groom': 0,
+        }
+
+    medical = max(30, min(90, round(osm_score * 0.7 + base * 0.3)))
+    return {
+        'medical': medical,
+        'medical_cafe': cafe_score,
+        'medical_vet': vet_score,
+        'medical_groom': groom_score,
+    }
 
 def calc_mobility_score(fac, sid, st_lat, st_lng, ku):
     pet_ok = sum(1 for _, la, lo, ok in CARSHARE_STATIONS
@@ -2144,12 +2160,17 @@ for st in stations:
     walk = max(walk, MIN_WALK)
     if walk_max:
         walk = min(walk, walk_max)
-    med   = calc_medical_score(fac['nearby_vets'], fac['nearby_cafes'], fac['nearby_grooming'], ov.get('medical_base', MEDICAL_BASE_DEFAULT))
+    result = calc_medical_score(fac['nearby_vets'], fac['nearby_cafes'], fac['nearby_grooming'], ov.get('medical_base', MEDICAL_BASE_DEFAULT))
+    medical_val = result['medical']
+    medical_cafe = result['medical_cafe']
+    medical_vet  = result['medical_vet']
+    medical_groom = result['medical_groom']
     mob   = calc_mobility_score(fac, sid, st['lat'], st['lng'], ku)
 
     # 非居住駅はスコアをNoneに上書き（app.jsがnullを"-"マーカーで表示するため）
     if st['name'] in NON_RESIDENTIAL_STATIONS:
-        walk = med = mob = None
+        walk = medical_val = mob = None
+        medical_cafe = medical_vet = medical_groom = None
         housing_val = None
     else:
         rent_score  = HOUSING_STATION.get(st['name'], HOUSING_WARD.get(ku, 65))
@@ -2159,9 +2180,12 @@ for st in stations:
     results.append({
         'id': sid, 'name': st['name'], 'line': st['line'],
         'lat': st['lat'], 'lng': st['lng'],
-        'walk':     walk,
-        'housing':  housing_val,
-        'medical':  med,
+        'walk':          walk,
+        'housing':       housing_val,
+        'medical':       medical_val,
+        'medical_cafe':  medical_cafe,
+        'medical_vet':   medical_vet,
+        'medical_groom': medical_groom,
         'mobility': mob,
         'safety':   _safety_map.get(st['name'], SAFETY_WARD.get(ku, 70)),
         'child':    CHILD_WARD.get(ku, 50),
@@ -2180,6 +2204,7 @@ for st in stations:
 for r in results:
     if r['name'] in NON_RESIDENTIAL_STATIONS:
         r['walk'] = r['housing'] = r['medical'] = r['mobility'] = None
+        r['medical_cafe'] = r['medical_vet'] = r['medical_groom'] = None
 
 os.makedirs('data', exist_ok=True)
 with open('data/stations.json', 'w', encoding='utf-8') as f:

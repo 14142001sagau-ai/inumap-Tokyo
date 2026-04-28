@@ -2,7 +2,7 @@ const {useState, useMemo, useEffect, useRef} = React;
 
 const WW={
   AX:{walk:15,housing:25,medical:50,mobility:10},
-  AY:{walk:49,housing:22,medical:10,mobility:19},
+  AY:{walk:54,housing:20,medical:11,mobility:15},
   AZ:{walk:20,housing:15,medical:60,mobility:5},
   BX:{walk:20,housing:34,medical:38,mobility:8},
   BY:{walk:48,housing:32,medical:9,mobility:11},
@@ -10,13 +10,13 @@ const WW={
 };
 const AXES=[
   {k:'walk',lb:'\uD83D\uDC3E \u6563\u6B69\u30FB\u5B89\u5168',co:'#2e7d32',
-   detail:['\uD83C\uDF33 \u516C\u5712\u30FB\u7DD1\u5730\u306E\u591A\u3055\uff08\u5408\u7B97\u30B9\u30B3\u30A2\u306E\u4E3B\u8981\u8981\u7D20\uff09','\uD83D\uDC15 \u30C9\u30C3\u30B0\u30E9\u30F3\u306E\u6709\u7121','\uD83D\uDEB6 \u6563\u6B69\u30B3\u30FC\u30B9\u306E\u5E83\u3055\u30FB\u5B89\u5168\u6027','\uD83D\uDEA6 \u4EA4\u901A\u91CF\u306E\u5C11\u306A\u3055\u30FB\u6B69\u884C\u8005\u5929\u56FD\u5316\u7387']},
+   detail:['\u516C\u5712\u306E\u5E83\u3055\u30FB\u8DDD\u96E2\uFF0F\u30C9\u30C3\u30B0\u30E9\u30F3\u30DC\u30FC\u30CA\u30B9\uFF0F\u6CB3\u5DDD\u30FB\u7DD1\u5730']},
   {k:'housing',lb:'\uD83C\uDFE0 \u4F4F\u74B0\u5883',co:'#1565c0',
-   detail:['\uD83D\uDEE1 \u6CBB\u5B89\u30B9\u30B3\u30A2\uff0840%\uff09\u2014\u51F6\u60AA\u72AF\u30FB\u7C97\u66B4\u72AF\u3092\u91CD\u8996\u3001\u8EFD\u72AF\u7F6A\u306F\u5C11\u3081\u306B\u8003\u616E','\uD83D\uDECD \u5546\u696D\u65BD\u8A2D\uff0850%\uff09\u2014\u30B9\u30FC\u30D1\u30FC\u30FB\u98F2\u98DF\u5E97\u30FB\u65E5\u7528\u54C1\u30FB\u30DB\u30FC\u30E0\u30BB\u30F3\u30BF\u30FC','\uD83D\uDC3E \u30DA\u30C3\u30C8\u53EF\u7269\u4EF6\uff0810%\uff09\u2014\u5927\u578B\u72ACOK\u30FB\u8CC3\u8CB8\u76F8\u5834']},
+   detail:['\u6CBB\u5B89\u30B9\u30B3\u30A2\uff0870%\uff09\u30FB\u5730\u4FA1\u5BB6\u8CDB\u76F8\u5834\uff0830%\uff09']},
   {k:'medical',lb:'\uD83C\uDFAA\uD83C\uDFE5 \u30B5\u30DD\u30FC\u30C8\u30FB\u533B\u7642',co:'#c2185b',
-   detail:['\uD83C\uDFE5 \u52D5\u7269\u75C5\u9662\u306E\u6570\u30FB\u8DDD\u96E2\uff0840%\uff09\u2014\u5F92\u6B69\u5708\u5185\u306E\u9662\u6570\u3067\u8A55\u4FA1','\uD83C\uDF19 \u591C\u9593\u30FB\u6551\u6025\u8A3A\u5BDF\u52D5\u7269\u75C5\u9662\uff0825%\uff09\u2014\u6709\u308A\u3067\u5927\u5E45\u52A0\u70B9','\u2615 \u72AC\uD83C\uDD97\u30AB\u30D5\u30A7\u30FB\u98F2\u98DF\u5E97\uff0820%\uff09','\u2702 \u30C8\u30EA\u30DF\u30F3\u30B0\u30FB\u4E00\u6642\u9802\u304B\u308A\uff0815%\uff09']},
+   detail:['\u30DA\u30C3\u30C8\u53EF\u98F2\u98DF\u5E97\uFF0F\u52D5\u7269\u75C5\u9662\uFF0F\u30B0\u30EB\u30FC\u30DF\u30F3\u30B0\u30B5\u30ED\u30F3\uff08\u30DA\u30EB\u30BD\u30CA\u306B\u3088\u308A\u91CD\u307F\u4ED8\u3051\u304C\u7570\u306A\u308A\u307E\u3059\uff09']},
   {k:'mobility',lb:'\uD83D\uDE97 \u79FB\u52D5',co:'#e65100',
-   detail:['\uD83D\uDE97 \u30AB\u30FC\u30B7\u30A7\u30A2\u30B9\u30C6\u30FC\u30B7\u30E7\u30F3\u6570\uff0840%\uff09\u2014\u72acOK\uff08MaaS Car\u30FBEveryGo\uff09\u306F\u91CD\u307F\u5927\u3001\u4E00\u822C\u306F\u5C0F\u3055\u3081','\uD83D\uDE95 \u30EC\u30F3\u30BF\u30AB\u30FC\u5E97\u8217\u6570\uff0830%\uff09\u2014\u8FBA\u308A\u306E\u5E97\u8217\u6570\uFF08\u72AC\u540C\u4F34\u53EF\u304C\u591A\u3044\u305F\u3081\u4EE3\u7528\uff09','\uD83C\uDFE7 \u6708\u6975\u99D0\u8ECA\u5834\u6599\u91D1\uff0830%\uff09\u2014\u5730\u4FA1\u304B\u3089\u63A8\u5B9A\u3001\u5B89\u3044\u307B\u3069\u9AD8\u30B9\u30B3\u30A2\uff08\u30CD\u30AC\u30C6\u30A3\u30D6\u6307\u6A19\u30FB\u53CD\u8EE2\u6E08\u307F\uff09']}
+   detail:['\u8DEF\u7DDA\u6570\u30FB\u4E57\u308A\u63DB\u3048\u5229\u4FBF\u6027\uFF0F\u30AB\u30FC\u30B7\u30A7\u30A2\u30FB\u30EC\u30F3\u30BF\u30AB\u30FC']}
 
 ];
 const LS={
@@ -83,14 +83,30 @@ const PENALTY={
 };
 
 function calc(areas,w,personaKey){
+  const medWeights={
+    'BX':{cafe:0.60,vet:0.25,groom:0.15},
+    'AX':{cafe:0.60,vet:0.25,groom:0.15},
+    'BY':{cafe:0.50,vet:0.30,groom:0.20},
+    'AY':{cafe:0.50,vet:0.30,groom:0.20},
+    'BZ':{cafe:0.20,vet:0.70,groom:0.10},
+    'AZ':{cafe:0.20,vet:0.70,groom:0.10},
+  };
+  const mw=medWeights[personaKey]||{cafe:0.50,vet:0.30,groom:0.20};
+  const areas2=areas.map(d=>{
+    if(d.medical===null||d.medical===undefined)return d;
+    const medRaw=(d.medical_cafe||0)*mw.cafe+(d.medical_vet||0)*mw.vet+(d.medical_groom||0)*mw.groom;
+    const medScaled=Math.round(30+(medRaw/100)*60);
+    const medical=Math.max(30,Math.min(90,medScaled));
+    return{...d,medical};
+  });
   const tot=Object.values(w).reduce((a,b)=>a+b,0);
   const hasNull=d=>AXES.some(a=>d[a.k]===null);
-  const rs=areas.map(d=>hasNull(d)?null:AXES.reduce((s,a)=>s+(d[a.k]||0)*w[a.k],0)/tot);
+  const rs=areas2.map(d=>hasNull(d)?null:AXES.reduce((s,a)=>s+(d[a.k]||0)*w[a.k],0)/tot);
   const valid=rs.filter(v=>v!==null);
   const avg=valid.reduce((a,b)=>a+b,0)/valid.length;
   const sd=Math.sqrt(valid.reduce((a,b)=>a+(b-avg)**2,0)/valid.length)||1;
   const pen=personaKey&&PENALTY[personaKey]?PENALTY[personaKey]:()=>0;
-  return areas.map((d,i)=>({...d,dev:rs[i]===null?null:Math.round((rs[i]-avg)/sd*10+50)+pen(d)}));
+  return areas2.map((d,i)=>({...d,dev:rs[i]===null?null:Math.round((rs[i]-avg)/sd*10+50)+pen(d)}));
 }
 function gs(v){
   if(v>=78)return{c:'#0d3b1e',b:'SS'};
