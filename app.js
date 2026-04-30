@@ -95,7 +95,7 @@ function calc(areas,w,personaKey){
   const areas2=areas.map(d=>{
     if(d.medical===null||d.medical===undefined)return d;
     const medRaw=(d.medical_cafe||0)*mw.cafe+(d.medical_vet||0)*mw.vet+(d.medical_groom||0)*mw.groom;
-    const medScaled=Math.round(30+(medRaw/100)*60);
+    const medScaled=Math.round(30+(medRaw/60)*60);
     const medical=Math.max(30,Math.min(90,medScaled));
     return{...d,medical};
   });
