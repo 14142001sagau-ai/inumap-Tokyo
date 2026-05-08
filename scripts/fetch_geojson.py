@@ -2017,7 +2017,7 @@ def calc_osm_score(nearby_parks, st_lat, st_lng):
     # 河川ボーナス（500m以内+10pt）
     river_bonus = get_river_bonus(st_lat, st_lng)
 
-    return min(park_score + greenway_score + dogrun_bonus + river_bonus, 90)
+    return min(park_score + greenway_score + dogrun_bonus + river_bonus, 80)
 
 
 def get_walk_base(st, osm_cache, stations, ward_default):
