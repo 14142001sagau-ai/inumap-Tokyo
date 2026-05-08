@@ -101,12 +101,23 @@ function calc(areas,w,personaKey){
   });
   const tot=Object.values(w).reduce((a,b)=>a+b,0);
   const hasNull=d=>AXES.some(a=>d[a.k]===null);
-  const rs=areas2.map(d=>hasNull(d)?null:AXES.reduce((s,a)=>s+(d[a.k]||0)*w[a.k],0)/tot);
-  const valid=rs.filter(v=>v!==null);
-  const avg=valid.reduce((a,b)=>a+b,0)/valid.length;
-  const sd=Math.sqrt(valid.reduce((a,b)=>a+(b-avg)**2,0)/valid.length)||1;
   const pen=personaKey&&PENALTY[personaKey]?PENALTY[personaKey]:()=>0;
-  return areas2.map((d,i)=>({...d,dev:rs[i]===null?null:Math.round((rs[i]-avg)/sd*10+50)+pen(d)}));
+
+  // パス1：raw → base_dev → temp_dev（penalty込み）
+  const raws=areas2.map(d=>hasNull(d)?null:AXES.reduce((s,a)=>s+(d[a.k]||0)*w[a.k],0)/tot);
+  const valid1=raws.filter(v=>v!==null);
+  const avg1=valid1.reduce((a,b)=>a+b,0)/valid1.length;
+  const sd1=Math.sqrt(valid1.reduce((a,b)=>a+(b-avg1)**2,0)/valid1.length)||1;
+  const temp_devs=areas2.map((d,i)=>raws[i]===null?null:Math.round((raws[i]-avg1)/sd1*10+50)+pen(d));
+
+  // パス2：temp_devを再正規化
+  const valid2=temp_devs.filter(v=>v!==null);
+  const avg2=valid2.reduce((a,b)=>a+b,0)/valid2.length;
+  const sd2=Math.sqrt(valid2.reduce((a,b)=>a+(b-avg2)**2,0)/valid2.length)||1;
+  return areas2.map((d,i)=>({
+    ...d,
+    dev:temp_devs[i]===null?null:Math.round((temp_devs[i]-avg2)/sd2*10+50)
+  }));
 }
 function gs(v){
   if(v>=78)return{c:'#0d3b1e',b:'SS'};
