@@ -116,7 +116,7 @@ function calc(areas,w,personaKey){
   const sd2=Math.sqrt(valid2.reduce((a,b)=>a+(b-avg2)**2,0)/valid2.length)||1;
   return areas2.map((d,i)=>({
     ...d,
-    dev:temp_devs[i]===null?null:Math.round((temp_devs[i]-avg2)/sd2*10+50)
+    dev:temp_devs[i]===null?null:Math.round((temp_devs[i]-avg2)/sd2*13+50)
   }));
 }
 function gs(v){
